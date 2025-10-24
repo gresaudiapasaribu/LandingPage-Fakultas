@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teknik Informatika | FAST UNPRI</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0b1221',
+                        accent: '#facc15',
+                        cyanx: '#22d3ee'
+                    },
+                    boxShadow: {
+                        glow: '0 20px 45px -12px rgba(34,211,238,0.25)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Feather + AOS -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <style>
+        html {
+            scroll-behavior: smooth
+        }
+        
+         ::selection {
+            background: #facc15;
+            color: #0b1221
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, .06);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, .12)
+        }
+        
+        .mesh {
+            background: radial-gradient(800px 400px at 10% 10%, rgba(34, 211, 238, .22), transparent 60%), radial-gradient(700px 400px at 90% 20%, rgba(250, 204, 21, .18), transparent 60%), radial-gradient(900px 500px at 50% 110%, rgba(59, 130, 246, .18), transparent 60%), linear-gradient(180deg, #0b1221 0%, #0b1221 60%, #0b1221 100%);
+        }
+        
+        .parallax {
+            transform: translateZ(0)
+        }
+        
+        @keyframes floaty {
+            0% {
+                transform: translateY(0)
+            }
+            50% {
+                transform: translateY(-10px)
+            }
+            100% {
+                transform: translateY(0)
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#0e1528] text-gray-200">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 inset-x-0 z-50">
+        <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between glass rounded-b-2xl">
+            <a href="{{ url('/') }}" class="flex items-center gap-2 font-semibold tracking-wide">
+                <i data-feather="arrow-left" class="w-5 h-5"></i> Beranda
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm">
+                <a href="#profil" class="hover:text-accent">Profil</a>
+                <a href="#fokus" class="hover:text-accent">Fokus</a>
+                <a href="#dosen" class="hover:text-accent">Dosen</a>
+                <a href="#karir" class="hover:text-accent">Karir</a>
+            </div>
+            <a href="#daftar" class="inline-flex items-center gap-2 bg-accent text-primary px-4 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">
+                <i data-feather="send" class="w-4 h-4"></i> Daftar
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="relative min-h-[92vh] flex items-center justify-center overflow-hidden mesh">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-cyanx/20 blur-3xl animate-pulse"></div>
+            <div class="absolute -bottom-20 -right-20 w-[28rem] h-[28rem] rounded-full bg-accent/20 blur-3xl animate-pulse"></div>
+            <svg class="absolute top-10 right-10 opacity-20" width="220" height="220" viewBox="0 0 200 200" fill="none">
+        <circle cx="100" cy="100" r="90" stroke="#22d3ee" stroke-dasharray="6 10" />
+      </svg>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center px-6" data-aos="zoom-in">
+            <span class="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase bg-white/10 px-3 py-1 rounded-full">
+        <i data-feather="cpu" class="w-3.5 h-3.5 text-cyanx"></i> FAST UNPRI
+      </span>
+            <h1 class="mt-5 text-4xl md:text-6xl font-extrabold leading-tight">
+                Teknik Informatika
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyanx via-white to-accent">Teknologi. Inovasi. Solusi.</span>
+            </h1>
+            <p class="mt-4 text-gray-300 md:text-lg">
+                Kuasai AI, Rekayasa Perangkat Lunak, dan Keamanan Siber. Belajar berbasis proyek dengan standar industri.
+            </p>
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="#profil" class="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 transition">Lihat Profil</a>
+                <a href="#daftar" class="px-6 py-3 rounded-xl bg-accent text-primary font-semibold hover:bg-yellow-300 transition">Daftar Sekarang</a>
+            </div>
+        </div>
+
+        <!-- kartu angka -->
+        <div class="absolute bottom-6 inset-x-0">
+            <div class="max-w-5xl mx-auto grid grid-cols-3 gap-4 px-6">
+                <div class="glass rounded-2xl p-5 text-center" data-aos="fade-up">
+                    <div class="text-3xl font-extrabold" data-counter="96">0%</div>
+                    <p class="text-xs text-gray-400 mt-1">Kepuasan Mahasiswa</p>
+                </div>
+                <div class="glass rounded-2xl p-5 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-3xl font-extrabold" data-counter="120">0</div>
+                    <p class="text-xs text-gray-400 mt-1">Mitra Industri</p>
+                </div>
+                <div class="glass rounded-2xl p-5 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-3xl font-extrabold" data-counter="35">0</div>
+                    <p class="text-xs text-gray-400 mt-1">Riset/Tahun</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- KONTEN -->
+    <main class="relative z-10 max-w-7xl mx-auto px-6 py-20 space-y-24">
+
+        <!-- PROFIL -->
+        <section id="profil" class="grid md:grid-cols-2 gap-10 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-3xl font-bold text-white">Profil Program Studi</h2>
+                <p class="mt-4 text-gray-300">
+                    Kurikulum berfokus pada Artificial Intelligence, Data Science, Cyber Security, dan Software Engineering. Belajar melalui studio class, hackathon, dan kolaborasi startup. Bimbingan riset dosen-peneliti aktif.
+                </p>
+                <div class="mt-6 grid grid-cols-2 gap-4">
+                    <div class="glass rounded-xl p-4">
+                        <div class="text-lg font-semibold text-white">Lab AI & Cyber</div>
+                        <p class="text-xs text-gray-400">Perangkat GPU, sandbox security, dan cloud env.</p>
+                    </div>
+                    <div class="glass rounded-xl p-4">
+                        <div class="text-lg font-semibold text-white">Project-Based</div>
+                        <p class="text-xs text-gray-400">Proyek nyata bersama mitra dan inkubator.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1100&q=80" class="rounded-2xl shadow-glow hover:scale-[1.02] transition duration-700" alt="Mahasiswa TI" />
+                <div class="absolute -bottom-6 -right-6 w-28 h-28 rounded-full bg-cyanx/25 blur-2xl animate-[floaty_6s_ease-in-out_infinite]"></div>
+            </div>
+        </section>
+
+        <!-- TAB FOKUS -->
+        <section id="fokus" class="glass rounded-3xl p-6 md:p-10" data-aos="fade-up">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <h3 class="text-2xl font-bold">Fokus Pembelajaran</h3>
+                <div class="flex gap-2 text-sm">
+                    <button class="tab-btn px-4 py-2 rounded-lg bg-white/10 border border-white/10" data-tab="se">Software Engineering</button>
+                    <button class="tab-btn px-4 py-2 rounded-lg hover:bg-white/10 border border-white/10" data-tab="ds">Data Science</button>
+                    <button class="tab-btn px-4 py-2 rounded-lg hover:bg-white/10 border border-white/10" data-tab="cs">Cyber Security</button>
+                </div>
+            </div>
+            <div class="mt-6">
+                <div class="tab-pane" id="tab-se">
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white/5 rounded-xl p-6 border border-white/10">
+                            <i data-feather="codesandbox" class="w-6 h-6 text-cyanx"></i>
+                            <h4 class="mt-3 font-semibold">Arsitektur & DevOps</h4>
+                            <p class="text-sm text-gray-300 mt-1">CI/CD, container, microservices, dan infrastruktur cloud.</p>
+                        </div>
+                        <div class="bg-white/5 rounded-xl p-6 border border-white/10">
+                            <i data-feather="smartphone" class="w-6 h-6 text-accent"></i>
+                            <h4 class="mt-3 font-semibold">Web & Mobile</h4>
+                            <p class="text-sm text-gray-300 mt-1">Front-end modern, backend scalable, aksesibilitas, UX.</p>
+                        </div>
+                        <div class="bg-white/5 rounded-xl p-6 border border-white/10">
+                            <i data-feather="git-branch" class="w-6 h-6 text-green-400"></i>
+                            <h4 class="mt-3 font-semibold">Quality Engineering</h4>
+                            <p class="text-sm text-gray-300 mt-1">Testing otomatis, code quality, dan observability.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane hidden" id="tab-ds">
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white/5 rounded-xl p-6 border border-white/10">
+                            <i data-feather="database" class="w-6 h-6 text-cyanx"></i>
+                            <h4 class="mt-3 font-semibold">Manajemen Data</h4>
+                            <p class="text-sm text-gray-300 mt-1">ETL, data warehouse, dan integrasi sistem.</p>
+                        </div>
+                        <div class="bg-white/5 rounded-xl p-6 border border-white/10">
+                            <i data-feather="cpu" class="w-6 h-6 text-accent"></i>
+                            <h4 class="mt-3 font-semibold">Machine Learning</h4>
+                            <p class="text-sm text-gray-300 mt-1">Modeling, evaluasi, MLOps, dan deployment.</p>
+                        </div>
+                        <div class="bg-white/5 rounded-xl p-6 border border-white/10">
+                            <i data-feather="bar-chart-2" class="w-6 h-6 text-green-400"></i>
+                            <h4 class="mt-3 font-semibold">Business Insight</h4>
+                            <p class="text-sm text-gray-300 mt-1">Visualisasi, dashboard, dan pengambilan keputusan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane hidden" id="tab-cs">
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white/5 rounded-xl p-6 border border-white/10">
+                            <i data-feather="shield" class="w-6 h-6 text-cyanx"></i>
+                            <h4 class="mt-3 font-semibold">Keamanan Jaringan</h4>
+                            <p class="text-sm text-gray-300 mt-1">Hardening, IDS/IPS, dan segmentasi jaringan.</p>
+                        </div>
+                        <div class="bg-white/5 rounded-xl p-6 border border-white/10">
+                            <i data-feather="lock" class="w-6 h-6 text-accent"></i>
+                            <h4 class="mt-3 font-semibold">Aplikasi Aman</h4>
+                            <p class="text-sm text-gray-300 mt-1">OWASP, secure coding, dan threat modeling.</p>
+                        </div>
+                        <div class="bg-white/5 rounded-xl p-6 border border-white/10">
+                            <i data-feather="activity" class="w-6 h-6 text-green-400"></i>
+                            <h4 class="mt-3 font-semibold">Incident Response</h4>
+                            <p class="text-sm text-gray-300 mt-1">Monitoring, forensik, dan pemulihan insiden.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOSEN -->
+        <section id="dosen" data-aos="fade-up">
+            <div class="flex items-end justify-between gap-6 mb-8">
+                <h3 class="text-2xl font-bold">Pimpinan & Dosen Unggulan</h3>
+                <a href="#karir" class="text-sm text-gray-300 hover:text-accent">Lihat Prospek Karir</a>
+            </div>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-glow transition">
+                    <div class="relative w-32 h-32 mx-auto">
+                        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=600&q=80" class="rounded-full w-full h-full object-cover border-4 border-accent/70" />
+                        <div class="absolute inset-0 rounded-full bg-accent/20 blur-2xl opacity-0 group-hover:opacity-100 transition"></div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <div class="font-semibold">Dr. Ir. Wahyu Aditya, M.Kom</div>
+                        <div class="text-xs text-gray-400">Kepala Program Studi</div>
+                    </div>
+                </div>
+                <div class="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-glow transition">
+                    <div class="relative w-32 h-32 mx-auto">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80" class="rounded-full w-full h-full object-cover border-4 border-cyanx/60" />
+                        <div class="absolute inset-0 rounded-full bg-cyanx/20 blur-2xl opacity-0 group-hover:opacity-100 transition"></div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <div class="font-semibold">Dr. Rina Kusuma, M.T</div>
+                        <div class="text-xs text-gray-400">Dosen & Peneliti AI</div>
+                    </div>
+                </div>
+                <div class="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-glow transition">
+                    <div class="relative w-32 h-32 mx-auto">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" class="rounded-full w-full h-full object-cover border-4 border-emerald-400/70" />
+                        <div class="absolute inset-0 rounded-full bg-emerald-400/20 blur-2xl opacity-0 group-hover:opacity-100 transition"></div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <div class="font-semibold">Ir. Budi Santosa, M.Kom</div>
+                        <div class="text-xs text-gray-400">Dosen Keamanan Siber</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KARIR -->
+        <section id="karir" class="glass rounded-3xl p-8 md:p-10" data-aos="fade-up">
+            <div class="flex items-center gap-3">
+                <i data-feather="briefcase" class="text-accent w-6 h-6"></i>
+                <h3 class="text-2xl font-bold">Prospek Karir</h3>
+            </div>
+            <p class="mt-3 text-gray-300">Bekerja di sektor teknologi modern, riset, maupun membangun startup digital.</p>
+            <div class="mt-6 grid md:grid-cols-2 gap-6">
+                <ul class="space-y-2 text-sm text-gray-200">
+                    <li class="flex items-center gap-2"><i data-feather="check-circle" class="w-4 h-4 text-cyanx"></i> Software Engineer / Full-Stack</li>
+                    <li class="flex items-center gap-2"><i data-feather="check-circle" class="w-4 h-4 text-cyanx"></i> Data Scientist & ML Engineer</li>
+                    <li class="flex items-center gap-2"><i data-feather="check-circle" class="w-4 h-4 text-cyanx"></i> Cyber Security Analyst</li>
+                </ul>
+                <ul class="space-y-2 text-sm text-gray-200">
+                    <li class="flex items-center gap-2"><i data-feather="check-circle" class="w-4 h-4 text-cyanx"></i> System Architect / DevOps</li>
+                    <li class="flex items-center gap-2"><i data-feather="check-circle" class="w-4 h-4 text-cyanx"></i> Game & Mobile Developer</li>
+                    <li class="flex items-center gap-2"><i data-feather="check-circle" class="w-4 h-4 text-cyanx"></i> Entrepreneur Digital</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="daftar" class="text-center" data-aos="zoom-in">
+            <h3 class="text-2xl font-bold">Siap Mulai?</h3>
+            <p class="mt-2 text-gray-300">Gabung dan bangun karya teknologi berdampak.</p>
+            <a href="mailto:info@unpri.ac.id" class="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-xl bg-accent text-primary font-semibold hover:bg-yellow-300 transition">
+                <i data-feather="mail"></i> Hubungi Admin
+            </a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+            <div>&copy; 2025 FAST – Universitas Prima Indonesia</div>
+            <div class="flex items-center gap-6">
+                <span class="flex items-center gap-2"><i data-feather="map-pin" class="w-4 h-4"></i> Medan</span>
+                <a href="mailto:info@unpri.ac.id" class="hover:text-accent flex items-center gap-2"><i data-feather="mail" class="w-4 h-4"></i> info@unpri.ac.id</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fullscreen Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 flex items-center justify-center bg-[#0b1221] z-[9999] transition-opacity duration-700">
+        <img src="{{ asset('assets/img/loading-fast.gif') }}" alt="Loading..." class="w-full h-full object-contain md:object-scale-down animate-fadeIn">
+    </div>
+
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 0.8s ease-out;
+        }
+    </style>
+
+    <script>
+        // Hilangkan loading setelah halaman selesai dimuat
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loading-screen');
+            loader.classList.add('opacity-0');
+            setTimeout(() => loader.style.display = 'none', 600);
+        });
+    </script>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        feather.replace();
+        AOS.init({
+            once: true,
+            duration: 900,
+            easing: 'ease-out-cubic'
+        });
+
+        // Counter angka
+        const counters = document.querySelectorAll('[data-counter]');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    const el = e.target;
+                    const target = +el.getAttribute('data-counter');
+                    let cur = 0;
+                    const inc = Math.ceil(target / 60);
+                    const timer = setInterval(() => {
+                        cur += inc;
+                        if (cur >= target) {
+                            cur = target;
+                            clearInterval(timer);
+                        }
+                        el.textContent = el.textContent.includes('%') ? cur + '%' : cur;
+                    }, 16);
+                    io.unobserve(el);
+                }
+            })
+        }, {
+            threshold: .6
+        });
+        counters.forEach(c => io.observe(c));
+
+        // Tab fokus
+        const btns = document.querySelectorAll('.tab-btn');
+        const panes = {
+            se: document.getElementById('tab-se'),
+            ds: document.getElementById('tab-ds'),
+            cs: document.getElementById('tab-cs'),
+        };
+
+        function setTab(key) {
+            Object.values(panes).forEach(p => p.classList.add('hidden'));
+            panes[key].classList.remove('hidden');
+            btns.forEach(b => b.classList.toggle('bg-white/10', b.dataset.tab === key));
+        }
+        btns.forEach(b => b.addEventListener('click', () => setTab(b.dataset.tab)));
+        setTab('se'); // default
+    </script>
+</body>
+
+</html>
