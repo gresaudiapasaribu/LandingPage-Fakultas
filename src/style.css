@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #192334;
+  --color-secondary: #bcbcbc;
+  --spacing-desk: 6rem;
+  --spacing-mob: 3rem;
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: inline-flex;
+  animation: scroll-left 30s linear infinite;
+  width: max-content;
+}
+section {
+  position: relative;
+}
+
+section div .relative {
+  overflow: hidden; 
+}

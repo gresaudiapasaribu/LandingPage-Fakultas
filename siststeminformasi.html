@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Informasi</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#192334",
+              accent: "#BCBCBC",
+              secondary: "#F5F5F5",
+            },
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans scroll-smooth font-inter">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-primary border-b border-white/10 px-16">
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"
+      >
+        <!-- Logo + Nama -->
+        <a
+          href="#"
+          class="flex items-center gap-7 text-2xl font-bold text-white drop-shadow-lg"
+        >
+          <!-- Logo UNPRI -->
+          <img
+            src="public/assets/img/logo unpri.png"
+            alt="Logo UNPRI"
+            class="w-13 h-12 object-contain drop-shadow-md transition-transform hover:scale-105"
+          />
+          <img
+            src="public/assets/img/LightLogo.png "
+            class="w-13 h-12 object-contain drop-shadow-md transition-transform hover:scale-105"
+            alt=""
+          />
+        </a>
+
+        <!-- Menu Desktop -->
+        <ul class="hidden md:flex space-x-8 text-gray-100 font-medium">
+          <li>
+            <a href="#profil" class="hover:text-accent transition">Profil</a>
+          </li>
+          <li>
+            <a href="#program" class="hover:text-accent transition">Program</a>
+          </li>
+          <li>
+            <a href="#fasilitas" class="hover:text-accent transition"
+              >Fasilitas</a
+            >
+          </li>
+          <li>
+            <a href="#kontak" class="hover:text-accent transition">Kontak</a>
+          </li>
+        </ul>
+
+        <!-- Tombol Mobile -->
+        <button id="menu-btn" class="md:hidden text-white">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+
+      <!-- Menu Mobile -->
+      <div id="mobile-menu" class="hidden bg-primary/95 md:hidden text-center">
+        <ul class="py-4 space-y-4 text-white font-medium">
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#fasilitas">Fasilitas</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section
+      class="relative h-screen flex items-center text-white overflow-hidden"
+    >
+      <img
+        src="public/assets/img/bgHero.jpg"
+        class="absolute w-full h-full object-cover brightness-[0.45]"
+        alt="Campus Background"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-primary/40 to-secondary/60"
+      ></div>
+
+      <div class="relative z-10 px-16">
+        <div class="bg-primary pl-5 pr-10 py-6 max-w-[793px] mb-5">
+          <h1 class="text-xl md:text-[38px] font-bold leading-tight font-inter">
+            PROGRAM STUDI SISTEM INFORMASI
+          </h1>
+        </div>
+
+        <button
+          class="text-[#262626] bg-[#FACC15] font-bold text-[16px] rounded-lg mt-3 px-5 py-4"
+        >
+          Pelajari Lebih Lanjut
+        </button>
+      </div>
+
+      <div
+        class="absolute w-[500px] h-[500px] bg-secondary/30 rounded-full blur-3xl top-0 left-0 animate-pulse"
+      ></div>
+      <div
+        class="absolute w-[400px] h-[400px] bg-accent/20 rounded-full blur-3xl bottom-0 right-0 animate-pulse"
+      ></div>
+    </section>
+
+    <!-- definisi prodi SI -->
+    <section class="px-16 py-10 flex justify-center bg-primary text-white">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="flex justify-center">
+          <div class="border border-blue-400 p-2 rounded-lg shadow-md">
+            <iframe
+              class="rounded-md w-[500px] h-[280px]"
+              src=""
+              title="Video Sistem Informasi"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="space-y-4 rounded-xl p-6 relative text-center font-inter">
+          <button
+            class="bg-gray-800 border border-gray-500 text-xs px-4 py-2 rounded-full text-[16px]"
+          >
+            Terakreditasi Baik Sekali
+          </button>
+
+          <h2 class="font-bold text-2xl text-center md:text-left">
+            Tentang Program Studi Sistem Informasi
+          </h2>
+
+          <p class="text-gray-300 leading-relaxed tracking-tighter text-left">
+            Program Studi Sistem Informasi mempelajari penerapan teknologi
+            informasi dalam manajemen bisnis untuk meningkatkan efektivitas
+            organisasi. Mahasiswa dibekali kemampuan analisis dan pengelolaan
+            sistem informasi, dengan peluang karier sebagai analis sistem,
+            konsultan TI, manajer proyek, atau spesialis keamanan informasi.
+          </p>
+
+          <p class="text-gray-300 leading-relaxed tracking-tighter text-left">
+            Lulusan Sistem Informasi memiliki peluang karier yang luas, seperti
+            analis sistem, konsultan TI, manajer proyek TI, atau spesialis
+            keamanan informasi. Mereka juga dapat berkontribusi dalam
+            transformasi digital organisasi dengan mengoptimalkan pemanfaatan
+            teknologi informasi.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visi dan Misi FAST UNPRI -->
+    <section
+      id="visi-misi"
+      class="py-28 bg-gray-50 relative overflow-hidden px-16 flex justify-center flex-col items-center"
+    >
+      <div
+        class="max-w-4xl w-full bg-secondary rounded-xl shadow p-6 mb-6 border-2 border-gray-200"
+      >
+        <div class="flex items-center justify-center gap-2 mb-2">
+          <div
+            class="w-10 h-10 bg-white flex items-center justify-center rounded-full"
+          >
+            <img
+              src="public/assets/img/vectorVisi.svg"
+              class="w-5 h-5"
+              alt=""
+            />
+          </div>
+          <h2 class="text-xl font-bold text-gray-800">Visi</h2>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-center">
+          Menjadi program studi yang unggul dalam bidang Business Intelligence
+          dan System Analyst berbasis technopreneur yang inovatif dan adaptif
+          pada tingkat internasional tahun 2030
+        </p>
+      </div>
+
+      <!-- MISI & TUJUAN -->
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl w-full">
+        <!-- MISI -->
+        <div
+          class="bg-secondary shadow rounded-xl p-6 border-2 border-gray-200"
+        >
+          <div class="flex items-center gap-2 mb-2">
+            <i class="ri-flag-line text-yellow-500 text-2xl"></i>
+            <div
+              class="w-10 h-10 bg-white flex items-center justify-center rounded-full"
+            >
+              <img
+                src="public/assets/img/vectorMisidanTujuan.svg"
+                class="w-5 h-5"
+                alt=""
+              />
+            </div>
+            <h2 class="text-xl font-bold text-gray-800">Misi</h2>
+          </div>
+          <ol class="list-decimal text-gray-700 leading-relaxed space-y-1">
+            <li>
+              Menyelenggarakan proses pendidikan dan pengajaran untuk
+              menghasilkan sumber daya manusia yang mampu di bidang business
+              intelligence dan system analyst berbasis technopreneur yang
+              adaptif dan inovatif ;
+            </li>
+            <li>
+              Menyelenggarakan riset dan publikasi yang berkualitas dan
+              berkontributif di bidang business intelligence dan system analyst
+              berbasis technopreneur yang adaptif dan inovatif ;
+            </li>
+            <li>
+              Melaksanakan pengabdian secara berkelanjutan dalam menerapkan dan
+              mengembangkan sistem informasi yang bermanfaat bagi masyarakat
+              Melakukan kerja sama dengan berbagai pihak di tingkat lokal,
+              nasional, maupun internasional.
+            </li>
+            <li>
+              Melakukan kerja sama dengan berbagai pihak di tingkat lokal,
+              nasional, maupun internasional.
+            </li>
+          </ol>
+        </div>
+
+        <!-- TUJUAN -->
+        <div
+          class="bg-secondary rounded-xl shadow p-6 border-2 border-gray-200"
+        >
+          <div class="flex items-center gap-2 mb-2">
+            <i class="ri-check-double-line text-yellow-500 text-2xl"></i>
+            <div
+              class="w-10 h-10 bg-white flex items-center justify-center rounded-full"
+            >
+              <img
+                src="public/assets/img/vectorMisidanTujuan.svg"
+                class="w-5 h-5"
+                alt=""
+              />
+            </div>
+            <h2 class="text-xl font-bold text-gray-800">Tujuan</h2>
+          </div>
+          <ol
+            class="list-decimal list-inside text-gray-700 leading-relaxed space-y-1"
+          >
+            <li>
+              Menghasilkan lulusan yang mampu di bidang business intelligence
+              dan system analyst berbasis Technopreneur yang adaptif dan
+              inovatif;
+            </li>
+            <li>
+              Menghasilkan riset dan publikasi yang berkualitas dan
+              berkontributif di bidang Business Intelligence dan System Analyst
+              berbasis Technopreneur yang adaptif dan inovatif;
+            </li>
+            <li>
+              Terwujudnya pengabdian secara berkelanjutan dalam menerapkan dan
+              mengembangkan sistem informasi yang bermanfaat bagi masyarakat;
+            </li>
+            <li>
+              Terwujudnya kerjasama dengan berbagai pihak di tingkat lokal,
+              nasional, maupun internasional.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- struktur organisasi prodi si -->
+    <section
+      id=""
+      class="py-24 bg-[#E8E9EB] text-center relative overflow-hidden px-16"
+    >
+      <div class="absolute inset-0 from-secondary/10 to-accent/5"></div>
+      <div class="relative z-10 max-w-6xl px-6">
+        <h3 class="text-4xl font-bold text-primary mb-12" data-aos="fade-up">
+          Struktur organisasi Program Studi Sistem Informasi
+        </h3>
+
+        <div
+          class="flex justify-center items-stretch flex-wrap gap-10"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <!-- kaprodi -->
+          <div
+            class="bg-white/90 backdrop-blur-md shadow-lg w-[300px] h-[280px] rounded-2xl p-5 flex flex-col items-center text-center justify-between hover:-translate-y-2 hover:shadow-2xl transition"
+          >
+            <div class="relative w-36 h-36 mb-4">
+              <img
+                src="public/assets/img/fast/Dekan.webp"
+                class="rounded-full w-full h-full object-cover object-top border-4 border-accent shadow-md"
+              />
+            </div>
+            <div>
+              <h4 class="font-bold text-[15px] text-primary mb-2 break-words">
+                Agung Prabowo, S.Kom., M.Kom.
+              </h4>
+              <p>Ketua Program Studi</p>
+            </div>
+          </div>
+
+          <!-- sekretaris prodi -->
+          <div
+            class="bg-white/90 backdrop-blur-md shadow-lg w-[300px] h-[280px] rounded-2xl p-4 flex flex-col items-center text-center justify-between hover:-translate-y-2 hover:shadow-2xl transition"
+          >
+            <div class="relative w-36 h-36 mb-4">
+              <img
+                src="public/assets/img/fast/Wakil dekan 3.webp"
+                class="rounded-full w-full h-full object-cover object-top shadow-md"
+              />
+            </div>
+            <div>
+              <h4 class="font-bold text-[15px] text-primary mb-2">
+                Dr. Delima Sitanggang, S.Kom., M.Kom.
+              </h4>
+              <p>Sekretaris Program Studi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Berita Terkini -->
+    <section class="px-16 py-16">
+      <div class="flex items-center mb-5">
+        <p class="text-[24px] font-bold">Berita Terkini</p>
+        <div class="flex-1 h-px bg-gray-300 mx-4"></div>
+        <a
+          href="#"
+          class="bg-yellow-400 text-[16px] text-black text-sm font-semibold px-4 py-2 rounded-md hover:bg-yellow-500 transition"
+        >
+          Baca Berita Lainnya
+        </a>
+      </div>
+      <div class="grid grid-cols-3 gap-10">
+        <div class="">
+          <img
+            src="public/assets/img/fast/berita1.jpeg"
+            class="mb-2 w-[360px] h-[220px]"
+            alt=""
+          />
+          <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
+          <p class="text-[20px] font-bold py-1">
+            Kampus Terbaik dan Unggul....
+          </p>
+          <p class="text-[15px]">
+            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi
+            Strategis di Kabupaten Rokan ....
+          </p>
+        </div>
+        <div>
+          <img
+            src="public/assets/img/fast/berita2.jpeg"
+            class="mb-2 w-[360px] h-[220px]"
+            alt=""
+          />
+          <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
+          <p class="text-[20px] font-bold py-1">
+            Kampus Terbaik dan Unggul....
+          </p>
+          <p class="text-[15px]">
+            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi
+            Strategis di Kabupaten Rokan ....
+          </p>
+        </div>
+        <div>
+          <img
+            src="public/assets/img/fast/berita3.jpeg"
+            class="mb-2 w-[360px] h-[220px]"
+            alt=""
+          />
+          <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
+          <p class="text-[20px] font-bold py-1">
+            Kampus Terbaik dan Unggul....
+          </p>
+          <p class="text-[15px]">
+            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi
+            Strategis di Kabupaten Rokan ....
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- hmmmmmmmmmm -->
+    <section class="px-16 py-16">
+      <div
+        class="bg-primary text-white rounded-2xl flex items-center justify-between px-10 py-10 gap-8"
+      >
+        <div class="flex-1 w-[657px]">
+          <h2 class="text-[29px] font-bold mb-2">
+            Jadilah Bagian dari Masa Depan Teknologi dan Inovasi!
+          </h2>
+          <p class="text-gray-300 mb-5 text-[16px]">
+            Wujudkan mimpi bersama Fakultas Sains dan Teknologi — tempat di mana
+            ide-ide cemerlang tumbuh menjadi inovasi yang berdampak. Daftar
+            sekarang!
+          </p>
+          <button
+            class="bg-yellow-400 text-black font-semibold px-5 py-2 rounded-md hover:bg-yellow-500 transition"
+          >
+            Daftar Sekarang
+          </button>
+        </div>
+
+        <div class="flex-shrink-0">
+          <img
+            src="public/assets/img/fast/image.webp"
+            alt="Mahasiswa belajar"
+            class="w-52 h-52 rounded-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="bg-[#E8E9EB] text-[#262626]">
+      <div class="flex justify-between px-16">
+        <div class="py-10 gap-10">
+          <!-- Logo -->
+
+          <div class="flex items-center mb-5">
+            <img
+              src="public/assets/img/logo-unpri-black.webp"
+              alt="Unpri Logo"
+              class="h-12"
+            />
+            <img
+              src="public/assets/img/logoAkrediatasiUnggul.webp"
+              alt="Unggul Logo"
+              class="h-12"
+            />
+            <img
+              src="public/assets/img/fastt.png"
+              alt="FAST Logo"
+              class="h-12"
+            />
+          </div>
+          <div class="text-[16px]">
+            <p class="font-bold mb-2">Jam Pendaftaran</p>
+            <ul class="text-gray-700">
+              <li>• Senin - Jumat: 08.00 - 17.00 WIB</li>
+              <li>• Sabtu: 08.00 - 13.00 WIB</li>
+            </ul>
+          </div>
+        </div>
+        <div class="py-10">
+          <div class="mb-5">
+            <h1 class="font-bold">FAKULTAS SAINS DAN TEKNOLOGI</h1>
+            <h2 class="font-bold">Universitas Prima Indonesia</h2>
+            <p>Jl. Sampul No. 3, Medan</p>
+            <p class="mt-2">Telepon: +62 12345689</p>
+            <p>Faks: +62 12345678</p>
+            <p>Email: fast@unpri.ac.id</p>
+          </div>
+          <div class="flex gap-4 text-xl">
+            <a href="#" class="hover:text-primary"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-primary"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-primary"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="#" class="hover:text-primary"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <div class="bg-[#0D1B2A] text-white text-center text-[16px] py-3">
+        © 2025 FAST - Fakultas Sains dan Teknologi | Universitas Prima Indonesia
+      </div>
+    </footer>
+
+    <!-- Fullscreen Loading Screen -->
+    <div
+      id="loading-screen"
+      class="fixed inset-0 flex items-center justify-center bg-[#0b1221] z-[9999] transition-opacity duration-700"
+    >
+      <img
+        src="{{ asset('assets/img/loading-fast.gif') }}"
+        alt="Loading..."
+        class="w-full h-full object-contain md:object-scale-down animate-fadeIn"
+      />
+    </div>
+
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .animate-fadeIn {
+        animation: fadeIn 0.8s ease-out;
+      }
+    </style>
+
+    <script>
+      // Hilangkan loading setelah halaman selesai dimuat
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("loading-screen");
+        loader.classList.add("opacity-0");
+        setTimeout(() => (loader.style.display = "none"), 600);
+      });
+    </script>
+
+    <!-- Script -->
+    <script>
+      feather.replace();
+      document.getElementById("menu-btn").onclick = () => {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      };
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      // AOS.init({ once: true, duration: 1000, easing: "ease-out-cubic" });
+    </script>
+  </body>
+</html>

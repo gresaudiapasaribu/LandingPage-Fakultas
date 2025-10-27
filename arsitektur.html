@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teknik Industri</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#192334",
+              accent: "#BCBCBC",
+              secondary: "#F5F5F5",
+            },
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans scroll-smooth font-inter">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-primary border-b border-white/10 px-16">
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"
+      >
+        <!-- Logo + Nama -->
+        <a
+          href="#"
+          class="flex items-center gap-7 text-2xl font-bold text-white drop-shadow-lg"
+        >
+          <!-- Logo UNPRI -->
+          <img
+            src="public/assets/img/logo unpri.png"
+            alt="Logo UNPRI"
+            class="w-13 h-12 object-contain drop-shadow-md transition-transform hover:scale-105"
+          />
+          <img
+            src="public/assets/img/LightLogo.png "
+            class="w-13 h-12 object-contain drop-shadow-md transition-transform hover:scale-105"
+            alt=""
+          />
+        </a>
+
+        <!-- Menu Desktop -->
+        <ul class="hidden md:flex space-x-8 text-gray-100 font-medium">
+          <li>
+            <a href="#profil" class="hover:text-yellow-500 transition"
+              >Profil</a
+            >
+          </li>
+          <li>
+            <a href="#program" class="hover:text-yellow-500 transition"
+              >Program</a
+            >
+          </li>
+          <li>
+            <a href="#fasilitas" class="hover:text-yellow-500 transition"
+              >Fasilitas</a
+            >
+          </li>
+          <li>
+            <a href="#kontak" class="hover:text-yellow-500 transition"
+              >Kontak</a
+            >
+          </li>
+        </ul>
+
+        <!-- Tombol Mobile -->
+        <button id="menu-btn" class="md:hidden text-white">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+
+      <!-- Menu Mobile -->
+      <div id="mobile-menu" class="hidden bg-primary/95 md:hidden text-center">
+        <ul class="py-4 space-y-4 text-white font-medium">
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#fasilitas">Fasilitas</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section
+      class="relative h-screen flex items-center text-white overflow-hidden"
+    >
+      <img
+        src="public/assets/img/bgHero.jpg"
+        class="absolute w-full h-full object-cover brightness-[0.45]"
+        alt="Campus Background"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-primary/40 to-secondary/60"
+      ></div>
+
+      <div class="relative z-10 px-16">
+        <div class="bg-primary pl-5 pr-10 py-6 max-w-[793px] mb-5">
+          <h1 class="text-xl md:text-[38px] font-bold leading-tight font-inter">
+            Sarjana Teknik Industri
+          </h1>
+        </div>
+
+        <button
+          class="text-[#262626] bg-[#FACC15] font-bold text-[16px] rounded-lg mt-3 px-5 py-4"
+        >
+          Pelajari Lebih Lanjut
+        </button>
+      </div>
+
+      <div
+        class="absolute w-[500px] h-[500px] bg-secondary/30 rounded-full blur-3xl top-0 left-0 animate-pulse"
+      ></div>
+      <div
+        class="absolute w-[400px] h-[400px] bg-accent/20 rounded-full blur-3xl bottom-0 right-0 animate-pulse"
+      ></div>
+    </section>
+
+    <!-- definisi prodi SI -->
+    <section class="px-16 py-10 flex justify-center bg-primary text-white">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="flex justify-center">
+          <div class="border border-blue-400 p-2 rounded-lg shadow-md">
+            <iframe
+              class="rounded-md w-[500px] h-[280px]"
+              src=""
+              title="Video Teknik Industr"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="space-y-4 rounded-xl p-6 relative text-center font-inter">
+          <button
+            class="bg-gray-800 border border-gray-500 text-xs px-4 py-2 rounded-full text-[16px]"
+          >
+            Terakreditasi Baik Sekali
+          </button>
+
+          <h2 class="font-bold text-2xl text-center md:text-left">
+            Tentang Program Studi Teknik Industri
+          </h2>
+
+          <p class="text-gray-300 leading-relaxed tracking-tighter text-left">
+            Program Studi Teknik Industri UNPRI menawarkan konsentrasi dalam
+            bidang Supply Chain & Optimization. Konsentrasi ini dirancang untuk
+            mempersiapkan mahasiswa menghadapi tantangan dalam manajemen rantai
+            pasok dan optimasi proses industri.
+          </p>
+
+          <p class="text-gray-300 leading-relaxed tracking-tighter text-left">
+            Lulusan Program Studi Teknik Industri juga dapat berkontribusi dalam
+            meningkatkan produktivitas dan keberlanjutan di berbagai sektor
+            industri. Dengan bekal pengetahuan dan keterampilan yang mendalam,
+            lulusan Teknik Industri siap menjadi agen perubahan dalam dunia
+            industri, mendorong inovasi, dan menciptakan sistem yang lebih
+            efisien dan berkelanjutan untuk masa depan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visi dan Misi FAST UNPRI -->
+    <section
+      id="visi-misi"
+      class="py-28 bg-gray-50 relative overflow-hidden px-16 flex justify-center flex-col items-center"
+    >
+      <div
+        class="max-w-4xl w-full bg-secondary rounded-xl shadow p-6 mb-6 border-2 border-gray-200"
+      >
+        <div class="flex items-center justify-center gap-2 mb-2">
+          <div
+            class="w-10 h-10 bg-white flex items-center justify-center rounded-full"
+          >
+            <img
+              src="public/assets/img/vectorVisi.svg"
+              class="w-5 h-5"
+              alt=""
+            />
+          </div>
+          <h2 class="text-xl font-bold text-gray-800">Visi</h2>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-center">
+          Menjadi program studi unggulan dalam rekayasa, perancangan, dan
+          pengembangan sistem rantai pasok industri kesehatan yang inovatif,
+          adaptif, berkelanjutan, serta berwawasan socio-technopreneurship pada
+          tahun 2030.
+        </p>
+      </div>
+
+      <!-- MISI & TUJUAN -->
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl w-full">
+        <!-- MISI -->
+        <div
+          class="bg-secondary shadow rounded-xl p-6 border-2 border-gray-200"
+        >
+          <div class="flex items-center gap-2 mb-2">
+            <i class="ri-flag-line text-yellow-500 text-2xl"></i>
+            <div
+              class="w-10 h-10 bg-white flex items-center justify-center rounded-full"
+            >
+              <img
+                src="public/assets/img/vectorMisidanTujuan.svg"
+                class="w-5 h-5"
+                alt=""
+              />
+            </div>
+            <h2 class="text-xl font-bold text-gray-800">Misi</h2>
+          </div>
+          <ol class="list-decimal text-gray-700 leading-relaxed space-y-1">
+            <li>
+              Menyelenggarakan pendidikan teknik industri yang berkualitas untuk
+              menghasilkan lulusan profesional, inovatif, dan berdaya saing di
+              sektor kesehatan dan manufaktur.
+            </li>
+            <li>
+              Mengembangkan penelitian dan inovasi teknologi di bidang kesehatan
+              dan manufaktur guna mendukung kemajuan ilmu pengetahuan serta
+              kebutuhan industri.
+            </li>
+            <li>
+              Melaksanakan pengabdian kepada masyarakat dengan penerapan ilmu
+              teknik industri yang memberikan solusi tepat guna bagi sektor
+              kesehatan dan manufaktur.
+            </li>
+            <li>
+              Membangun jejaring kerjasama strategis dengan dunia usaha, dunia
+              industri, dan institusi pendidikan, serta menumbuhkan semangat
+              socio-technopreneurship di kalangan civitas akademika.
+            </li>
+          </ol>
+        </div>
+
+        <!-- TUJUAN -->
+        <div
+          class="bg-secondary rounded-xl shadow p-6 border-2 border-gray-200"
+        >
+          <div class="flex items-center gap-2 mb-2">
+            <i class="ri-check-double-line text-yellow-500 text-2xl"></i>
+            <div
+              class="w-10 h-10 bg-white flex items-center justify-center rounded-full"
+            >
+              <img
+                src="public/assets/img/vectorMisidanTujuan.svg"
+                class="w-5 h-5"
+                alt=""
+              />
+            </div>
+            <h2 class="text-xl font-bold text-gray-800">Tujuan</h2>
+          </div>
+          <ol
+            class="list-decimal list-inside text-gray-700 leading-relaxed space-y-1"
+          >
+            <li>
+              Tercapainya pendidikan di bidang perbaikan, perancangan dan
+              instalasi sistem terintegrasi di industri manufaktur dan jasa
+              berwawasan sociotechnopreneurship;
+            </li>
+            <li>
+              Menghasilkan riset dan publikasi di bidang perbaikan, perancangan
+              dan instalasi sistem terintegrasi di industri manufaktur
+              berwawasan sociotechnopreneurship;
+            </li>
+            <li>
+              Menghasilkan Pengabdian masyarakat pada bidang teknik industri
+              berwawasan socio- technopreneurship;
+            </li>
+            <li>
+              Terwujudnya kerjasama dengan berbagai pihak di tingkat lokal,
+              nasional, regional, maupun internasional
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- knp milih Teknik industri -->
+
+    <section class="px-6 py-12 bg-primary text-white md:px-16">
+      <h2 class="text-center text-[24px] md:text-3xl font-bold mb-10">
+        Kenapa Memilih Program Studi Teknik Industri?
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="flex items-start space-x-4">
+          <div class="text-yellow-500 text-4xl font-bold">01</div>
+          <div>
+            <h3 class="text-lg font-semibold">Akreditasi Baik Sekali</h3>
+            <p class="text-[16px]">
+              Program studi ini telah mendapatkan akreditasi dengan peringkat
+              "Baik Sekali" dari BAN-PT.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="text-yellow-500 text-4xl font-bold">04</div>
+          <div>
+            <h3 class="text-lg font-semibold">Menjalankan Kurikulum OBE</h3>
+            <p class="text-[16px]">
+              Pembelajaran berfokus pada capaian dan kompetensi lulusan yang
+              relevan dengan kebutuhan industri.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="text-yellow-500 text-4xl font-bold">02</div>
+          <div>
+            <h3 class="text-lg font-bold text[20px]">
+              Konsentrasi Supply Chain & Optimization
+            </h3>
+            <p class="text-[16px]">
+              Fokus pada manajemen rantai pasok dan optimasi proses industri
+              kesehatan dan manufaktur.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="text-yellow-500 text-4xl font-bold">05</div>
+          <div>
+            <h3 class="text-lg font-bold text[20px]">Fasilitas Modern</h3>
+            <p class="text-[16px]">
+              Menyediakan ruang kuliah multimedia, perpustakaan digital
+              terakreditasi, convention hall terbesar di Sumatera Utara, mall
+              kampus, hingga cafe di rooftop lantai 23 gedung kampus.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="text-yellow-500 text-4xl font-bold">03</div>
+          <div>
+            <h3 class="text-lg font-bold text[20px]">Studi Ekskursi</h3>
+            <p class="text-[16px]">
+              Kuliah lapangan ke industri manufaktur dan kesehatan.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="text-yellow-500 text-4xl font-bold">06</div>
+          <div>
+            <h3 class="text-lg font-bold text[20px]">
+              Pendekatan Socio-Technopreneurship
+            </h3>
+            <p class="text-[16px]">
+              Mengintegrasikan pendidikan, teknologi, kewirausahaan, dan
+              kepedulian sosial.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- akreditasi & durasi -->
+    <section
+      class="flex gap-10 justify-center md:px-16 w-[798px] py-12 mx-auto text-center"
+    >
+      <!-- akreditasi -->
+      <div
+        class="w-[337px] h-[132px] rounded-lg shadow-[2px_4px_4px_rgba(0,0,0,0.25)] px-5 pt-2 border"
+      >
+        <p class="text-[#474F5D] mb-1">Akrediatasi Program Studi</p>
+        <p class="font-bold text[16px] mb-3">Baik Sekali</p>
+        <p class="text[16px]">Berdasarkan SK. No. 2123654364</p>
+      </div>
+      <!-- durasi studi -->
+      <div
+        class="w-[401px] rounded-lg shadow-[2px_4px_4px_rgba(0,0,0,0.25)] px-5 py-2 border"
+      >
+        <p class="text-[#474F5D] mb-3">Durasi Studi dan Gelar</p>
+        <p class="text[16px] font-bold">
+          4 tahun (8 Semester) dengan gelar S.T. (Sarjana Teknik)
+        </p>
+      </div>
+    </section>
+
+    <!-- peluang karir -->
+    <section
+      class="bg-[#FDE893] max-w-4xl mx-auto p-8 rounded-lg shadow-[2px_4px_4px_0_rgba(0,0,0,0.25)]"
+    >
+      <h2 class="text-center text-lg md:text-xl font-bold mb-4">
+        Peluang Karir Lulusan Prodi Teknik Industri
+      </h2>
+      <p class="text-center text-gray-800 text-sm md:text-base leading-relaxed">
+        Lulusan Program Studi Teknik Industri UNPRI memiliki peluang karir yang
+        luas, seperti :
+      </p>
+
+      <ul
+        class="mt-3 text-gray-900 text-sm md:text-base leading-relaxed list-disc list-inside space-y-1 font-medium text-center"
+      >
+        <li>Analis Teknik Industri (Manajer Operasi, Analis Sistem, dsb.)</li>
+        <li>
+          Asisten Manajer Rantai Pasokan (Spesialis Manajemen Rantai Pasok)
+        </li>
+        <li>Analis Ergonomi, Keselamatan dan Kesehatan Kerja.</li>
+      </ul>
+    </section>
+    <!-- struktur organisasi prodi Teknik industri -->
+    <section
+      id=""
+      class="py-24 bg-[#E8E9EB] text-center relative overflow-hidden px-16 mt-12"
+    >
+      <div class="absolute inset-0 from-secondary/10 to-accent/5"></div>
+      <div class="relative z-10 max-w-6xl px-6">
+        <h3 class="text-4xl font-bold text-primary mb-12" data-aos="fade-up">
+          Struktur organisasi Program Studi Teknik industri
+        </h3>
+
+        <div
+          class="flex justify-center items-stretch flex-wrap gap-10"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <!-- kaprodi -->
+          <div
+            class="bg-white/90 backdrop-blur-md shadow-lg w-[300px] h-[280px] rounded-2xl p-5 flex flex-col items-center text-center justify-between hover:-translate-y-2 hover:shadow-2xl transition"
+          >
+            <div class="relative w-36 h-36 mb-4">
+              <img
+                src="public/assets/img/fast/Dekan.webp"
+                class="rounded-full w-full h-full object-cover object-top border-4 border-accent shadow-md"
+              />
+            </div>
+            <div>
+              <h4 class="font-bold text-[15px] text-primary mb-2 break-words">
+                Agung Prabowo, S.Kom., M.Kom.
+              </h4>
+              <p>Ketua Program Studi</p>
+            </div>
+          </div>
+
+          <!-- sekretaris prodi -->
+          <div
+            class="bg-white/90 backdrop-blur-md shadow-lg w-[300px] h-[280px] rounded-2xl p-4 flex flex-col items-center text-center justify-between hover:-translate-y-2 hover:shadow-2xl transition"
+          >
+            <div class="relative w-36 h-36 mb-4">
+              <img
+                src="public/assets/img/fast/Wakil dekan 3.webp"
+                class="rounded-full w-full h-full object-cover object-top shadow-md"
+              />
+            </div>
+            <div>
+              <h4 class="font-bold text-[15px] text-primary mb-2">
+                Dr. Delima Sitanggang, S.Kom., M.Kom.
+              </h4>
+              <p>Sekretaris Program Studi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Berita Terkini -->
+    <section class="px-16 py-16">
+      <div class="flex items-center mb-5">
+        <p class="text-[24px] font-bold">Berita Terkini</p>
+        <div class="flex-1 h-px bg-gray-300 mx-4"></div>
+        <a
+          href="#"
+          class="bg-yellow-400 text-[16px] text-black text-sm font-bold text[20px] px-4 py-2 rounded-md hover:bg-yellow-500 transition"
+        >
+          Baca Berita Lainnya
+        </a>
+      </div>
+      <div class="grid grid-cols-3 gap-10">
+        <div class="">
+          <img
+            src="public/assets/img/fast/berita1.jpeg"
+            class="mb-2 w-[360px] h-[220px]"
+            alt=""
+          />
+          <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
+          <p class="text-[20px] font-bold py-1">
+            Kampus Terbaik dan Unggul....
+          </p>
+          <p class="text-[15px]">
+            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi
+            Strategis di Kabupaten Rokan ....
+          </p>
+        </div>
+        <div>
+          <img
+            src="public/assets/img/fast/berita2.jpeg"
+            class="mb-2 w-[360px] h-[220px]"
+            alt=""
+          />
+          <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
+          <p class="text-[20px] font-bold py-1">
+            Kampus Terbaik dan Unggul....
+          </p>
+          <p class="text-[15px]">
+            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi
+            Strategis di Kabupaten Rokan ....
+          </p>
+        </div>
+        <div>
+          <img
+            src="public/assets/img/fast/berita3.jpeg"
+            class="mb-2 w-[360px] h-[220px]"
+            alt=""
+          />
+          <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
+          <p class="text-[20px] font-bold py-1">
+            Kampus Terbaik dan Unggul....
+          </p>
+          <p class="text-[15px]">
+            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi
+            Strategis di Kabupaten Rokan ....
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Institusi Mitra  -->
+    <section class="max-w-6xl mx-auto px-6 py-12 text-center">
+      <h2 class="text-xl md:text-2xl font-bold mb-3">Institusi Mitra</h2>
+      <p class="text-[16px] md:text-base text-gray-700 mb-10 max-w-2xl mx-auto">
+        Program Studi Teknik Industri UNPRI menjalin kemitraan dengan berbagai
+        institusi dan industri untuk mendukung pengembangan akademik dan
+        profesional mahasiswa.
+      </p>
+
+      <!-- Logo mitra -->
+      <div class="flex flex-wrap justify-center items-center gap-8">
+        <img
+          src="public/assets/img/tknk industri/Logo-BKST.webp"
+          alt="BKSTI"
+          class="h-16 md:h-20 object-contain"
+        />
+        <img
+          src="public/assets/img/tknk industri/pelindo-multiterminal.webp"
+          alt="PTPN"
+          class="w-[206px] h-[43px] md:h-20 object-contain"
+        />
+        <img
+          src="public/assets/img/tknk industri/ptpn.png"
+          alt="Pelindo"
+          class="h-16 md:h-20 object-contain"
+        />
+        <img
+          src="public/assets/img/tknk industri/pelindo.webp"
+          alt="Pelindo Multi Terminal"
+          class="w-[206px] h-[64px] -ml-8 md:h-20 object-contain"
+        />
+      </div>
+    </section>
+
+    <!-- hmmmmmmmmmm -->
+    <section class="px-16 py-16">
+      <div
+        class="bg-primary text-white rounded-2xl flex items-center justify-between px-10 py-10 gap-8"
+      >
+        <div class="flex-1 w-[657px]">
+          <h2 class="text-[29px] font-bold mb-2">
+            Jadilah Bagian dari Masa Depan Teknologi dan Inovasi!
+          </h2>
+          <p class="text-gray-300 mb-5 text-[16px]">
+            Wujudkan mimpi bersama Fakultas Sains dan Teknologi — tempat di mana
+            ide-ide cemerlang tumbuh menjadi inovasi yang berdampak. Daftar
+            sekarang!
+          </p>
+          <button
+            class="bg-yellow-500 text-black font-semibold px-5 py-2 rounded-md hover:bg-yellow-600 transition"
+          >
+            Daftar Sekarang
+          </button>
+        </div>
+
+        <div class="flex-shrink-0">
+          <img
+            src="public/assets/img/fast/image.webp"
+            alt="Mahasiswa belajar"
+            class="w-52 h-52 rounded-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="bg-[#E8E9EB] text-[#262626]">
+      <div class="flex justify-between px-16">
+        <div class="py-10 gap-10">
+          <!-- Logo -->
+
+          <div class="flex items-center mb-5">
+            <img
+              src="public/assets/img/logo-unpri-black.webp"
+              alt="Unpri Logo"
+              class="h-12"
+            />
+            <img
+              src="public/assets/img/logoAkrediatasiUnggul.webp"
+              alt="Unggul Logo"
+              class="h-12"
+            />
+            <img
+              src="public/assets/img/fastt.png"
+              alt="FAST Logo"
+              class="h-12"
+            />
+          </div>
+          <div class="text-[16px]">
+            <p class="font-bold mb-2">Jam Pendaftaran</p>
+            <ul class="text-gray-700">
+              <li>• Senin - Jumat: 08.00 - 17.00 WIB</li>
+              <li>• Sabtu: 08.00 - 13.00 WIB</li>
+            </ul>
+          </div>
+        </div>
+        <div class="py-10">
+          <div class="mb-5">
+            <h1 class="font-bold">FAKULTAS SAINS DAN TEKNOLOGI</h1>
+            <h2 class="font-bold">Universitas Prima Indonesia</h2>
+            <p>Jl. Sampul No. 3, Medan</p>
+            <p class="mt-2">Telepon: +62 12345689</p>
+            <p>Faks: +62 12345678</p>
+            <p>Email: fast@unpri.ac.id</p>
+          </div>
+          <div class="flex gap-4 text-xl">
+            <a href="#" class="hover:text-primary"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-primary"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-primary"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="#" class="hover:text-primary"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <div class="bg-[#0D1B2A] text-white text-center text-[16px] py-3">
+        © 2025 FAST - Fakultas Sains dan Teknologi | Universitas Prima Indonesia
+      </div>
+    </footer>
+
+    <!-- Fullscreen Loading Screen -->
+    <div
+      id="loading-screen"
+      class="fixed inset-0 flex items-center justify-center bg-[#0b1221] z-[9999] transition-opacity duration-700"
+    >
+      <img
+        src="{{ asset('assets/img/loading-fast.gif') }}"
+        alt="Loading..."
+        class="w-full h-full object-contain md:object-scale-down animate-fadeIn"
+      />
+    </div>
+
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .animate-fadeIn {
+        animation: fadeIn 0.8s ease-out;
+      }
+    </style>
+
+    <script>
+      // Hilangkan loading setelah halaman selesai dimuat
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("loading-screen");
+        loader.classList.add("opacity-0");
+        setTimeout(() => (loader.style.display = "none"), 600);
+      });
+    </script>
+
+    <!-- Script -->
+    <script>
+      feather.replace();
+      document.getElementById("menu-btn").onclick = () => {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      };
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      // AOS.init({ once: true, duration: 1000, easing: "ease-out-cubic" });
+    </script>
+  </body>
+</html>
