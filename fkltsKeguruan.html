@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistem Informasi</title>
+    <title>Fakultas Keguruan</title>
+    <link rel="stylesheet" href="src/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -11,36 +12,35 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="src/style.css" />
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#192334",
-              accent: "#BCBCBC",
-              secondary: "#F5F5F5",
-            },
-            fontFamily: {
-              inter: ["Inter", "sans-serif"],
+      tailwind = {
+        config: {
+          theme: {
+            extend: {
+              colors: {
+                primary: "#192334",
+                accent: "#facc15",
+                secondary: "#F5F5F5",
+              },
+              fontFamily: {
+                sans: ["Poppins", "sans-serif"],
+              },
             },
           },
         },
       };
     </script>
+
+    <!-- Feather -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-gray-50 text-gray-800 font-sans scroll-smooth font-inter">
+  <body class="bg-gray-50 text-gray-800 font-sans scroll-smooth">
     <!-- Navbar -->
     <nav class="fixed w-full z-50 bg-primary border-b border-white/10 px-16">
       <div
@@ -113,16 +113,17 @@
       ></div>
 
       <div class="relative z-10 px-16">
-
-        <div class="bg-primary pl-5 pr-10 py-6 max-w-[793px] mb-5">
-          <h1 class="text-xl md:text-[38px] font-bold leading-tight font-inter">
-            PROGRAM STUDI SISTEM INFORMASI
+        <div class="bg-primary pl-5 pr-10 py-6 max-w-[792px]">
+          <h1 class="text-xl md:text-4xl font-extrabold leading-tight">
+            FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN
           </h1>
         </div>
-
+        <p class="text-sm md:text-[17px] mt-4 max-w-[600px] text-gray-200 my-5">
+          Membentuk generasi digital unggul, kreatif, dan adaptif menghadapi era
+          industri 5.0
+        </p>
         <button
-
-          class="text-[#262626] bg-[#FACC15] font-bold text-[16px] rounded-lg mt-3 px-5 py-4"
+          class="text-[#262626] bg-[#FACC15] font-bold text-sm rounded-lg mt-3 px-5 py-4"
         >
           Pelajari Lebih Lanjut
         </button>
@@ -136,52 +137,139 @@
       ></div>
     </section>
 
-    <!-- definisi prodi SI -->
-    <section class="px-16 py-10 flex justify-center bg-primary text-white">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div class="flex justify-center">
-          <div class="border border-blue-400 p-2 rounded-lg shadow-md">
-            <iframe
-              class="rounded-md w-[500px] h-[280px]"
-              src="public/assets/img/LightLogo.png"
-              title="Video Sistem Informasi"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
+    <!-- Kemitraan -->
+    <section class="px-16 overflow-hidden">
+      <div>
+        <h1 class="font-bold text-3xl mt-8 mb-3">Kemitraan</h1>
+        <div class="relative">
+          <div class="flex items-center gap-5 animate-scroll">
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/Acharya.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/University of malaysia.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/sanda university.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/chongqingIndustryPolitechnic.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ucyp.webp"
+              alt=""
+            />
+            <img
+              class="w-[100px] h-[90px]"
+              src="public/assets/img/Unsza.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/Malaysia sarawak.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ishou university.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/Yangtze normal University.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/university utara malaysia.webp"
+              alt=""
+            />
+
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/Acharya.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/University of malaysia.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/sanda university.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/chongqingIndustryPolitechnic.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ucyp.webp"
+              alt=""
+            />
+            <img
+              class="w-[100px] h-[90px]"
+              src="public/assets/img/Unsza.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/Malaysia sarawak.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ishou university.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/Yangtze normal University.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/university utara malaysia.webp"
+              alt=""
+            />
           </div>
-        </div>
-
-
-        <div class="space-y-4 rounded-xl p-6 relative text-center font-inter">
-          <button
-            class="bg-gray-800 border border-gray-500 text-xs px-4 py-2 rounded-full text-[16px]"
-          >
-            Terakreditasi Baik Sekali
-          </button>
-
-          <h2 class="font-bold text-2xl text-center md:text-left">
-            Tentang Program Studi Sistem Informasi
-          </h2>
-
-          <p class="text-gray-300 leading-relaxed tracking-tighter text-left">
-            Program Studi Sistem Informasi mempelajari penerapan teknologi
-            informasi dalam manajemen bisnis untuk meningkatkan efektivitas
-            organisasi. Mahasiswa dibekali kemampuan analisis dan pengelolaan
-            sistem informasi, dengan peluang karier sebagai analis sistem,
-            konsultan TI, manajer proyek, atau spesialis keamanan informasi.
-          </p>
-
-          <p class="text-gray-300 leading-relaxed tracking-tighter text-left">
-            Lulusan Sistem Informasi memiliki peluang karier yang luas, seperti
-            analis sistem, konsultan TI, manajer proyek TI, atau spesialis
-            keamanan informasi. Mereka juga dapat berkontribusi dalam
-            transformasi digital organisasi dengan mengoptimalkan pemanfaatan
-            teknologi informasi.
-          </p>
         </div>
       </div>
     </section>
 
+    <!-- tentang fast -->
+    <section class="px-16 mt-20">
+      <div class="bg-primary flex p-10 gap-20">
+        <img src="public/assets/img/LightLogo.png" class="w-[400px]" alt="" />
+        <div class="text-white w-1/2 text-center">
+          <p class="text-xl mb-2">
+            Tentang Fakultas Keguruan dan Ilmu Pendidikan
+          </p>
+          <p class="text-left">
+            Fakultas Keguruan dan Ilmu Pendidikan telah meraih berbagai
+            pencapaian akademik dan non-akademik di tingkat lokal, nasional, dan
+            internasional, serta mendapatkan akreditasi "Baik Sekali". Untuk
+            menghasilkan pendidik profesional berkualitas dalam bidang bahasa
+            dan sastra, dengan keahlian dalam Bahasa Indonesia bagi Penutur
+            Asing (BIPA) serta pemikiran Socio-Technopreneurship, fakultas ini
+            telah merancang pembelajaran berbasis teknologi dan kurikulum
+            Outcome-Based Education (OBE).
+          </p>
+        </div>
+      </div>
+    </section>
     <!-- Visi dan Misi FAST UNPRI -->
     <section
       id="visi-misi"
@@ -202,10 +290,10 @@
           </div>
           <h2 class="text-xl font-bold text-gray-800">Visi</h2>
         </div>
-        <p class="text-gray-700 leading-relaxed text-center">
-          Menjadi program studi yang unggul dalam bidang Business Intelligence
-          dan System Analyst berbasis technopreneur yang inovatif dan adaptif
-          pada tingkat internasional tahun 2030
+        <p class="text-gray-700 leading-relaxed text-justify">
+          Menjadi sentral pengembangan kependidikan dan ilmu pengetahuan yang
+          unggul untuk membangun karakter pendidik yang profesional, inovatif,
+          dan adaptif dalam bidang sosio-technopreneurship.
         </p>
       </div>
 
@@ -230,25 +318,25 @@
           </div>
           <ol class="list-decimal text-gray-700 leading-relaxed space-y-1">
             <li>
-              Menyelenggarakan proses pendidikan dan pengajaran untuk
-              menghasilkan sumber daya manusia yang mampu di bidang business
-              intelligence dan system analyst berbasis technopreneur yang
-              adaptif dan inovatif ;
+              Menyelenggarakan proses pendidikan dan pengajaran dengan sistem
+              kurikulum nasional dan internasional untuk menghasilkan lulusan
+              yang mampu di bidang technopreneurship yang inovatif dan adaptif.
             </li>
             <li>
-              Menyelenggarakan riset dan publikasi yang berkualitas dan
-              berkontributif di bidang business intelligence dan system analyst
-              berbasis technopreneur yang adaptif dan inovatif ;
+              Menyelenggarakan riset dan publikasi dalam bidang sains dan
+              teknologi.
             </li>
             <li>
-              Melaksanakan pengabdian secara berkelanjutan dalam menerapkan dan
-              mengembangkan sistem informasi yang bermanfaat bagi masyarakat
-              Melakukan kerja sama dengan berbagai pihak di tingkat lokal,
-              nasional, maupun internasional.
+              Berperan aktif dalam pelayanan kepada masyarakat pada bidang sains
+              dan teknologi.
             </li>
             <li>
               Melakukan kerja sama dengan berbagai pihak di tingkat lokal,
-              nasional, maupun internasional.
+              nasional, regional, maupun internasional.
+            </li>
+            <li>
+              Meningkatkan tata kelola guna penguatan akuntabilitas, penataan
+              struktur organisasi yang efisien, efektif serta transparan.
             </li>
           </ol>
         </div>
@@ -274,81 +362,215 @@
             class="list-decimal list-inside text-gray-700 leading-relaxed space-y-1"
           >
             <li>
-              Menghasilkan lulusan yang mampu di bidang business intelligence
-              dan system analyst berbasis Technopreneur yang adaptif dan
-              inovatif;
+              Menghasilkan lulusan yang mampu di bidang Technopreneurship yang
+              inovatif, adaptif;
             </li>
             <li>
-              Menghasilkan riset dan publikasi yang berkualitas dan
-              berkontributif di bidang Business Intelligence dan System Analyst
-              berbasis Technopreneur yang adaptif dan inovatif;
+              Menghasilkan riset dan publikasi pada bidang teknologi dan ilmu
+              komputer;
             </li>
             <li>
-              Terwujudnya pengabdian secara berkelanjutan dalam menerapkan dan
-              mengembangkan sistem informasi yang bermanfaat bagi masyarakat;
+              Meningkatkan kepercayaan masyarakat dalam pelayanan di bidang
+              teknologi dan ilmu komputer;
             </li>
             <li>
-              Terwujudnya kerjasama dengan berbagai pihak di tingkat lokal,
-              nasional, maupun internasional.
+              Menghasilkan berbagai kerjasama untuk meningkatkan sarana
+              pelaksanaan Tri Dharma Perguruan Tinggi;
+            </li>
+            <li>
+              Terwujudnya tata kelola guna penguatan akuntabilitas, penataan
+              struktur organisasi yang efisien, efektif, transparan, dan
+              akuntabel.
             </li>
           </ol>
         </div>
       </div>
     </section>
 
-    <!-- struktur organisasi prodi si -->
+    <!-- Pimpinan prodi -->
     <section
-      id=""
+      id="pimpinan"
       class="py-24 bg-[#E8E9EB] text-center relative overflow-hidden px-16"
     >
-      <div class="absolute inset-0 from-secondary/10 to-accent/5"></div>
-      <div class="relative z-10 max-w-6xl px-6">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-accent/5"
+      ></div>
+      <div class="relative z-10 max-w-6xl mx-auto px-6">
         <h3 class="text-4xl font-bold text-primary mb-12" data-aos="fade-up">
-          Struktur organisasi Program Studi Sistem Informasi
+          Pimpinan Fakultas Sains dan Teknologi
         </h3>
 
         <div
-          class="flex justify-center items-stretch flex-wrap gap-10"
+          class="grid sm:grid-cols-2 md:grid-cols-4 gap-10 justify-center"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <!-- kaprodi -->
+          <!-- dekan -->
           <div
-            class="bg-white/90 backdrop-blur-md shadow-lg w-[300px] h-[280px] rounded-2xl p-5 flex flex-col items-center text-center justify-between hover:-translate-y-2 hover:shadow-2xl transition"
+            class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-4 hover:-translate-y-2 hover:shadow-2xl transition"
           >
-            <div class="relative w-36 h-36 mb-4">
+            <div class="relative w-36 h-36 mx-auto mb-4">
               <img
-                src="public/assets/img/fast/kaprodi.jpg"
-
-                class="rounded-full w-full h-full object-cover object-top border-4 border-accent shadow-md"
-              />
-            </div>
-            <div>
-              <h4 class="font-bold text-[15px] text-primary mb-2 break-words">
-                Agung Prabowo, S.Kom., M.Kom.
-              </h4>
-              <p>Ketua Program Studi</p>
-            </div>
-          </div>
-
-          <!-- sekretaris prodi -->
-          <div
-            class="bg-white/90 backdrop-blur-md shadow-lg w-[300px] h-[280px] rounded-2xl p-4 flex flex-col items-center text-center justify-between hover:-translate-y-2 hover:shadow-2xl transition"
-          >
-            <div class="relative w-36 h-36 mb-4">
-              <img
-                src="public/assets/img/fast/sekretaris.jpg"
-
+                src="public/assets/img/fast/Dekan.webp"
                 class="rounded-full w-full h-full object-cover object-top shadow-md"
               />
             </div>
-            <div>
-              <h4 class="font-bold text-[15px] text-primary mb-2">
-                Dr. Delima Sitanggang, S.Kom., M.Kom.
-              </h4>
-              <p>Sekretaris Program Studi</p>
+            <h4 class="font-bold text-[15px] text-primary mb-2">
+              Prof. Ir. Bhakti Alamsyah, MT., Ph.D.
+            </h4>
+            <p>Dekan</p>
+          </div>
+
+          <!-- Wakil dekan I -->
+          <div
+            class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition"
+          >
+            <div class="relative w-36 h-36 mx-auto mb-4">
+              <img
+                src="public/assets/img/fast/wk dekan 1.webp"
+                class="rounded-full w-full h-full object-cover object-top shadow-md"
+              />
+            </div>
+            <h4 class="font-bold text-[15px] text-primary mb-2">
+              Dr. Mardi Turnip, S.Kom., M.Kom.
+            </h4>
+            <p>wakil Dekan 1</p>
+          </div>
+
+          <!-- Wakil dekan II -->
+          <div
+            class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition"
+          >
+            <div class="relative w-36 h-36 mx-auto mb-4">
+              <img
+                src="public/assets/img/fast/wk dekan 2.webp"
+                class="rounded-full w-full h-full object-cover object-top border-4 shadow-md"
+              />
+            </div>
+            <h4 class="font-bold text-[15px] text-primary mb-2">
+              Dr. Siti Aisyah, S.Kom., M.Kom.
+            </h4>
+            <p>Wakil Dekan 2</p>
+          </div>
+
+          <!-- Wakil dekan III -->
+          <div
+            class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition"
+          >
+            <div class="relative w-36 h-36 mx-auto mb-4">
+              <img
+                src="public/assets/img/fast/Wakil dekan 3.webp"
+                class="rounded-full w-full h-full object-cover object-top shadow-md"
+              />
+            </div>
+            <h4 class="font-bold text-[15px] text-primary mb-2">
+              Dhanny Rukmana Manday, S.T., M.T.
+            </h4>
+            <p>Wakil Dekan 3</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Studi -->
+    <section class="px-16">
+      <div>
+        <h1 class="font-bold text-2xl my-5">Program Studi</h1>
+        <div class="grid grid-cols-3 gap-8">
+          <div class="relative">
+            <div
+              class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"
+            ></div>
+
+            <div
+              class="bg-secondary rounded-2xl p-5 shadow border border-gray-200"
+            >
+              <div
+                class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2"
+              >
+                <img
+                  src="public/assets/img/Si.svg"
+                  class="w-5 h-5"
+                  alt="icon"
+                />
+              </div>
+              <h1 class="text-xl font-bold">
+                Sarjana Pendidikan Bahasa dan Sastra Indonesia
+              </h1>
+              <p class="my-5">
+                Sarjana Pendidikan Bahasa dan Sastra Indonesia di Fakultas
+                Keguruan dan Ilmu Pendidikan adalah program studi yang dirancang
+                untuk menghasilkan pendidik profesional di bidang bahasa dan
+                sastra Indonesia.
+              </p>
+              <div class="flex gap-3 items-center">
+                Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
+              </div>
             </div>
           </div>
+          <div class="relative">
+            <div
+              class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"
+            ></div>
+
+            <div
+              class="bg-secondary rounded-2xl p-5 shadow border border-gray-200"
+            >
+              <div
+                class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2"
+              >
+                <img
+                  src="public/assets/img/Vector.svg"
+                  class="w-5 h-5"
+                  alt="icon"
+                />
+              </div>
+              <h1 class="text-xl font-bold">
+                Sarjana Pendidikan Bahasa Ingris
+              </h1>
+              <p class="my-5">
+                Sarjana Pendidikan Bahasa Inggris di Fakultas Keguruan dan Ilmu
+                Pendidikan adalah program studi yang dirancang untuk
+                menghasilkan pendidik profesional di bidang bahasa Inggris.
+              </p>
+              <div class="flex gap-3 items-center">
+                Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div
+              class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"
+            ></div>
+
+            <div
+              class="bg-secondary rounded-2xl p-5 shadow border border-gray-200"
+            >
+              <div
+                class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2"
+              >
+                <img
+                  src="public/assets/img/elektro.svg"
+                  class="w-5 h-5"
+                  alt="icon"
+                />
+              </div>
+              <h1 class="text-xl font-bold">
+                magister pendidikan bahasa indonesia
+              </h1>
+              <p class="my-5">
+                Magister Pendidikan Bahasa Indonesia di Fakultas Keguruan dan
+                Ilmu Pendidikan adalah program pascasarjana yang dirancang untuk
+                memperdalam pengetahuan dan keterampilan dalam pengajaran bahasa
+                dan sastra Indonesia.
+              </p>
+              <div class="flex gap-3 items-center">
+                Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        
         </div>
       </div>
     </section>
@@ -444,6 +666,7 @@
         </div>
       </div>
     </section>
+
     <!-- FOOTER -->
     <footer class="bg-[#E8E9EB] text-[#262626]">
       <div class="flex justify-between px-16">
@@ -552,7 +775,7 @@
     </script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-      // AOS.init({ once: true, duration: 1000, easing: "ease-out-cubic" });
+      AOS.init({ once: true, duration: 1000, easing: "ease-out-cubic" });
     </script>
   </body>
 </html>

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistem Informasi</title>
+    <title>PSIKOLOGI | UNPRI</title>
+    <link rel="stylesheet" href="src/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -11,36 +12,35 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="src/style.css" />
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#192334",
-              accent: "#BCBCBC",
-              secondary: "#F5F5F5",
-            },
-            fontFamily: {
-              inter: ["Inter", "sans-serif"],
+      tailwind = {
+        config: {
+          theme: {
+            extend: {
+              colors: {
+                primary: "#192334",
+                accent: "#facc15",
+                secondary: "#F5F5F5",
+              },
+              fontFamily: {
+                sans: ["Poppins", "sans-serif"],
+              },
             },
           },
         },
       };
     </script>
+
+    <!-- Feather -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-gray-50 text-gray-800 font-sans scroll-smooth font-inter">
+  <body class="bg-gray-50 text-gray-800 font-sans scroll-smooth">
     <!-- Navbar -->
     <nav class="fixed w-full z-50 bg-primary border-b border-white/10 px-16">
       <div
@@ -58,7 +58,7 @@
             class="w-13 h-12 object-contain drop-shadow-md transition-transform hover:scale-105"
           />
           <img
-            src="public/assets/img/LightLogo.png "
+            src="public/assets/img/ekonomi/logoEkonomi/Fakultas Ekonomi.png "
             class="w-13 h-12 object-contain drop-shadow-md transition-transform hover:scale-105"
             alt=""
           />
@@ -113,16 +113,17 @@
       ></div>
 
       <div class="relative z-10 px-16">
-
-        <div class="bg-primary pl-5 pr-10 py-6 max-w-[793px] mb-5">
-          <h1 class="text-xl md:text-[38px] font-bold leading-tight font-inter">
-            PROGRAM STUDI SISTEM INFORMASI
+        <div class="bg-primary px-2 py-1 max-w-[792px]">
+          <h1 class="text-xl md:text-4xl font-extrabold leading-tight">
+            FAKULTAS PSIKOLOGI
           </h1>
         </div>
-
+        <p class="text-sm md:text-[17px] mt-4 max-w-[600px] text-gray-200">
+          Membentuk generasi digital unggul, kreatif, dan adaptif menghadapi era
+          industri 5.0
+        </p>
         <button
-
-          class="text-[#262626] bg-[#FACC15] font-bold text-[16px] rounded-lg mt-3 px-5 py-4"
+          class="text-[#262626] bg-[#FACC15] font-bold text-sm rounded-lg mt-3 px-3 py-2"
         >
           Pelajari Lebih Lanjut
         </button>
@@ -136,53 +137,119 @@
       ></div>
     </section>
 
-    <!-- definisi prodi SI -->
-    <section class="px-16 py-10 flex justify-center bg-primary text-white">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div class="flex justify-center">
-          <div class="border border-blue-400 p-2 rounded-lg shadow-md">
-            <iframe
-              class="rounded-md w-[500px] h-[280px]"
-              src="public/assets/img/LightLogo.png"
-              title="Video Sistem Informasi"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
+    <!-- Kemitraan -->
+    <section class="px-16 overflow-hidden">
+      <div>
+        <h1 class="font-bold text-3xl mt-8 mb-3">Kemitraan</h1>
+        <div class="relative">
+          <div class="flex items-center gap-5 animate-scroll">
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/bankbca .webp"
+              alt=""
+            />
+ 
+            <img
+              class="w-[100px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/EverBright Logo .webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/bumn.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/direktorat jendral pajak.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/bank btn.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/BUMS.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/indotama.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/kantor akuntan publik.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/Logo HIPMI.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/logo ISEI.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/logo pegadaian.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/logo waruna_nusa_sentana.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/logo-bank-mandiri.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/Logo_Bank_Sumut.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/ptpn4.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/sandong university.webp"
+              alt=""
+            />
+            <img
+              class="w-[90px] h-[90px]"
+              src="public/assets/img/ekonomi/kemitraanLogo/TELKOM.webp"
+              alt=""
+            />
           </div>
-        </div>
-
-
-        <div class="space-y-4 rounded-xl p-6 relative text-center font-inter">
-          <button
-            class="bg-gray-800 border border-gray-500 text-xs px-4 py-2 rounded-full text-[16px]"
-          >
-            Terakreditasi Baik Sekali
-          </button>
-
-          <h2 class="font-bold text-2xl text-center md:text-left">
-            Tentang Program Studi Sistem Informasi
-          </h2>
-
-          <p class="text-gray-300 leading-relaxed tracking-tighter text-left">
-            Program Studi Sistem Informasi mempelajari penerapan teknologi
-            informasi dalam manajemen bisnis untuk meningkatkan efektivitas
-            organisasi. Mahasiswa dibekali kemampuan analisis dan pengelolaan
-            sistem informasi, dengan peluang karier sebagai analis sistem,
-            konsultan TI, manajer proyek, atau spesialis keamanan informasi.
-          </p>
-
-          <p class="text-gray-300 leading-relaxed tracking-tighter text-left">
-            Lulusan Sistem Informasi memiliki peluang karier yang luas, seperti
-            analis sistem, konsultan TI, manajer proyek TI, atau spesialis
-            keamanan informasi. Mereka juga dapat berkontribusi dalam
-            transformasi digital organisasi dengan mengoptimalkan pemanfaatan
-            teknologi informasi.
-          </p>
         </div>
       </div>
     </section>
 
-    <!-- Visi dan Misi FAST UNPRI -->
+    <!-- tentang fast -->
+    <section class="px-16 mt-20">
+      <div class="bg-primary flex p-10 gap-20">
+        <img src="public/assets/img/ekonomi/logoEkonomi/Fakultas Ekonomi.png" class="w-[400px]" alt="" />
+        <div class="text-white w-1/2 text-center">
+          <p class="text-xl mb-2">Tentang Fakultas Psikologi</p>
+          <p class="text-left">
+            Fakultas Psikologi berkomitmen untuk menjadi pusat keunggulan dalam menangani tantangan psikologis
+            di masyarakat.Misi utama kami adalah mengembangkan sumber daya manusia berkualitas tinggi 
+            yang terampil,berprestasi,dan inovatif,terutama dalam bidang Socio-Technopreneurship.
+
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Visi dan Misi Psikologi UNPRI -->
     <section
       id="visi-misi"
       class="py-28 bg-gray-50 relative overflow-hidden px-16 flex justify-center flex-col items-center"
@@ -202,10 +269,10 @@
           </div>
           <h2 class="text-xl font-bold text-gray-800">Visi</h2>
         </div>
-        <p class="text-gray-700 leading-relaxed text-center">
-          Menjadi program studi yang unggul dalam bidang Business Intelligence
-          dan System Analyst berbasis technopreneur yang inovatif dan adaptif
-          pada tingkat internasional tahun 2030
+        <p class="text-gray-700 leading-relaxed text-justify">
+         Menjadi pusat pembelajaran dan pengembangan psikologi yang unggul dalam bidang sosiotechnopreneurship 
+         dalam menghasilkan lulusan yang inovatif dan adaptif berdaya saing internasional pada tahun 2030.
+
         </p>
       </div>
 
@@ -230,25 +297,21 @@
           </div>
           <ol class="list-decimal text-gray-700 leading-relaxed space-y-1">
             <li>
-              Menyelenggarakan proses pendidikan dan pengajaran untuk
-              menghasilkan sumber daya manusia yang mampu di bidang business
-              intelligence dan system analyst berbasis technopreneur yang
-              adaptif dan inovatif ;
+              Menyelenggarakan, mengembangkan dan memajukan pendidikan ilmu psikologi yang berkualitas
+              dalam bidang sosiotechnopreneurship sehingga mampu menghasilkan lulusan psikologi yang inovatif dan
+              adaptif.
             </li>
             <li>
-              Menyelenggarakan riset dan publikasi yang berkualitas dan
-              berkontributif di bidang business intelligence dan system analyst
-              berbasis technopreneur yang adaptif dan inovatif ;
+              Menyelenggarakan penelitian untuk menunjang pengembangan ilmu psikologi dalam bidang 
+              sosiotechnopreneurship yang inovatif dan adaptif.
             </li>
             <li>
-              Melaksanakan pengabdian secara berkelanjutan dalam menerapkan dan
-              mengembangkan sistem informasi yang bermanfaat bagi masyarakat
-              Melakukan kerja sama dengan berbagai pihak di tingkat lokal,
-              nasional, maupun internasional.
+              Menyelenggarakan pengabdian kepada Masyarakat untuk menunjang pengembangan ilmu psikologi dalam 
+              bidang sosiotechnopreneurship yang inovatif dan adaptif.
             </li>
-            <li>
-              Melakukan kerja sama dengan berbagai pihak di tingkat lokal,
-              nasional, maupun internasional.
+            <li> 
+                Mengembangkan kerjasama dengan berbagai pihak guna meningkatkan mutu pelaksanaan Tri Dharma Perguruan 
+                Tinggi baik dalam skala nasional maupun skala internasional.
             </li>
           </ol>
         </div>
@@ -274,83 +337,141 @@
             class="list-decimal list-inside text-gray-700 leading-relaxed space-y-1"
           >
             <li>
-              Menghasilkan lulusan yang mampu di bidang business intelligence
-              dan system analyst berbasis Technopreneur yang adaptif dan
-              inovatif;
+              Melahirkan sarjana psikologi yang memiliki integritas kepribadian dan berakhlak mulia 
+              sehingga menjadi teladan bagi masyarakat sekitarnya
+            </li>
+            <li>  
+              Dihasilkannya ilmu pengetahuan psikologi melalui penelitian agar bermanfaat bagi kemandirian 
+              dan kemajuan bangsa,serta kemajuan peradaban dan kesejahteraan umat manusia.
             </li>
             <li>
-              Menghasilkan riset dan publikasi yang berkualitas dan
-              berkontributif di bidang Business Intelligence dan System Analyst
-              berbasis Technopreneur yang adaptif dan inovatif;
+              Menghasilkan luaran penelitian yang unggul di bidang psikologi yang berwawasan sosiotechnopreneurship.
             </li>
             <li>
-              Terwujudnya pengabdian secara berkelanjutan dalam menerapkan dan
-              mengembangkan sistem informasi yang bermanfaat bagi masyarakat;
-            </li>
-            <li>
-              Terwujudnya kerjasama dengan berbagai pihak di tingkat lokal,
-              nasional, maupun internasional.
+              Terwujudnya pengabdian kepada masyarakat di bidang Psikologi yang dapat memberikan dampak pada pemecahan
+              masalah psikologi didalam masyarakat.
             </li>
           </ol>
         </div>
       </div>
     </section>
 
-    <!-- struktur organisasi prodi si -->
+    <!-- Pimpinan prodi -->
     <section
-      id=""
+      id="pimpinan"
       class="py-24 bg-[#E8E9EB] text-center relative overflow-hidden px-16"
     >
-      <div class="absolute inset-0 from-secondary/10 to-accent/5"></div>
-      <div class="relative z-10 max-w-6xl px-6">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-accent/5"
+      ></div>
+      <div class="relative z-10 max-w-6xl mx-auto px-6">
         <h3 class="text-4xl font-bold text-primary mb-12" data-aos="fade-up">
-          Struktur organisasi Program Studi Sistem Informasi
+          Pimpinan Fakultas Psikologi
         </h3>
 
         <div
-          class="flex justify-center items-stretch flex-wrap gap-10"
+          class="grid sm:grid-cols-2 md:grid-cols-4 gap-10 justify-center"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <!-- kaprodi -->
+          <!-- dekan -->
           <div
-            class="bg-white/90 backdrop-blur-md shadow-lg w-[300px] h-[280px] rounded-2xl p-5 flex flex-col items-center text-center justify-between hover:-translate-y-2 hover:shadow-2xl transition"
+            class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-4 hover:-translate-y-2 hover:shadow-2xl transition"
           >
-            <div class="relative w-36 h-36 mb-4">
+            <div class="relative w-36 h-36 mx-auto mb-4">
               <img
-                src="public/assets/img/fast/kaprodi.jpg"
-
-                class="rounded-full w-full h-full object-cover object-top border-4 border-accent shadow-md"
+                src="public/assets/img/ekonomi/pimpinanfakultasekonomi/Dekan fakultas ekonomi.webp"
+                class="rounded-full w-full h-full object-cover border-4 border-accent shadow-md"
               />
             </div>
-            <div>
-              <h4 class="font-bold text-[15px] text-primary mb-2 break-words">
-                Agung Prabowo, S.Kom., M.Kom.
-              </h4>
-              <p>Ketua Program Studi</p>
-            </div>
+            <h4 class="font-bold text-[15px] text-primary mb-2 mb-2">
+              Dr. Sri Hartini, S.Psi., M.Si.
+            </h4>
+            <p>Dekan</p>
           </div>
 
-          <!-- sekretaris prodi -->
+          <!-- Wakil dekan I -->
           <div
-            class="bg-white/90 backdrop-blur-md shadow-lg w-[300px] h-[280px] rounded-2xl p-4 flex flex-col items-center text-center justify-between hover:-translate-y-2 hover:shadow-2xl transition"
+            class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition"
           >
-            <div class="relative w-36 h-36 mb-4">
+            <div class="relative w-36 h-36 mx-auto mb-4">
               <img
-                src="public/assets/img/fast/sekretaris.jpg"
-
-                class="rounded-full w-full h-full object-cover object-top shadow-md"
+                src="public/assets/img/ekonomi/pimpinanfakultasekonomi/wakil dekan 1 ekonomi.webp"
+                class="rounded-full w-full h-full object-cover border-4 border-blue-400 shadow-md"
               />
             </div>
-            <div>
-              <h4 class="font-bold text-[15px] text-primary mb-2">
-                Dr. Delima Sitanggang, S.Kom., M.Kom.
-              </h4>
-              <p>Sekretaris Program Studi</p>
-            </div>
+            <h4 class="font-bold text-[15px] text-primary mb-2">
+              Haposan Lumbantoruan
+            </h4>
+            <p>wakil Dekan 1</p>
+          </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- Program Studi -->
+    <section class="px-16">
+      <div>
+        <h1 class="font-bold text-2xl my-5">Program Studi</h1>
+        <div class="grid grid-cols-3 gap-8">
+          <div class="relative">
+            <div
+              class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"
+            ></div>
+
+            <div
+              class="bg-secondary rounded-2xl p-5 shadow border border-gray-200"
+            >
+              <div
+                class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2"
+              >
+                <img
+                  src="public/assets/img/Vector.svg"
+                  class="w-5 h-5"
+                  alt="icon"
+                />
+              </div>
+              <h1 class="text-xl font-bold">Sarjana Psikologi</h1>
+              <p class="my-5">
+                Program Studi Diploma Tiga Keperawatan merupakan pendidikan vokasi yang dirancang untuk mencetak 
+                perawat profesional dengan keterampilan klinis yang kuat.
+              </p>
+              <div class="flex gap-3 items-center">
+                Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"
+            ></div>
+
+            <div
+              class="bg-secondary rounded-2xl p-5 shadow border border-gray-200"
+            >
+              <div
+                class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2"
+              >
+                <img
+                  src="public/assets/img/Si.svg"
+                  class="w-5 h-5"
+                  alt="icon"
+                />
+              </div>
+              <h1 class="text-xl font-bold">sarjana Profesi Psikolog</h1>
+              <p class="my-5">
+               Program Studi Sarjana Ilmu Keperawatan adalah sebuah program pendidikan tinggi yang dirancang untuk 
+               mempersiapkan mahasiswa menjadi perawat profesional yang kompeten 
+              </p>
+              <div class="flex gap-3 items-center">
+                Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+            <div></div>
+            ></div>
+            </div>
     </section>
 
     <!-- Berita Terkini -->
@@ -392,8 +513,7 @@
             Kampus Terbaik dan Unggul....
           </p>
           <p class="text-[15px]">
-            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi
-            Strategis di Kabupaten Rokan ....
+            Menjadi Arsitek Profesional Melalui Pendidikan Berbasis Desain dan Teknologi di UNPRI....
           </p>
         </div>
         <div>
@@ -404,12 +524,15 @@
           />
           <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
           <p class="text-[20px] font-bold py-1">
-            Kampus Terbaik dan Unggul....
+            Kuliah Arsitektur di Kampus....
           </p>
           <p class="text-[15px]">
-            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi
-            Strategis di Kabupaten Rokan ....
+            Mencetak Generasi Digital Unggul Melalui Socio-Technopreneurship di UNPRI ....
           </p>
+        </div>
+      </div>
+          />
+            </p>
         </div>
       </div>
     </section>
@@ -421,12 +544,11 @@
       >
         <div class="flex-1 w-[657px]">
           <h2 class="text-[29px] font-bold mb-2">
-            Jadilah Bagian dari Masa Depan Teknologi dan Inovasi!
+            Merawat dengan Ilmu, Mengabdi dengan Hati
           </h2>
           <p class="text-gray-300 mb-5 text-[16px]">
-            Wujudkan mimpi bersama Fakultas Sains dan Teknologi — tempat di mana
-            ide-ide cemerlang tumbuh menjadi inovasi yang berdampak. Daftar
-            sekarang!
+            Di Fakultas Keperawatan dan Kebidanan, setiap langkah belajar adalah panggilan untuk
+            memberi makna dan harapan bagi kehidupan. Wujudkan perubahan dimulai dari sentuhanmu.
           </p>
           <button
             class="bg-yellow-400 text-black font-semibold px-5 py-2 rounded-md hover:bg-yellow-500 transition"
@@ -437,15 +559,16 @@
 
         <div class="flex-shrink-0">
           <img
-            src="public/assets/img/fast/image.webp"
+            src="public/assets/img/ekonomi/logoEkonomi/Fakultas Ekonomi.png"
             alt="Mahasiswa belajar"
             class="w-52 h-52 rounded-full object-cover"
           />
         </div>
       </div>
     </section>
+
     <!-- FOOTER -->
-    <footer class="bg-[#E8E9EB] text-[#262626]">
+     <footer class="bg-[#E8E9EB] text-[#262626]">
       <div class="flex justify-between px-16">
         <div class="py-10 gap-10">
           <!-- Logo -->
@@ -462,8 +585,8 @@
               class="h-12"
             />
             <img
-              src="public/assets/img/fastt.png"
-              alt="FAST Logo"
+              src="public/assets/img/ekonomi/logoEkonomi/Fakultas Ekonomi.png"
+              alt="ekonomi"
               class="h-12"
             />
           </div>
@@ -477,12 +600,12 @@
         </div>
         <div class="py-10">
           <div class="mb-5">
-            <h1 class="font-bold">FAKULTAS SAINS DAN TEKNOLOGI</h1>
+            <h1 class="font-bold">FAKULTAS PSIKOLOGI</h1>
             <h2 class="font-bold">Universitas Prima Indonesia</h2>
             <p>Jl. Sampul No. 3, Medan</p>
             <p class="mt-2">Telepon: +62 12345689</p>
             <p>Faks: +62 12345678</p>
-            <p>Email: fast@unpri.ac.id</p>
+            <p>Email: contact@unprimdn.ac.id</p>
           </div>
           <div class="flex gap-4 text-xl">
             <a href="#" class="hover:text-primary"
@@ -502,9 +625,10 @@
       </div>
       <!-- Copyright -->
       <div class="bg-[#0D1B2A] text-white text-center text-[16px] py-3">
-        © 2025 FAST - Fakultas Sains dan Teknologi | Universitas Prima Indonesia
+        © 2025 Psikologi - Fakultas Psikologi | Universitas Prima Indonesia
       </div>
     </footer>
+
 
     <!-- Fullscreen Loading Screen -->
     <div
@@ -552,7 +676,7 @@
     </script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-      // AOS.init({ once: true, duration: 1000, easing: "ease-out-cubic" });
+      AOS.init({ once: true, duration: 1000, easing: "ease-out-cubic" });
     </script>
   </body>
 </html>
