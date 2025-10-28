@@ -17,7 +17,11 @@
 
 .animate-scroll {
   display: inline-flex;
+<<<<<<< HEAD
   animation: scroll-left 10s linear infinite;
+=======
+  animation: scroll-left 30s linear infinite;
+>>>>>>> 2a206b7a5c3a628489a0868e75702e91fb1dc488
   width: max-content;
 }
 section {
