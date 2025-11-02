@@ -1,679 +1,473 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fakultas Keguruan</title>
-    <link rel="stylesheet" href="src/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- Tailwind -->
+    <title> Fakultas Keguruan dan Ilmu Pendidikan</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind = {
-        config: {
-          theme: {
-            extend: {
-              colors: {
-                primary: "#192334",
-                accent: "#facc15",
-                secondary: "#F5F5F5",
-              },
-              fontFamily: {
-                sans: ["Poppins", "sans-serif"],
-              },
-            },
-          },
-        },
-      };
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="img/logo-fkkgik.png" />
+</head>
 
-    <!-- Feather -->
-    <script src="https://unpkg.com/feather-icons"></script>
+<body class="font-sans text-gray-800">
 
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  </head>
+    <!-- Navbar Transparan -->
+    <header class="absolute top-0 left-0 w-full z-50">
+        <nav class="flex justify-between items-center px-6 md:px-[120px] py-4">
+            <div class="flex items-center space-x-4">
+                <img src="public/assets/img/kedokteran/white.png" alt="UNPRI" class="h-12 md:h-14" />
+                <img src="public/assets/img/kedokteran/dokter.png" alt="FKKGIK" class="h-12 md:h-14" />
+            </div>
 
-  <body class="bg-gray-50 text-gray-800 font-sans scroll-smooth">
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-primary border-b border-white/10 px-16">
-      <div
-        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"
-      >
-        <!-- Logo + Nama -->
-        <a
-          href="#"
-          class="flex items-center gap-7 text-2xl font-bold text-white drop-shadow-lg"
-        >
-          <!-- Logo UNPRI -->
-          <img
-            src="public/assets/img/logo unpri.png"
-            alt="Logo UNPRI"
-            class="w-13 h-12 object-contain drop-shadow-md transition-transform hover:scale-105"
-          />
-          <img
-            src="public/assets/img/LightLogo.png "
-            class="w-13 h-12 object-contain drop-shadow-md transition-transform hover:scale-105"
-            alt=""
-          />
+            <!-- Tombol Hamburger -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+            <!-- Menu Desktop -->
+            <ul id="menu" class="hidden md:flex space-x-8 text-white font-medium">
+                <li><a href="#profil" class="hover:text-teal-300">Profil</a></li>
+                <li><a href="#program" class="hover:text-teal-300">Program Studi</a></li>
+                <li><a href="#departemen" class="hover:text-teal-300">Departemen dan Laboratorium</a></li>
+                <li><a href="#unit" class="hover:text-teal-300">Unit</a></li>
+                <li><a href="#mahasiswa" class="hover:text-teal-300">Mahasiswa dan Alumni</a></li>
+            </ul>
+        </nav>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#004d40] text-white px-6 pb-4 space-y-3">
+            <a href="#profil" class="block hover:text-teal-300">Profil</a>
+            <a href="#program" class="block hover:text-teal-300">Program Studi</a>
+            <a href="#departemen" class="block hover:text-teal-300">Departemen dan Laboratorium</a>
+            <a href="#unit" class="block hover:text-teal-300">Unit</a>
+            <a href="#mahasiswa" class="block hover:text-teal-300">Mahasiswa dan Alumni</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[640px] flex items-center text-white text-left overflow-hidden">
+        <!-- Gambar background -->
+        <img src="public/assets/img/keguruan/herobg.png" alt="Hero Dokter" class="absolute inset-0 w-full h-full object-cover brightness-75" />
+
+        <!-- Lapisan transparan -->
+        <!-- <div class="absolute inset-0 bg-[#155B5542]"></div> -->
+
+        <!-- Konten teks -->
+        <div class="relative px-6 md:px-[120px] max-w-3xl flex flex-col items-start text-left z-10">
+            <p class="text-lg mb-2">Selamat Datang di</p>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-left w-full">
+                Fakultas Keguruan dan Ilmu Pendidikan
+            </h1>
+            <a href="#profil" class="bg-[#034A8A] hover:bg-teal-600 px-6 py-3 rounded-md font-semibold inline-block">
+      Pelajari Lebih Lanjut
+    </a>
+        </div>
+    </section>
+
+
+    <!-- Akreditasi -->
+    <section class="bg-[#034A8A] text-white py-10">
+            <div class="flex gap-10 items-center justify-center">
+                <img src="public/assets/img/kedokteran/medal.png" class="w-[114px] h-[114px]" alt="">
+                <div>
+                    <h3 class="text-xl font-bold mb-1">Terakreditasi Baik Sekali</h3>
+                <p class="max-w-2xl text-sm md:text-base">
+                    Fakultas Kedokteran, Kedokteran Gigi, dan Ilmu Kesehatan (FKKGIK) Universitas Prima Indonesia (UNPRI) telah memperoleh akreditasi Baik Sekali.
+                </p>
+                </div>
+            </div>
+    </section>
+
+    <!-- Tentang Fakultas -->
+    <section id="profil" class="container mx-auto px-6 md:px-[120px] py-16 grid md:grid-cols-2 gap-10 items-center">
+
+        <!-- Gambar / Video -->
+        <a href="https://youtu.be/Zn023FcTseE?si=nZc3wMtIOFY7I6Pz" class="relative flex justify-center">
+            <img src="public/assets/img/kedokteran/xample.jpg" alt="Gedung Fakultas" class="w-[440px] h-[250px] object-cover rounded-lg shadow-md">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <button class="bg-white/90 text-[#034A8A] w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      </button>
+            </div>
         </a>
 
-        <!-- Menu Desktop -->
-        <ul class="hidden md:flex space-x-8 text-gray-100 font-medium">
-          <li>
-            <a href="#profil" class="hover:text-accent transition">Profil</a>
-          </li>
-          <li>
-            <a href="#program" class="hover:text-accent transition">Program</a>
-          </li>
-          <li>
-            <a href="#fasilitas" class="hover:text-accent transition"
-              >Fasilitas</a
-            >
-          </li>
-          <li>
-            <a href="#kontak" class="hover:text-accent transition">Kontak</a>
-          </li>
-        </ul>
-
-        <!-- Tombol Mobile -->
-        <button id="menu-btn" class="md:hidden text-white">
-          <i data-feather="menu"></i>
-        </button>
-      </div>
-
-      <!-- Menu Mobile -->
-      <div id="mobile-menu" class="hidden bg-primary/95 md:hidden text-center">
-        <ul class="py-4 space-y-4 text-white font-medium">
-          <li><a href="#profil">Profil</a></li>
-          <li><a href="#program">Program</a></li>
-          <li><a href="#fasilitas">Fasilitas</a></li>
-          <li><a href="#kontak">Kontak</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- Hero -->
-    <section
-      class="relative h-screen flex items-center text-white overflow-hidden"
-    >
-      <img
-        src="public/assets/img/bgHero.jpg"
-        class="absolute w-full h-full object-cover brightness-[0.45]"
-        alt="Campus Background"
-      />
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-primary/40 to-secondary/60"
-      ></div>
-
-      <div class="relative z-10 px-16">
-        <div class="bg-primary pl-5 pr-10 py-6 max-w-[792px]">
-          <h1 class="text-xl md:text-4xl font-extrabold leading-tight">
-            FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN
-          </h1>
-        </div>
-        <p class="text-sm md:text-[17px] mt-4 max-w-[600px] text-gray-200 my-5">
-          Membentuk generasi digital unggul, kreatif, dan adaptif menghadapi era
-          industri 5.0
-        </p>
-        <button
-          class="text-[#262626] bg-[#FACC15] font-bold text-sm rounded-lg mt-3 px-5 py-4"
-        >
-          Pelajari Lebih Lanjut
-        </button>
-      </div>
-
-      <div
-        class="absolute w-[500px] h-[500px] bg-secondary/30 rounded-full blur-3xl top-0 left-0 animate-pulse"
-      ></div>
-      <div
-        class="absolute w-[400px] h-[400px] bg-accent/20 rounded-full blur-3xl bottom-0 right-0 animate-pulse"
-      ></div>
-    </section>
-
-    <!-- Kemitraan -->
-    <section class="px-16 overflow-hidden">
-      <div>
-        <h1 class="font-bold text-3xl mt-8 mb-3">Kemitraan</h1>
-        <div class="relative">
-          <div class="flex items-center gap-5 animate-scroll">
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/Acharya.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/University of malaysia.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/sanda university.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/chongqingIndustryPolitechnic.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ucyp.webp"
-              alt=""
-            />
-            <img
-              class="w-[100px] h-[90px]"
-              src="public/assets/img/Unsza.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/Malaysia sarawak.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ishou university.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/Yangtze normal University.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/university utara malaysia.webp"
-              alt=""
-            />
-
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/Acharya.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/University of malaysia.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/sanda university.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/chongqingIndustryPolitechnic.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ucyp.webp"
-              alt=""
-            />
-            <img
-              class="w-[100px] h-[90px]"
-              src="public/assets/img/Unsza.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/Malaysia sarawak.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ishou university.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/Yangtze normal University.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/university utara malaysia.webp"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- tentang fast -->
-    <section class="px-16 mt-20">
-      <div class="bg-primary flex p-10 gap-20">
-        <img src="public/assets/img/LightLogo.png" class="w-[400px]" alt="" />
-        <div class="text-white w-1/2 text-center">
-          <p class="text-xl mb-2">
-            Tentang Fakultas Keguruan dan Ilmu Pendidikan
-          </p>
-          <p class="text-left">
-            Fakultas Keguruan dan Ilmu Pendidikan telah meraih berbagai
-            pencapaian akademik dan non-akademik di tingkat lokal, nasional, dan
-            internasional, serta mendapatkan akreditasi "Baik Sekali". Untuk
-            menghasilkan pendidik profesional berkualitas dalam bidang bahasa
-            dan sastra, dengan keahlian dalam Bahasa Indonesia bagi Penutur
-            Asing (BIPA) serta pemikiran Socio-Technopreneurship, fakultas ini
-            telah merancang pembelajaran berbasis teknologi dan kurikulum
-            Outcome-Based Education (OBE).
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- Visi dan Misi FAST UNPRI -->
-    <section
-      id="visi-misi"
-      class="py-28 bg-gray-50 relative overflow-hidden px-16 flex justify-center flex-col items-center"
-    >
-      <div
-        class="max-w-4xl w-full bg-secondary rounded-xl shadow p-6 mb-6 border-2 border-gray-200"
-      >
-        <div class="flex items-center justify-center gap-2 mb-2">
-          <div
-            class="w-10 h-10 bg-white flex items-center justify-center rounded-full"
-          >
-            <img
-              src="public/assets/img/vectorVisi.svg"
-              class="w-5 h-5"
-              alt=""
-            />
-          </div>
-          <h2 class="text-xl font-bold text-gray-800">Visi</h2>
-        </div>
-        <p class="text-gray-700 leading-relaxed text-justify">
-          Menjadi sentral pengembangan kependidikan dan ilmu pengetahuan yang
-          unggul untuk membangun karakter pendidik yang profesional, inovatif,
-          dan adaptif dalam bidang sosio-technopreneurship.
-        </p>
-      </div>
-
-      <!-- MISI & TUJUAN -->
-      <div class="grid md:grid-cols-2 gap-6 max-w-4xl w-full">
-        <!-- MISI -->
-        <div
-          class="bg-secondary shadow rounded-xl p-6 border-2 border-gray-200"
-        >
-          <div class="flex items-center gap-2 mb-2">
-            <i class="ri-flag-line text-yellow-500 text-2xl"></i>
-            <div
-              class="w-10 h-10 bg-white flex items-center justify-center rounded-full"
-            >
-              <img
-                src="public/assets/img/vectorMisidanTujuan.svg"
-                class="w-5 h-5"
-                alt=""
-              />
-            </div>
-            <h2 class="text-xl font-bold text-gray-800">Misi</h2>
-          </div>
-          <ol class="list-decimal text-gray-700 leading-relaxed space-y-1">
-            <li>
-              Menyelenggarakan proses pendidikan dan pengajaran dengan sistem
-              kurikulum nasional dan internasional untuk menghasilkan lulusan
-              yang mampu di bidang technopreneurship yang inovatif dan adaptif.
-            </li>
-            <li>
-              Menyelenggarakan riset dan publikasi dalam bidang sains dan
-              teknologi.
-            </li>
-            <li>
-              Berperan aktif dalam pelayanan kepada masyarakat pada bidang sains
-              dan teknologi.
-            </li>
-            <li>
-              Melakukan kerja sama dengan berbagai pihak di tingkat lokal,
-              nasional, regional, maupun internasional.
-            </li>
-            <li>
-              Meningkatkan tata kelola guna penguatan akuntabilitas, penataan
-              struktur organisasi yang efisien, efektif serta transparan.
-            </li>
-          </ol>
-        </div>
-
-        <!-- TUJUAN -->
-        <div
-          class="bg-secondary rounded-xl shadow p-6 border-2 border-gray-200"
-        >
-          <div class="flex items-center gap-2 mb-2">
-            <i class="ri-check-double-line text-yellow-500 text-2xl"></i>
-            <div
-              class="w-10 h-10 bg-white flex items-center justify-center rounded-full"
-            >
-              <img
-                src="public/assets/img/vectorMisidanTujuan.svg"
-                class="w-5 h-5"
-                alt=""
-              />
-            </div>
-            <h2 class="text-xl font-bold text-gray-800">Tujuan</h2>
-          </div>
-          <ol
-            class="list-decimal list-inside text-gray-700 leading-relaxed space-y-1"
-          >
-            <li>
-              Menghasilkan lulusan yang mampu di bidang Technopreneurship yang
-              inovatif, adaptif;
-            </li>
-            <li>
-              Menghasilkan riset dan publikasi pada bidang teknologi dan ilmu
-              komputer;
-            </li>
-            <li>
-              Meningkatkan kepercayaan masyarakat dalam pelayanan di bidang
-              teknologi dan ilmu komputer;
-            </li>
-            <li>
-              Menghasilkan berbagai kerjasama untuk meningkatkan sarana
-              pelaksanaan Tri Dharma Perguruan Tinggi;
-            </li>
-            <li>
-              Terwujudnya tata kelola guna penguatan akuntabilitas, penataan
-              struktur organisasi yang efisien, efektif, transparan, dan
-              akuntabel.
-            </li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pimpinan prodi -->
-    <section
-      id="pimpinan"
-      class="py-24 bg-[#E8E9EB] text-center relative overflow-hidden px-16"
-    >
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-accent/5"
-      ></div>
-      <div class="relative z-10 max-w-6xl mx-auto px-6">
-        <h3 class="text-4xl font-bold text-primary mb-12" data-aos="fade-up">
-          Pimpinan Fakultas Sains dan Teknologi
-        </h3>
-
-        <div
-          class="grid sm:grid-cols-2 md:grid-cols-4 gap-10 justify-center"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <!-- dekan -->
-          <div
-            class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-4 hover:-translate-y-2 hover:shadow-2xl transition"
-          >
-            <div class="relative w-36 h-36 mx-auto mb-4">
-              <img
-                src="public/assets/img/fast/Dekan.webp"
-                class="rounded-full w-full h-full object-cover object-top shadow-md"
-              />
-            </div>
-            <h4 class="font-bold text-[15px] text-primary mb-2">
-              Prof. Ir. Bhakti Alamsyah, MT., Ph.D.
-            </h4>
-            <p>Dekan</p>
-          </div>
-
-          <!-- Wakil dekan I -->
-          <div
-            class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition"
-          >
-            <div class="relative w-36 h-36 mx-auto mb-4">
-              <img
-                src="public/assets/img/fast/wk dekan 1.webp"
-                class="rounded-full w-full h-full object-cover object-top shadow-md"
-              />
-            </div>
-            <h4 class="font-bold text-[15px] text-primary mb-2">
-              Dr. Mardi Turnip, S.Kom., M.Kom.
-            </h4>
-            <p>wakil Dekan 1</p>
-          </div>
-
-          <!-- Wakil dekan II -->
-          <div
-            class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition"
-          >
-            <div class="relative w-36 h-36 mx-auto mb-4">
-              <img
-                src="public/assets/img/fast/wk dekan 2.webp"
-                class="rounded-full w-full h-full object-cover object-top border-4 shadow-md"
-              />
-            </div>
-            <h4 class="font-bold text-[15px] text-primary mb-2">
-              Dr. Siti Aisyah, S.Kom., M.Kom.
-            </h4>
-            <p>Wakil Dekan 2</p>
-          </div>
-
-          <!-- Wakil dekan III -->
-          <div
-            class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition"
-          >
-            <div class="relative w-36 h-36 mx-auto mb-4">
-              <img
-                src="public/assets/img/fast/Wakil dekan 3.webp"
-                class="rounded-full w-full h-full object-cover object-top shadow-md"
-              />
-            </div>
-            <h4 class="font-bold text-[15px] text-primary mb-2">
-              Dhanny Rukmana Manday, S.T., M.T.
-            </h4>
-            <p>Wakil Dekan 3</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Program Studi -->
-    <section class="px-16">
-      <div>
-        <h1 class="font-bold text-2xl my-5">Program Studi</h1>
-        <div class="grid grid-cols-3 gap-8">
-          <div class="relative">
-            <div
-              class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"
-            ></div>
-
-            <div
-              class="bg-secondary rounded-2xl p-5 shadow border border-gray-200"
-            >
-              <div
-                class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2"
-              >
-                <img
-                  src="public/assets/img/Si.svg"
-                  class="w-5 h-5"
-                  alt="icon"
-                />
-              </div>
-              <h1 class="text-xl font-bold">
-                Sarjana Pendidikan Bahasa dan Sastra Indonesia
-              </h1>
-              <p class="my-5">
-                Sarjana Pendidikan Bahasa dan Sastra Indonesia di Fakultas
-                Keguruan dan Ilmu Pendidikan adalah program studi yang dirancang
-                untuk menghasilkan pendidik profesional di bidang bahasa dan
-                sastra Indonesia.
-              </p>
-              <div class="flex gap-3 items-center">
-                Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="relative">
-            <div
-              class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"
-            ></div>
-
-            <div
-              class="bg-secondary rounded-2xl p-5 shadow border border-gray-200"
-            >
-              <div
-                class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2"
-              >
-                <img
-                  src="public/assets/img/Vector.svg"
-                  class="w-5 h-5"
-                  alt="icon"
-                />
-              </div>
-              <h1 class="text-xl font-bold">
-                Sarjana Pendidikan Bahasa Ingris
-              </h1>
-              <p class="my-5">
-                Sarjana Pendidikan Bahasa Inggris di Fakultas Keguruan dan Ilmu
-                Pendidikan adalah program studi yang dirancang untuk
-                menghasilkan pendidik profesional di bidang bahasa Inggris.
-              </p>
-              <div class="flex gap-3 items-center">
-                Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="relative">
-            <div
-              class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"
-            ></div>
-
-            <div
-              class="bg-secondary rounded-2xl p-5 shadow border border-gray-200"
-            >
-              <div
-                class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2"
-              >
-                <img
-                  src="public/assets/img/elektro.svg"
-                  class="w-5 h-5"
-                  alt="icon"
-                />
-              </div>
-              <h1 class="text-xl font-bold">
-                magister pendidikan bahasa indonesia
-              </h1>
-              <p class="my-5">
-                Magister Pendidikan Bahasa Indonesia di Fakultas Keguruan dan
-                Ilmu Pendidikan adalah program pascasarjana yang dirancang untuk
-                memperdalam pengetahuan dan keterampilan dalam pengajaran bahasa
-                dan sastra Indonesia.
-              </p>
-              <div class="flex gap-3 items-center">
-                Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-        
-        </div>
-      </div>
-    </section>
-
-    <!-- Berita Terkini -->
-    <section class="px-16 py-16">
-      <div class="flex items-center mb-5">
-        <p class="text-[24px] font-bold">Berita Terkini</p>
-        <div class="flex-1 h-px bg-gray-300 mx-4"></div>
-        <a
-          href="#"
-          class="bg-yellow-400 text-[16px] text-black text-sm font-semibold px-4 py-2 rounded-md hover:bg-yellow-500 transition"
-        >
-          Baca Berita Lainnya
-        </a>
-      </div>
-      <div class="grid grid-cols-3 gap-10">
-        <div class="">
-          <img
-            src="public/assets/img/fast/berita1.jpeg"
-            class="mb-2 w-[360px] h-[220px]"
-            alt=""
-          />
-          <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
-          <p class="text-[20px] font-bold py-1">
-            Kampus Terbaik dan Unggul....
-          </p>
-          <p class="text-[15px]">
-            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi
-            Strategis di Kabupaten Rokan ....
-          </p>
-        </div>
+        <!-- Teks -->
         <div>
-          <img
-            src="public/assets/img/fast/berita2.jpeg"
-            class="mb-2 w-[360px] h-[220px]"
-            alt=""
-          />
-          <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
-          <p class="text-[20px] font-bold py-1">
-            Kampus Terbaik dan Unggul....
-          </p>
-          <p class="text-[15px]">
-            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi
-            Strategis di Kabupaten Rokan ....
-          </p>
+            <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+              Tentang Fakultas Keguruan dan Ilmu Pendidikan
+            </h2>
+            <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
+               Fakultas Keguruan dan Ilmu Pendidikan telah menghasilkan pendidik profesional berkualitas dalam bidang bahasa dan sastra, dengan keahlian dalam Bahasa Indonesia bagi Penutur Asing (BIPA) serta pemikiran Socio-Technopreneurship, fakultas ini telah merancang pembelajaran berbasis teknologi dan kurikulum Outcome-Based Education (OBE).
+            </p>
+           
         </div>
-        <div>
-          <img
-            src="public/assets/img/fast/berita3.jpeg"
-            class="mb-2 w-[360px] h-[220px]"
-            alt=""
-          />
-          <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
-          <p class="text-[20px] font-bold py-1">
-            Kampus Terbaik dan Unggul....
-          </p>
-          <p class="text-[15px]">
-            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi
-            Strategis di Kabupaten Rokan ....
-          </p>
-        </div>
-      </div>
+
     </section>
 
-    <!-- hmmmmmmmmmm -->
-    <section class="px-16 py-16">
-      <div
-        class="bg-primary text-white rounded-2xl flex items-center justify-between px-10 py-10 gap-8"
-      >
-        <div class="flex-1 w-[657px]">
-          <h2 class="text-[29px] font-bold mb-2">
-            Jadilah Bagian dari Masa Depan Teknologi dan Inovasi!
-          </h2>
-          <p class="text-gray-300 mb-5 text-[16px]">
-            Wujudkan mimpi bersama Fakultas Sains dan Teknologi — tempat di mana
-            ide-ide cemerlang tumbuh menjadi inovasi yang berdampak. Daftar
-            sekarang!
-          </p>
-          <button
-            class="bg-yellow-400 text-black font-semibold px-5 py-2 rounded-md hover:bg-yellow-500 transition"
-          >
-            Daftar Sekarang
-          </button>
-        </div>
+    <!-- Keunggulan Fakultas -->
+    <section class="bg-white py-16 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 md:px-[120px]">
+            <h2 class="text-xl md:text-2xl font-bold text-gray-900 text-center mb-12">
+         Kenapa Harus Memilih Fakultas Keguruan dan Ilmu Pendidikan UNPRI?
+              </h2>
+              <div class="flex items-start gap-10">
+                <img src="public/assets/img/keguruan/animasi.png" class="w-[200px] h-[220px]" alt="">
+            <div class="grid md:grid-cols-2 gap-x-10 gap-y-5 w-[762px]">
 
-        <div class="flex-shrink-0">
-          <img
-            src="public/assets/img/fast/image.webp"
-            alt="Mahasiswa belajar"
-            class="w-52 h-52 rounded-full object-cover"
-          />
+               
+                    
+                    <div class=" w-[371px]">
+                        <h4 class="font-bold text-gray-900 mb-2">Bekerjasama dengan Mitra Terpercaya</h4>
+                        <p class="text-gray-600 font-normal leading-relaxed">
+                          Menjalin kolaborasi dengan sekolah, lembaga pendidikan, dan institusi profesional untuk memperluas pengalaman belajar.  
+                        </p>
+                    
+                </div>
+
+                    
+                    <div class=" w-[371px]" >
+                        <h4 class="font-semibold text-gray-900 mb-2">Berbasis Socio-Technopreneurship</h4>
+                        <p class="tekext-gray-600 text-sm leading-relaxed">
+                            Fakultas Keguruan dan Ilmu Pendidikan telah merancang pembelajaran berbasis teknologi dan kurikulum Outcome-Based Education (OBE).
+                        </p>
+                    </div>
+               
+
+              
+                  
+                    <div class=" w-[371px]">
+                        <h4 class="font-semibold text-gray-900 mb-2">Menjalankan Kurikulum OBE</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                          Fakultas Keguruan dan Ilmu Pendidikan telah merancang pembelajaran berbasis teknologi dan kurikulum Outcome-Based Education (OBE).  
+                        </p>
+                    </div>
+                    
+               
+            </div>
+              </div>
         </div>
-      </div>
+    </section>
+
+
+    <!-- Program Studi Unggulan -->
+    <section class="bg-white py-16">
+        <div class="max-w-6xl md:px-[120px] px-6 grid md:grid-cols-2 gap-10">
+
+                <img src="public/assets/img/kedokteran/guru.png" alt="Ilustrasi Program Studi" class="w-full max-w-md rounded-lg">
+
+            <div>
+                <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">Program Studi Unggulan</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
+                    Fakultas Kedokteran, Kedokteran Gigi, dan Ilmu Kesehatan Universitas Prima Indonesia (UNPRI) menawarkan berbagai program studi yang dirancang untuk mencetak tenaga kesehatan profesional, beretika, dan berdaya saing global. Setiap program disusun dengan
+                    kurikulum berbasis kompetensi serta praktik klinik yang relevan dengan kebutuhan dunia medis modern.
+                </p>
+
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <button class="bg-[#00A79D] text-white font-semibold px-5 py-2 rounded-full text-sm">Sarjana</button>
+                    <button class="border border-gray-300 text-gray-700 font-semibold px-5 py-2 rounded-full text-sm hover:bg-[#00A79D] duration-300 hover:text-white">Magister</button>
+                    <button class="border border-gray-300 text-gray-700 font-semibold px-5 py-2 rounded-full text-sm hover:bg-[#00A79D] duration-300 hover:text-white">Spesialis</button>
+                    <button class="border border-gray-300 text-gray-700 font-semibold px-5 py-2 rounded-full text-sm hover:bg-[#00A79D] duration-300 hover:text-white">Profesi</button>
+                    <button class="border border-gray-300 text-gray-700 font-semibold px-5 py-2 rounded-full text-sm hover:bg-[#00A79D] duration-300 hover:text-white">Doktor</button>
+                </div>
+
+                <!-- Daftar Program -->
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="group bg-gray-50 border border-gray-200 p-4 rounded-xl flex justify-between items-center hover:shadow-md hover:border-l-8 hover:border-l-[#00A79D] duration-300 transition">
+                        <p class="text-gray-800 text-sm font-semibold">Sarjana Pendidikan Dokter</p>
+                        <i class="fa-solid fa-arrow-right font-semibold text-lg group-hover:text-[#00A79D]"></i>
+                    </div>
+
+                    <div class="group bg-gray-50 border border-gray-200 p-4 rounded-xl flex justify-between items-center hover:shadow-md hover:border-l-8 hover:border-l-[#00A79D] duration-300 transition">
+                        <p class="text-gray-800 text-sm font-semibold">Sarjana Pendidikan Dokter Gigi</p>
+                        <i class="fa-solid fa-arrow-right font-semibold text-lg group-hover:text-[#00A79D]"></i>
+                        
+                    </div>
+
+                    <div class=" group bg-gray-50 border border-gray-200 p-4 rounded-xl flex justify-between items-center hover:shadow-md hover:border-l-8 hover:border-l-[#00A79D] duration-300 transition">
+                        <p class="text-gray-800 text-sm font-semibold">Sarjana Kesehatan Masyarakat</p>
+                        <i class="fa-solid fa-arrow-right font-semibold text-lg group-hover:text-[#00A79D]"></i>
+                        
+                    </div>
+
+                    <div class=" group bg-gray-50 border border-gray-200 p-4 rounded-xl flex justify-between items-center hover:shadow-md hover:border-l-8 hover:border-l-[#00A79D] duration-300 transition">
+                        <p class="text-gray-800 text-sm font-semibold">Sarjana Farmasi Klinis</p>
+                        <i class="fa-solid fa-arrow-right font-semibold text-lg group-hover:text-[#00A79D]"></i>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visi dan Misi -->
+    <section class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-6 md:px-[120px]">
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+
+                <!-- Visi -->
+                <div class="bg-white rounded-xl shadow-md border-t-4 border-[#00A79D] p-6 h-fit">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Visi</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Menghasilkan Sarjana Pendidikan Dokter yang profesional, berwawasan sociotechnopreneurship dan unggul pada penyakit degeneratif.
+                    </p>
+                </div>
+
+                <!-- Misi -->
+                <div class="bg-white rounded-xl shadow-md border-t-4 border-[#00A79D] p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Misi</h3>
+                    <ol class="list-decimal list-inside text-gray-700 text-sm leading-relaxed space-y-2">
+                        <li>
+                            Menyelenggarakan pendidikan kedokteran yang berkualitas untuk menghasilkan sarjana kedokteran yang kompeten, berpegang teguh pada etika kedokteran, yang unggul di bidang penyakit degeneratif.
+                        </li>
+                        <li>
+                            Melaksanakan penelitian inovatif dan berdampak yang mengembangkan pengetahuan serta teknologi di bidang ilmu kedokteran, khususnya dalam meningkatkan layanan kesehatan dan memimpin upaya pencegahan penyakit degeneratif.
+                        </li>
+                        <li>
+                            Mengimplementasikan inisiatif pengabdian kepada masyarakat dengan mengadopsi perspektif sociotechnopreneurship, yang bertujuan meningkatkan kesehatan masyarakat dan kesejahteraan sosial.
+                        </li>
+                        <li>
+                            Menyelenggarakan layanan akademik dan non-akademik yang komprehensif melalui kolaborasi strategis dengan institusi nasional maupun internasional.
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Struktur Organisasi Fakultas -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-6xl mx-auto px-6 md:px-[120px] text-center">
+            <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-12">
+                Struktur Organisasi Fakultas Kedokteran, Kedokteran Gigi, dan Ilmu Kesehatan
+            </h2>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
+
+                <!-- Dekan -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden max-w-xs">
+                    <div class="bg-[#7A1C1C] flex justify-center items-center p-4">
+                        <img src="public/assets/img/kedokteran/dekan.webp" alt="Dekan" class="w-40 h-48 object-cover rounded-md">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-sm font-semibold text-gray-900">
+                            Prof. Dr. dr. H. Gusbakti Rusip, M.Sc., Sp.KKL.P., Subsp.FOM(K), PKK., AIFM., AIFO-K.
+                        </h4>
+                        <p class="text-gray-600 text-sm mt-1">Dekan</p>
+                    </div>
+                </div>
+
+                <!-- Wakil Dekan 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden max-w-xs">
+                    <div class="bg-[#7A1C1C] flex justify-center items-center p-4">
+                        <img src="public/assets/img/kedokteran/Kaprodi Sarjana Pendidikan Dokter.webp" alt="Wakil Dekan 1" class="w-40 h-48 object-cover rounded-md">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-sm font-semibold text-gray-900">
+                            Dr. dr. Linda Chiuman, M.K.M., M.Biomed., Sp.K.K.L.P.
+                        </h4>
+                        <p class="text-gray-600 text-sm mt-1">Wakil Dekan 1</p>
+                    </div>
+                </div>
+
+                <!-- Wakil Dekan 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden max-w-xs">
+                    <div class="bg-[#7A1C1C] flex justify-center items-center p-4">
+                        <img src="public/assets/img/kedokteran/wk dekan 1.jpg" alt="Wakil Dekan 2" class="w-40 h-48 object-cover rounded-md">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-sm font-semibold text-gray-900">
+                            Dr. dr. Maya Sari Mutia, M.K.M., M.Biomed.
+                        </h4>
+                        <p class="text-gray-600 text-sm mt-1">Wakil Dekan 2</p>
+                    </div>
+                </div>
+
+                <!-- Wakil Dekan 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden max-w-xs">
+                    <div class="bg-[#7A1C1C] flex justify-center items-center p-4">
+                        <img src="public/assets/img/kedokteran/wk dekan 2.jpg" alt="Wakil Dekan 3" class="w-40 h-48 object-cover rounded-md">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-sm font-semibold text-gray-900">
+                            Dr. Santy Deasy Siregar, SKM., M.Kes.
+                        </h4>
+                        <p class="text-gray-600 text-sm mt-1">Wakil Dekan 3</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Berita Terbaru -->
+    <section class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-6 md:px-[120px] text-center">
+            <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-10">Berita Terbaru</h2>
+
+            <!-- Grid Berita -->
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="public/assets/img/kedokteran/berita.jpg" alt="Berita UNPRI" class="w-full h-52 object-cover">
+                    <div class="p-5">
+                        <p class="text-gray-500 text-sm mb-1">Senin, 20 Oktober 2025</p>
+                        <h4 class="text-gray-900 font-semibold text-base mb-2 truncate">
+                            Kampus Terbaik dan Unggul….
+                        </h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi Strategis di Kabupaten Rokan ….
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="public/assets/img/kedokteran/berita.jpg" alt="Berita UNPRI" class="w-full h-52 object-cover">
+                    <div class="p-5">
+                        <p class="text-gray-500 text-sm mb-1">Senin, 20 Oktober 2025</p>
+                        <h4 class="text-gray-900 font-semibold text-base mb-2 truncate">
+                            Kampus Terbaik dan Unggul….
+                        </h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi Strategis di Kabupaten Rokan ….
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="public/assets/img/kedokteran/berita.jpg" alt="Berita UNPRI" class="w-full h-52 object-cover">
+                    <div class="p-5">
+                        <p class="text-gray-500 text-sm mb-1">Senin, 20 Oktober 2025</p>
+                        <h4 class="text-gray-900 font-semibold text-base mb-2 truncate">
+                            Kampus Terbaik dan Unggul….
+                        </h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi Strategis di Kabupaten Rokan ….
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Tombol -->
+            <div class="mt-10">
+                <a href="#" class="inline-block bg-[#00A79D] text-white font-semibold px-6 py-2 rounded-full hover:bg-[#029183] transition">
+        Lihat Berita Lainnya
+      </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni Alumni -->
+    <section class="bg-[#f4f4f5] py-16">
+        <div class="max-w-6xl mx-auto px-6 md:px-[120px] text-center">
+            <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-12">Testimoni Alumni</h2>
+
+            <!-- Grid Testimoni -->
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Testimoni 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 relative">
+                    <div class="flex flex-col items-center">
+                        <img src="public/assets/img/kedokteran/orang1.jpg" alt="Jane Doe" class="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md -mt-12 mb-3">
+                        <h4 class="font-semibold text-gray-900">Jane Doe</h4>
+                        <p class="text-gray-500 text-sm mb-4">Profesi Pekerjaan</p>
+                        <p class="text-gray-700 text-sm leading-relaxed text-center">
+                            “Belajar di Fakultas Kedokteran Universitas Prima Indonesia memberikan saya pengalaman yang sangat berharga. Kurikulum yang terstruktur, didukung dosen berkompeten dan fasilitas laboratorium yang lengkap, membuat saya semakin siap menghadapi dunia kedokteran
+                            yang sesungguhnya.”
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Testimoni 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 relative">
+                    <div class="flex flex-col items-center">
+                        <img src="public/assets/img/kedokteran/orang2.jpg" alt="Jhon Doe" class="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md -mt-12 mb-3">
+                        <h4 class="font-semibold text-gray-900">Jhon Doe</h4>
+                        <p class="text-gray-500 text-sm mb-4">Profesi Pekerjaan</p>
+                        <p class="text-gray-700 text-sm leading-relaxed text-center">
+                            “Selama menempuh pendidikan di Fakultas Kedokteran, saya tidak hanya dibekali teori medis, tetapi juga keterampilan klinis yang aplikatif. Pendekatan pembelajaran berbasis kasus dan kegiatan praktik di rumah sakit mitra menjadikan proses belajar terasa
+                            nyata dan relevan.”
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Testimoni 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 relative">
+                    <div class="flex flex-col items-center">
+                        <img src="public/assets/img/kedokteran/orang3.jpg" alt="Jhon Doe Sibling" class="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md -mt-12 mb-3">
+                        <h4 class="font-semibold text-gray-900">Jhon Doe Sibling</h4>
+                        <p class="text-gray-500 text-sm mb-4">Profesi Pekerjaan</p>
+                        <p class="text-gray-700 text-sm leading-relaxed text-center">
+                            “Fakultas Kedokteran UNPRI memiliki lingkungan akademik yang mendukung dan disiplin tinggi. Setiap dosen benar-benar mendorong kami untuk berpikir kritis dan beretika dalam praktik kedokteran, sehingga membentuk karakter profesional yang kuat.”
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="bg-[#1DA799] py-12">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 items-center gap-8 md:px-[120px] text-white">
+
+            <!-- Teks -->
+            <div>
+                <h2 class="text-xl md:text-2xl font-bold mb-3">
+                    Raih Masa Depan Gemilang Bersama Kami!
+                </h2>
+                <p class="text-sm md:text-base mb-6 text-white/90">
+                    Raih pendidikan kedokteran berkualitas di UNPRI — dengan kurikulum modern, dosen berpengalaman, dan fasilitas pembelajaran yang mendukung kesuksesan Anda di dunia medis.
+                </p>
+                <a href="#" class="inline-block bg-[#FFD400] text-black font-semibold px-5 py-2 rounded-md shadow hover:bg-yellow-400 transition">
+        Daftar Sekarang
+      </a>
+            </div>
+
+            <!-- Ilustrasi dengan animasi -->
+            <div class="flex justify-center">
+                <img src="public/assets/img/kedokteran/Group.png" alt="Ilustrasi Ajakan" class="w-40 md:w-56 animate-float">
+            </div>
+
+            <!-- Tambahkan style animasi -->
+            <style>
+                @keyframes float {
+                    0%,
+                    100% {
+                        transform: translateY(0);
+                    }
+                    50% {
+                        transform: translateY(-8px);
+                    }
+                }
+                
+                .animate-float {
+                    animation: float 3s ease-in-out infinite;
+                }
+            </style>
+
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-[#E8E9EB] text-[#262626]">
-      <div class="flex justify-between px-16">
+
+
+    <footer class="bg-[#E8E9EB] text-[#262626] ">
+      <div class="flex justify-between md:px-[120px]">
         <div class="py-10 gap-10">
           <!-- Logo -->
 
-          <div class="flex items-center mb-5">
+          <div class="flex items-center gap-5 mb-5">
             <img
               src="public/assets/img/logo-unpri-black.webp"
               alt="Unpri Logo"
@@ -685,7 +479,7 @@
               class="h-12"
             />
             <img
-              src="public/assets/img/fastt.png"
+              src="public/assets/img/kedokteran/dokter.png"
               alt="FAST Logo"
               class="h-12"
             />
@@ -724,58 +518,21 @@
         </div>
       </div>
       <!-- Copyright -->
-      <div class="bg-[#0D1B2A] text-white text-center text-[16px] py-3">
+      <div class="bg-[#0D1B2A] text-white text-center text-[16px] py-3 md:px-[120px]">
         © 2025 FAST - Fakultas Sains dan Teknologi | Universitas Prima Indonesia
       </div>
     </footer>
 
-    <!-- Fullscreen Loading Screen -->
-    <div
-      id="loading-screen"
-      class="fixed inset-0 flex items-center justify-center bg-[#0b1221] z-[9999] transition-opacity duration-700"
-    >
-      <img
-        src="{{ asset('assets/img/loading-fast.gif') }}"
-        alt="Loading..."
-        class="w-full h-full object-contain md:object-scale-down animate-fadeIn"
-      />
-    </div>
 
-    <style>
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: scale(0.95);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-      .animate-fadeIn {
-        animation: fadeIn 0.8s ease-out;
-      }
-    </style>
+    <!-- JavaScript Responsive Navbar -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
 
-    <script>
-      // Hilangkan loading setelah halaman selesai dimuat
-      window.addEventListener("load", () => {
-        const loader = document.getElementById("loading-screen");
-        loader.classList.add("opacity-0");
-        setTimeout(() => (loader.style.display = "none"), 600);
-      });
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
     </script>
+</body>
 
-    <!-- Script -->
-    <script>
-      feather.replace();
-      document.getElementById("menu-btn").onclick = () => {
-        document.getElementById("mobile-menu").classList.toggle("hidden");
-      };
-    </script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({ once: true, duration: 1000, easing: "ease-out-cubic" });
-    </script>
-  </body>
 </html>
