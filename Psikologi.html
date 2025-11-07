@@ -1,682 +1,560 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PSIKOLOGI | UNPRI</title>
-    <link rel="stylesheet" href="src/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- Tailwind -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakultas Psikologi UNPRI</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind = {
-        config: {
-          theme: {
-            extend: {
-              colors: {
-                primary: "#192334",
-                accent: "#facc15",
-                secondary: "#F5F5F5",
-              },
-              fontFamily: {
-                sans: ["Poppins", "sans-serif"],
-              },
-            },
-          },
-        },
-      };
-    </script>
+</head>
 
-    <!-- Feather -->
-    <script src="https://unpkg.com/feather-icons"></script>
+<body class="bg-gray-100">
 
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  </head>
-
-  <body class="bg-gray-50 text-gray-800 font-sans scroll-smooth">
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-primary border-b border-white/10 px-16">
-      <div
-        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"
-      >
-        <!-- Logo + Nama -->
-        <a
-          href="#"
-          class="flex items-center gap-7 text-2xl font-bold text-white drop-shadow-lg"
-        >
-          <!-- Logo UNPRI -->
-          <img
-            src="public/assets/img/logo unpri.png"
-            alt="Logo UNPRI"
-            class="w-13 h-12 object-contain drop-shadow-md transition-transform hover:scale-105"
-          />
-          <img
-            src="public/assets/img/ekonomi/logoEkonomi/Fakultas Ekonomi.png "
-            class="w-13 h-12 object-contain drop-shadow-md transition-transform hover:scale-105"
-            alt=""
-          />
-        </a>
+    <header class="bg-[#2E0F73] text-white">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <img src="public/assets/img/psikologi/logoxxx.png" alt="Logo UNPRI" class="h-10">
+                <img src="public/assets/img/psikologi/hsus.png" alt="Logo Fakultas Psikologi" class="h-10">
+            </div>
 
-        <!-- Menu Desktop -->
-        <ul class="hidden md:flex space-x-8 text-gray-100 font-medium">
-          <li>
-            <a href="#profil" class="hover:text-accent transition">Profil</a>
-          </li>
-          <li>
-            <a href="#program" class="hover:text-accent transition">Program</a>
-          </li>
-          <li>
-            <a href="#fasilitas" class="hover:text-accent transition"
-              >Fasilitas</a
-            >
-          </li>
-          <li>
-            <a href="#kontak" class="hover:text-accent transition">Kontak</a>
-          </li>
-        </ul>
-
-        <!-- Tombol Mobile -->
-        <button id="menu-btn" class="md:hidden text-white">
-          <i data-feather="menu"></i>
-        </button>
-      </div>
-
-      <!-- Menu Mobile -->
-      <div id="mobile-menu" class="hidden bg-primary/95 md:hidden text-center">
-        <ul class="py-4 space-y-4 text-white font-medium">
-          <li><a href="#profil">Profil</a></li>
-          <li><a href="#program">Program</a></li>
-          <li><a href="#fasilitas">Fasilitas</a></li>
-          <li><a href="#kontak">Kontak</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- Hero -->
-    <section
-      class="relative h-screen flex items-center text-white overflow-hidden"
-    >
-      <img
-        src="public/assets/img/bgHero.jpg"
-        class="absolute w-full h-full object-cover brightness-[0.45]"
-        alt="Campus Background"
-      />
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-primary/40 to-secondary/60"
-      ></div>
-
-      <div class="relative z-10 px-16">
-        <div class="bg-primary px-2 py-1 max-w-[792px]">
-          <h1 class="text-xl md:text-4xl font-extrabold leading-tight">
-            FAKULTAS PSIKOLOGI
-          </h1>
+            <!-- Menu -->
+            <nav class="space-x-6 text-sm font-medium hidden md:block">
+                <a href="#" class="hover:text-gray-200">Profil</a>
+                <div class="inline-block relative group">
+                    <button class="hover:text-gray-200">Program Studi</button>
+                    <div class="absolute hidden group-hover:block bg-white text-gray-800 mt-2 rounded-md shadow-lg w-40">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Sarjana Psikologi</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Profesi Psikolog</a>
+                    </div>
+                </div>
+                <a href="#" class="hover:text-gray-200">Kemitraan</a>
+                <a href="#" class="hover:text-gray-200">Info Akademik</a>
+                <a href="#" class="hover:text-gray-200">Kontak</a>
+            </nav>
         </div>
-        <p class="text-sm md:text-[17px] mt-4 max-w-[600px] text-gray-200">
-          Membentuk generasi digital unggul, kreatif, dan adaptif menghadapi era
-          industri 5.0
-        </p>
-        <button
-          class="text-[#262626] bg-[#FACC15] font-bold text-sm rounded-lg mt-3 px-3 py-2"
-        >
-          Pelajari Lebih Lanjut
-        </button>
-      </div>
+    </header>
 
-      <div
-        class="absolute w-[500px] h-[500px] bg-secondary/30 rounded-full blur-3xl top-0 left-0 animate-pulse"
-      ></div>
-      <div
-        class="absolute w-[400px] h-[400px] bg-accent/20 rounded-full blur-3xl bottom-0 right-0 animate-pulse"
-      ></div>
+    <!-- Hero Section -->
+    <section class="relative h-[600px] bg-cover bg-center" style="background-image: url('public/assets/img/psikologi/hero-img.png');">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+        <!-- Konten -->
+        <div class="relative z-10 max-w-6xl mx-auto h-full flex flex-col justify-center text-white px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">FAKULTAS PSIKOLOGI</h1>
+            <p class="text-base md:text-lg max-w-xl mb-6">
+                Membentuk generasi digital unggul, kreatif, dan adaptif menghadapi era industri 5.0
+            </p>
+            <a href="#tentang" class="bg-[#B6A7D7] hover:bg-[#9c8bc6] text-white font-medium px-6 py-2 rounded-md w-fit transition">
+        Pelajari Lebih Lanjut
+      </a>
+        </div>
+
+        <!-- Slider Indicator -->
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
+            <span class="w-3 h-3 bg-white rounded-full"></span>
+            <span class="w-3 h-3 bg-white/50 rounded-full"></span>
+            <span class="w-3 h-3 bg-white/50 rounded-full"></span>
+        </div>
     </section>
 
-    <!-- Kemitraan -->
-    <section class="px-16 overflow-hidden">
-      <div>
-        <h1 class="font-bold text-3xl mt-8 mb-3">Kemitraan</h1>
-        <div class="relative">
-          <div class="flex items-center gap-5 animate-scroll">
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/bankbca .webp"
-              alt=""
-            />
- 
-            <img
-              class="w-[100px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/EverBright Logo .webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/bumn.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/direktorat jendral pajak.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/bank btn.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/BUMS.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/indotama.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/kantor akuntan publik.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/Logo HIPMI.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/logo ISEI.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/logo pegadaian.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/logo waruna_nusa_sentana.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/logo-bank-mandiri.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/Logo_Bank_Sumut.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/ptpn4.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/sandong university.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/ekonomi/kemitraanLogo/TELKOM.webp"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+</body>
 
-    <!-- tentang fast -->
-    <section class="px-16 mt-20">
-      <div class="bg-primary flex p-10 gap-20">
-        <img src="public/assets/img/ekonomi/logoEkonomi/Fakultas Ekonomi.png" class="w-[400px]" alt="" />
-        <div class="text-white w-1/2 text-center">
-          <p class="text-xl mb-2">Tentang Fakultas Psikologi</p>
-          <p class="text-left">
-            Fakultas Psikologi berkomitmen untuk menjadi pusat keunggulan dalam menangani tantangan psikologis
-            di masyarakat.Misi utama kami adalah mengembangkan sumber daya manusia berkualitas tinggi 
-            yang terampil,berprestasi,dan inovatif,terutama dalam bidang Socio-Technopreneurship.
+</html>
 
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- Visi dan Misi Psikologi UNPRI -->
-    <section
-      id="visi-misi"
-      class="py-28 bg-gray-50 relative overflow-hidden px-16 flex justify-center flex-col items-center"
-    >
-      <div
-        class="max-w-4xl w-full bg-secondary rounded-xl shadow p-6 mb-6 border-2 border-gray-200"
-      >
-        <div class="flex items-center justify-center gap-2 mb-2">
-          <div
-            class="w-10 h-10 bg-white flex items-center justify-center rounded-full"
-          >
-            <img
-              src="public/assets/img/vectorVisi.svg"
-              class="w-5 h-5"
-              alt=""
-            />
-          </div>
-          <h2 class="text-xl font-bold text-gray-800">Visi</h2>
-        </div>
-        <p class="text-gray-700 leading-relaxed text-justify">
-         Menjadi pusat pembelajaran dan pengembangan psikologi yang unggul dalam bidang sosiotechnopreneurship 
-         dalam menghasilkan lulusan yang inovatif dan adaptif berdaya saing internasional pada tahun 2030.
+<!-- Bagian Akreditasi Fakultas -->
+<section class="bg-gray-200 py-8">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-center items-center md:justify-evenly gap-10 text-center">
 
-        </p>
-      </div>
-
-      <!-- MISI & TUJUAN -->
-      <div class="grid md:grid-cols-2 gap-6 max-w-4xl w-full">
-        <!-- MISI -->
-        <div
-          class="bg-secondary shadow rounded-xl p-6 border-2 border-gray-200"
-        >
-          <div class="flex items-center gap-2 mb-2">
-            <i class="ri-flag-line text-yellow-500 text-2xl"></i>
-            <div
-              class="w-10 h-10 bg-white flex items-center justify-center rounded-full"
-            >
-              <img
-                src="public/assets/img/vectorMisidanTujuan.svg"
-                class="w-5 h-5"
-                alt=""
-              />
-            </div>
-            <h2 class="text-xl font-bold text-gray-800">Misi</h2>
-          </div>
-          <ol class="list-decimal text-gray-700 leading-relaxed space-y-1">
-            <li>
-              Menyelenggarakan, mengembangkan dan memajukan pendidikan ilmu psikologi yang berkualitas
-              dalam bidang sosiotechnopreneurship sehingga mampu menghasilkan lulusan psikologi yang inovatif dan
-              adaptif.
-            </li>
-            <li>
-              Menyelenggarakan penelitian untuk menunjang pengembangan ilmu psikologi dalam bidang 
-              sosiotechnopreneurship yang inovatif dan adaptif.
-            </li>
-            <li>
-              Menyelenggarakan pengabdian kepada Masyarakat untuk menunjang pengembangan ilmu psikologi dalam 
-              bidang sosiotechnopreneurship yang inovatif dan adaptif.
-            </li>
-            <li> 
-                Mengembangkan kerjasama dengan berbagai pihak guna meningkatkan mutu pelaksanaan Tri Dharma Perguruan 
-                Tinggi baik dalam skala nasional maupun skala internasional.
-            </li>
-          </ol>
+        <!-- Judul -->
+        <div class="flex flex-col items-center md:items-start">
+            <h3 class="text-lg md:text-xl font-semibold text-gray-800">Akreditasi Fakultas</h3>
         </div>
 
-        <!-- TUJUAN -->
-        <div
-          class="bg-secondary rounded-xl shadow p-6 border-2 border-gray-200"
-        >
-          <div class="flex items-center gap-2 mb-2">
-            <i class="ri-check-double-line text-yellow-500 text-2xl"></i>
-            <div
-              class="w-10 h-10 bg-white flex items-center justify-center rounded-full"
-            >
-              <img
-                src="public/assets/img/vectorMisidanTujuan.svg"
-                class="w-5 h-5"
-                alt=""
-              />
-            </div>
-            <h2 class="text-xl font-bold text-gray-800">Tujuan</h2>
-          </div>
-          <ol
-            class="list-decimal list-inside text-gray-700 leading-relaxed space-y-1"
-          >
-            <li>
-              Melahirkan sarjana psikologi yang memiliki integritas kepribadian dan berakhlak mulia 
-              sehingga menjadi teladan bagi masyarakat sekitarnya
-            </li>
-            <li>  
-              Dihasilkannya ilmu pengetahuan psikologi melalui penelitian agar bermanfaat bagi kemandirian 
-              dan kemajuan bangsa,serta kemajuan peradaban dan kesejahteraan umat manusia.
-            </li>
-            <li>
-              Menghasilkan luaran penelitian yang unggul di bidang psikologi yang berwawasan sosiotechnopreneurship.
-            </li>
-            <li>
-              Terwujudnya pengabdian kepada masyarakat di bidang Psikologi yang dapat memberikan dampak pada pemecahan
-              masalah psikologi didalam masyarakat.
-            </li>
-          </ol>
+        <!-- Gambar Akreditasi -->
+        <div class="flex items-center gap-3 text-gray-800">
+            <img src="public/assets/img/psikologi/Vector (1).png" alt="Akreditasi" class="w-12 h-12 md:w-14 md:h-14 object-contain" />
+            <p class="font-medium text-sm md:text-base">Terakreditasi Baik Sekali</p>
         </div>
-      </div>
-    </section>
 
-    <!-- Pimpinan prodi -->
-    <section
-      id="pimpinan"
-      class="py-24 bg-[#E8E9EB] text-center relative overflow-hidden px-16"
-    >
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-accent/5"
-      ></div>
-      <div class="relative z-10 max-w-6xl mx-auto px-6">
-        <h3 class="text-4xl font-bold text-primary mb-12" data-aos="fade-up">
-          Pimpinan Fakultas Psikologi
-        </h3>
-
-        <div
-          class="grid sm:grid-cols-2 md:grid-cols-4 gap-10 justify-center"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <!-- dekan -->
-          <div
-            class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-4 hover:-translate-y-2 hover:shadow-2xl transition"
-          >
-            <div class="relative w-36 h-36 mx-auto mb-4">
-              <img
-                src="public/assets/img/ekonomi/pimpinanfakultasekonomi/Dekan fakultas ekonomi.webp"
-                class="rounded-full w-full h-full object-cover border-4 border-accent shadow-md"
-              />
-            </div>
-            <h4 class="font-bold text-[15px] text-primary mb-2 mb-2">
-              Dr. Sri Hartini, S.Psi., M.Si.
-            </h4>
-            <p>Dekan</p>
-          </div>
-
-          <!-- Wakil dekan I -->
-          <div
-            class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition"
-          >
-            <div class="relative w-36 h-36 mx-auto mb-4">
-              <img
-                src="public/assets/img/ekonomi/pimpinanfakultasekonomi/wakil dekan 1 ekonomi.webp"
-                class="rounded-full w-full h-full object-cover border-4 border-blue-400 shadow-md"
-              />
-            </div>
-            <h4 class="font-bold text-[15px] text-primary mb-2">
-              Haposan Lumbantoruan
-            </h4>
-            <p>wakil Dekan 1</p>
-          </div>
-          </div>
+        <!-- Gambar Program Studi -->
+        <div class="flex items-center gap-3 text-gray-800">
+            <img src="public/assets/img/psikologi/sdsd.png" alt="Program Studi" class="w-12 h-12 md:w-14 md:h-14 object-contain" />
+            <p class="font-medium text-sm md:text-base">2 Program Studi</p>
         </div>
-      </div>
-    </section>
 
-    <!-- Program Studi -->
-    <section class="px-16">
-      <div>
-        <h1 class="font-bold text-2xl my-5">Program Studi</h1>
-        <div class="grid grid-cols-3 gap-8">
-          <div class="relative">
-            <div
-              class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"
-            ></div>
+    </div>
+</section>
 
-            <div
-              class="bg-secondary rounded-2xl p-5 shadow border border-gray-200"
-            >
-              <div
-                class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2"
-              >
-                <img
-                  src="public/assets/img/Vector.svg"
-                  class="w-5 h-5"
-                  alt="icon"
-                />
-              </div>
-              <h1 class="text-xl font-bold">Sarjana Psikologi</h1>
-              <p class="my-5">
-                Program Studi Diploma Tiga Keperawatan merupakan pendidikan vokasi yang dirancang untuk mencetak 
-                perawat profesional dengan keterampilan klinis yang kuat.
-              </p>
-              <div class="flex gap-3 items-center">
-                Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="relative">
-            <div
-              class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"
-            ></div>
 
-            <div
-              class="bg-secondary rounded-2xl p-5 shadow border border-gray-200"
-            >
-              <div
-                class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2"
-              >
-                <img
-                  src="public/assets/img/Si.svg"
-                  class="w-5 h-5"
-                  alt="icon"
-                />
-              </div>
-              <h1 class="text-xl font-bold">sarjana Profesi Psikolog</h1>
-              <p class="my-5">
-               Program Studi Sarjana Ilmu Keperawatan adalah sebuah program pendidikan tinggi yang dirancang untuk 
-               mempersiapkan mahasiswa menjadi perawat profesional yang kompeten 
-              </p>
-              <div class="flex gap-3 items-center">
-                Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-            <div></div>
-            ></div>
-            </div>
-    </section>
+<!-- Tambahkan ini di bawah script Feather -->
+<script src="https://unpkg.com/phosphor-icons "></script>
 
-    <!-- Berita Terkini -->
-    <section class="px-16 py-16">
-      <div class="flex items-center mb-5">
-        <p class="text-[24px] font-bold">Berita Terkini</p>
-        <div class="flex-1 h-px bg-gray-300 mx-4"></div>
-        <a
-          href="#"
-          class="bg-yellow-400 text-[16px] text-black text-sm font-semibold px-4 py-2 rounded-md hover:bg-yellow-500 transition"
-        >
-          Baca Berita Lainnya
-        </a>
-      </div>
-      <div class="grid grid-cols-3 gap-10">
-        <div class="">
-          <img
-            src="public/assets/img/fast/berita1.jpeg"
-            class="mb-2 w-[360px] h-[220px]"
-            alt=""
-          />
-          <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
-          <p class="text-[20px] font-bold py-1">
-            Kampus Terbaik dan Unggul....
-          </p>
-          <p class="text-[15px]">
-            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi
-            Strategis di Kabupaten Rokan ....
-          </p>
+
+<!-- Tentang Fakultas Psikologi -->
+<section class="bg-white py-10 px-6">
+    <div class="max-w-6xl mx-auto bg-[#9F8FC1] rounded-lg shadow-md flex flex-col md:flex-row items-center justify-between gap-10 px-10 md:px-16 py-10 text-white">
+
+        <!-- Logo -->
+        <div class="flex justify-center md:justify-start w-full md:w-1/3">
+            <img src="public/assets/img/psikologi/Ellipse 22.png" alt=" Logo Fakultas Psikologi " class="w-56 h-56 object-contain drop-shadow-lg " />
         </div>
-        <div>
-          <img
-            src="public/assets/img/fast/berita2.jpeg"
-            class="mb-2 w-[360px] h-[220px]"
-            alt=""
-          />
-          <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
-          <p class="text-[20px] font-bold py-1">
-            Kampus Terbaik dan Unggul....
-          </p>
-          <p class="text-[15px]">
-            Menjadi Arsitek Profesional Melalui Pendidikan Berbasis Desain dan Teknologi di UNPRI....
-          </p>
-        </div>
-        <div>
-          <img
-            src="public/assets/img/fast/berita3.jpeg"
-            class="mb-2 w-[360px] h-[220px]"
-            alt=""
-          />
-          <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
-          <p class="text-[20px] font-bold py-1">
-            Kuliah Arsitektur di Kampus....
-          </p>
-          <p class="text-[15px]">
-            Mencetak Generasi Digital Unggul Melalui Socio-Technopreneurship di UNPRI ....
-          </p>
-        </div>
-      </div>
-          />
+
+        <!-- Teks Deskripsi -->
+        <div class="w-full md:w-2/3 text-center md:text-left ">
+            <h2 class="text-2xl font-bold mb-4 ">Tentang Fakultas Psikologi</h2>
+            <p class="text-sm md:text-base leading-relaxed ">
+                Fakultas Psikologi berkomitmen untuk menjadi pusat keunggulan dalam menangani tantangan psikologis di masyarakat. Misi utama kami adalah mengembangkan sumber daya manusia berkualitas tinggi yang terampil, berprestasi, dan inovatif, terutama dalam bidang
+                Socio-Technopreneurship.
             </p>
         </div>
-      </div>
-    </section>
 
-    <!-- hmmmmmmmmmm -->
-    <section class="px-16 py-16">
-      <div
-        class="bg-primary text-white rounded-2xl flex items-center justify-between px-10 py-10 gap-8"
-      >
-        <div class="flex-1 w-[657px]">
-          <h2 class="text-[29px] font-bold mb-2">
-            Merawat dengan Ilmu, Mengabdi dengan Hati
-          </h2>
-          <p class="text-gray-300 mb-5 text-[16px]">
-            Di Fakultas Keperawatan dan Kebidanan, setiap langkah belajar adalah panggilan untuk
-            memberi makna dan harapan bagi kehidupan. Wujudkan perubahan dimulai dari sentuhanmu.
-          </p>
-          <button
-            class="bg-yellow-400 text-black font-semibold px-5 py-2 rounded-md hover:bg-yellow-500 transition"
-          >
-            Daftar Sekarang
-          </button>
-        </div>
-
-        <div class="flex-shrink-0">
-          <img
-            src="public/assets/img/ekonomi/logoEkonomi/Fakultas Ekonomi.png"
-            alt="Mahasiswa belajar"
-            class="w-52 h-52 rounded-full object-cover"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-     <footer class="bg-[#E8E9EB] text-[#262626]">
-      <div class="flex justify-between px-16">
-        <div class="py-10 gap-10">
-          <!-- Logo -->
-
-          <div class="flex items-center mb-5">
-            <img
-              src="public/assets/img/logo-unpri-black.webp"
-              alt="Unpri Logo"
-              class="h-12"
-            />
-            <img
-              src="public/assets/img/logoAkrediatasiUnggul.webp"
-              alt="Unggul Logo"
-              class="h-12"
-            />
-            <img
-              src="public/assets/img/ekonomi/logoEkonomi/Fakultas Ekonomi.png"
-              alt="ekonomi"
-              class="h-12"
-            />
-          </div>
-          <div class="text-[16px]">
-            <p class="font-bold mb-2">Jam Pendaftaran</p>
-            <ul class="text-gray-700">
-              <li>• Senin - Jumat: 08.00 - 17.00 WIB</li>
-              <li>• Sabtu: 08.00 - 13.00 WIB</li>
-            </ul>
-          </div>
-        </div>
-        <div class="py-10">
-          <div class="mb-5">
-            <h1 class="font-bold">FAKULTAS PSIKOLOGI</h1>
-            <h2 class="font-bold">Universitas Prima Indonesia</h2>
-            <p>Jl. Sampul No. 3, Medan</p>
-            <p class="mt-2">Telepon: +62 12345689</p>
-            <p>Faks: +62 12345678</p>
-            <p>Email: contact@unprimdn.ac.id</p>
-          </div>
-          <div class="flex gap-4 text-xl">
-            <a href="#" class="hover:text-primary"
-              ><i class="fab fa-facebook"></i
-            ></a>
-            <a href="#" class="hover:text-primary"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="#" class="hover:text-primary"
-              ><i class="fab fa-youtube"></i
-            ></a>
-            <a href="#" class="hover:text-primary"
-              ><i class="fab fa-tiktok"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-      <!-- Copyright -->
-      <div class="bg-[#0D1B2A] text-white text-center text-[16px] py-3">
-        © 2025 Psikologi - Fakultas Psikologi | Universitas Prima Indonesia
-      </div>
-    </footer>
-
-
-    <!-- Fullscreen Loading Screen -->
-    <div
-      id="loading-screen"
-      class="fixed inset-0 flex items-center justify-center bg-[#0b1221] z-[9999] transition-opacity duration-700"
-    >
-      <img
-        src="{{ asset('assets/img/loading-fast.gif') }}"
-        alt="Loading..."
-        class="w-full h-full object-contain md:object-scale-down animate-fadeIn"
-      />
     </div>
+</section>
 
-    <style>
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: scale(0.95);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-      .animate-fadeIn {
-        animation: fadeIn 0.8s ease-out;
-      }
-    </style>
 
-    <script>
-      // Hilangkan loading setelah halaman selesai dimuat
-      window.addEventListener("load", () => {
-        const loader = document.getElementById("loading-screen");
-        loader.classList.add("opacity-0");
-        setTimeout(() => (loader.style.display = "none"), 600);
-      });
-    </script>
+<!-- Visi -->
+<section class="bg-white py-10 px-6 ">
+    <div class="max-w-5xl mx-auto bg-white border border-white-200 rounded-xl shadow-sm p-6 text-center md:text-left ">
+        <div class="flex items-center justify-center mb-3 ">
+            <img src="public/assets/img/psikologi/lampuu.png " alt="Ikon Visi " class="w-6 h-6 md:w-8 md:h-8 mr-2 " />
+            <h3 class="text-lg md:text-xl font-semibold text-[#5C3BA5] ">Visi</h3>
+        </div>
+        <p class="text-gray-700 text-sm md:text-base leading-relaxed ">
+            Menjadi pusat pembelajaran dan pengembangan psikologi yang unggul dalam bidang sociotechnopreneurship dalam menghasilkan lulusan yang inovatif dan adaptif berdaya saing internasional pada tahun 2030.
+        </p>
+    </div>
+</section>
 
-    <!-- Script -->
-    <script>
-      feather.replace();
-      document.getElementById("menu-btn").onclick = () => {
-        document.getElementById("mobile-menu").classList.toggle("hidden");
-      };
-    </script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({ once: true, duration: 1000, easing: "ease-out-cubic" });
-    </script>
-  </body>
+<!-- Pimpinan Fakultas Psikologi -->
+<section class="bg-white mt-6 px-6">
+    <div class="max-w-6xl mx-auto">
+        <h3 class="text-xl font-semibold text-gray-800 mb-6 text-center md:text-left">
+            Pimpinan Fakultas Psikologi
+        </h3>
+
+        <!-- Grid utama 2x2 -->
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- Dekan -->
+            <div class="bg-[#E5E1F7] rounded-xl p-6 text-center text-gray-900 shadow">
+                <img src="public/assets/img/psikologi/Rectangle 3 (1).png" alt="Dekan" class="w-36 h-36 mx-auto rounded-2xl mb-5 object-cover">
+                <p class="font-bold text-base md:text-lg mb-1">Dr. Tiarnida Nababan, SST., S.Kep., Ners., M.Kep.</p>
+                <p class="text-gray-700 text-sm">Dekan</p>
+            </div>
+
+            <!-- Misi -->
+            <div class="bg-gray-50 rounded-xl p-5 shadow">
+                <div class="flex items-center mb-3">
+                    <img src="public/assets/img/psikologi/Group 2.png" class="w-6 h-6 mr-2" alt="Misi Icon">
+                    <h4 class="text-lg font-semibold text-gray-800">Misi</h4>
+                </div>
+                <ol class="list-decimal list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                    <li>Menyelenggarakan, mengembangkan dan memajukan pendidikan ilmu psikologi yang berkualitas dalam bidang sosio-technopreneurship sehingga mampu menghasilkan lulusan psikologi yang inovatif dan adaptif.</li>
+                    <li>Menyelenggarakan penelitian untuk menunjang pengembangan ilmu psikologi dalam bidang sosio-technopreneurship yang inovatif dan adaptif.</li>
+                    <li>Menyelenggarakan pengabdian kepada masyarakat untuk menunjang pengembangan ilmu psikologi dalam bidang sosio-technopreneurship yang inovatif dan adaptif.</li>
+                    <li>Mengembangkan kerja sama dengan berbagai pihak guna meningkatkan mutu pelaksanaan Tri Dharma Perguruan Tinggi baik dalam skala nasional maupun internasional.</li>
+                </ol>
+            </div>
+
+            <!-- Wakil Dekan 1 -->
+            <div class="bg-[#E5E1F7] rounded-xl p-6 text-center text-gray-900 shadow">
+                <img src="public/assets/img/psikologi/skwia.png" alt="Wakil Dekan 1" class="w-36 h-36 mx-auto rounded-2xl mb-5 object-cover">
+                <p class="font-bold text-base md:text-lg mb-1">Haposan Lumbantoruan, S.Pd., M.Psi.</p>
+                <p class="text-gray-700 text-sm">Wakil Dekan 1</p>
+            </div>
+
+            <!-- Tujuan -->
+            <div class="bg-gray-50 rounded-xl p-5 shadow">
+                <div class="flex items-center mb-3">
+                    <img src="public/assets/img/psikologi/Group 2.png" class="w-6 h-6 mr-2" alt="Tujuan Icon">
+                    <h4 class="text-lg font-semibold text-gray-800">Tujuan</h4>
+                </div>
+                <ol class="list-decimal list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                    <li>Melahirkan sarjana psikologi yang memiliki integritas kepribadian dan berakhlak mulia sehingga menjadi teladan bagi masyarakat sekitarnya.</li>
+                    <li>Dihasilkannya ilmu pengetahuan psikologi melalui penelitian yang bermanfaat bagi kemandirian dan kemajuan bangsa, serta kemajuan peradaban dan kesejahteraan umat manusia.</li>
+                    <li>Menghasilkan luaran penelitian yang unggul di bidang psikologi yang berwawasan sosio-technopreneurship.</li>
+                    <li>Terwujudnya pengabdian kepada masyarakat di bidang psikologi yang dapat memberikan dampak pada pemecahan masalah psikologi di dalam masyarakat.</li>
+                </ol>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Program Studi -->
+<section class="bg-white py-10 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-8">Program Studi</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 justify-center">
+            <!-- Program 1 -->
+            <div class="bg-[#F5F2FB] rounded-xl shadow p-6 flex flex-col items-center">
+                <div class="bg-white rounded-full w-14 h-14 flex items-center justify-center shadow mb-4">
+                    <img src="public/assets/img/psikologi/Vector-his.png" alt="Ikon Sarjana Psikologi" class="w-7 h-7">
+                </div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-2">Sarjana Psikologi</h3>
+                <p class="text-gray-600 text-sm mb-4 max-w-xs">
+                    Program Studi Sarjana Psikologi merupakan pendidikan akademik yang dirancang untuk menghasilkan lulusan dengan kompetensi keilmuan dan keterampilan psikologis yang kuat.
+                </p>
+                <a href="#" class="px-5 py-2 rounded-full text-white bg-[#5C3BA5] hover:bg-[#4b2f8b] text-sm font-medium transition">Pelajari Lebih Lanjut</a>
+            </div>
+
+            <!-- Program 2 -->
+            <div class="bg-[#F5F2FB] rounded-xl shadow p-6 flex flex-col items-center">
+                <div class="bg-white rounded-full w-14 h-14 flex items-center justify-center shadow mb-4">
+                    <img src="public/assets/img/psikologi/Vector-his.png" alt="Ikon Profesi Psikolog" class="w-7 h-7">
+                </div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-2">Sarjana Profesi Psikolog</h3>
+                <p class="text-gray-600 text-sm mb-4 max-w-xs">
+                    Program Studi Profesi Psikolog adalah jenjang lanjutan yang mempersiapkan mahasiswa menjadi psikolog profesional dan kompeten di bidangnya.
+                </p>
+                <a href="#" class="px-5 py-2 rounded-full text-white bg-[#5C3BA5] hover:bg-[#4b2f8b] text-sm font-medium transition">Pelajari Lebih Lanjut</a>
+            </div>
+        </div>
+
+        <!-- Bagian Bawah -->
+        <div class="mt-12">
+            <h3 class="font-semibold text-lg md:text-xl text-gray-900 mb-2">Kenapa Harus Memilih Fakultas Psikologi UNPRI?</h3>
+            <p class="text-gray-700 max-w-3xl mx-auto text-sm md:text-base">
+                Dengan komitmen terhadap inovasi, empati, dan keunggulan akademik, Fakultas Psikologi UNPRI merupakan pilihan terbaik bagi calon profesional psikologi yang siap memahami manusia secara mendalam serta menciptakan perubahan positif bagi individu, komunitas,
+                dan dunia.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Alasan Memilih Fakultas Psikologi UNPRI -->
+<section class="bg-white py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-center text-xl md:text-2xl font-semibold text-gray-800 mb-10">
+            Kenapa Harus Memilih Fakultas Psikologi UNPRI?
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-10">
+            <!-- 01 -->
+            <div class="flex items-start gap-4">
+                <div class="flex items-center">
+                    <h3 class="text-3xl font-bold text-[#5C3BA5]">01</h3>
+                    <span class="w-10 h-[2px] bg-gray-400 ml-2"></span>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Akreditasi dan reputasi kampus yang unggul</h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Program Studi Psikologi di UNPRI telah mendapatkan akreditasi “Baik Sekali”. Kampus UNPRI juga terakreditasi “Unggul” oleh BAN-PT dan menjadi salah satu perguruan tinggi swasta unggulan di Sumatera Utara. Dengan reputasi seperti ini, memilih Psikologi
+                        di UNPRI berarti Anda memilih institusi yang sudah diakui kualitasnya.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 02 -->
+            <div class="flex items-start gap-4">
+                <div class="flex items-center">
+                    <h3 class="text-3xl font-bold text-[#5C3BA5]">02</h3>
+                    <span class="w-10 h-[2px] bg-gray-400 ml-2"></span>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Fasilitas pembelajaran yang lengkap dan modern</h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Fakultas Psikologi UNPRI memiliki fasilitas seperti laboratorium psikodiagnostik, laboratorium eksperimen, ruang observasi dan wawancara, serta unit layanan psikologi. Lingkungan belajar yang nyaman dan alat pendukung yang memadai menjadi nilai tambah
+                        penting bagi mahasiswa.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 03 -->
+            <div class="flex items-start gap-4">
+                <div class="flex items-center">
+                    <h3 class="text-3xl font-bold text-[#5C3BA5]">03</h3>
+                    <span class="w-10 h-[2px] bg-gray-400 ml-2"></span>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Kurikulum yang relevan dengan tantangan zaman & peluang karir yang luas</h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Jurusan Psikologi di UNPRI membuka peluang di berbagai bidang seperti klinis, sosial, pendidikan, dan industri. Lulusan dapat berkarier sebagai konselor, HRD, peneliti, atau wirausaha di bidang psikologi. Pembelajaran tidak hanya teoritis, tetapi juga
+                        aplikatif sesuai kebutuhan masyarakat dan dunia kerja.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 04 -->
+            <div class="flex items-start gap-4">
+                <div class="flex items-center">
+                    <h3 class="text-3xl font-bold text-[#5C3BA5]">04</h3>
+                    <span class="w-10 h-[2px] bg-gray-400 ml-2"></span>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Dosen dan pengajar yang kompeten serta kolaborasi akademik</h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Dosen-dosen UNPRI memiliki latar belakang kuat di bidang psikologi dan menjalin kerja sama akademik dengan universitas lain seperti Universitas Tarumanagara untuk pengembangan kurikulum dan sistem pembelajaran. Mahasiswa mendapatkan pengalaman belajar
+                        yang up-to-date dan berstandar nasional maupun internasional.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 05 -->
+            <div class="flex items-start gap-4">
+                <div class="flex items-center">
+                    <h3 class="text-3xl font-bold text-[#5C3BA5]">05</h3>
+                    <span class="w-10 h-[2px] bg-gray-400 ml-2"></span>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Biaya kuliah yang terjangkau dan fleksibilitas pembayaran</h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        UNPRI menawarkan sistem pembayaran fleksibel “terjangkau, bisa dicicil” dan memberikan kesempatan beasiswa bagi mahasiswa berprestasi. Fleksibilitas ini membantu mahasiswa fokus belajar tanpa beban finansial berat.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 06 -->
+            <div class="flex items-start gap-4">
+                <div class="flex items-center">
+                    <h3 class="text-3xl font-bold text-[#5C3BA5]">06</h3>
+                    <span class="w-10 h-[2px] bg-gray-400 ml-2"></span>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Visi ke depan yang kuat: menuju lulusan bertaraf internasional dan adaptif</h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Fakultas Psikologi UNPRI memiliki visi menjadi pusat pembelajaran dan pengembangan psikologi yang unggul dan berdaya saing global. Mahasiswa dipersiapkan tidak hanya untuk dunia kerja lokal tetapi juga internasional melalui kurikulum yang dinamis dan
+                        adaptif.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Kemitraan -->
+<section class="px-16 overflow-hidden ">
+    <div>
+        <h1 class="font-bold text-3xl mt-8 mb-3 ">Kemitraan</h1>
+        <div class="relative ">
+            <div class="flex items-center gap-5 animate-scroll ">
+                <img class="w-[90px] h-[90px] " src="public/assets/img/psikologi/pos indonesia 1 (1).png " alt=" " />
+
+                <img class="w-[100px] h-[90px] " src="public/assets/img/psikologi/multimatics_logo_colorful 1.png " alt=" " />
+                <img class="w-[90px] h-[90px] " src="public/assets/img/psikologi/sari mutiara 1.png" alt=" " />
+                <img class="w-[90px] h-[90px] " src="public/assets/img/psikologi/multimatics_logo_colorful 1.png " alt=" " />
+                <img class="w-[90px] h-[90px] " src="public/assets/img/ekonomi/kemitraanLogo/bank btn.webp " alt=" " />
+                <img class="w-[90px] h-[90px] " src="public/assets/img/ekonomi/kemitraanLogo/BUMS.webp " alt=" " />
+                <img class="w-[90px] h-[90px] " src="public/assets/img/ekonomi/kemitraanLogo/indotama.webp " alt=" " />
+                <img class="w-[90px] h-[90px] " src="public/assets/img/ekonomi/kemitraanLogo/kantor akuntan publik.webp " alt=" " />
+                <img class="w-[90px] h-[90px] " src="public/assets/img/ekonomi/kemitraanLogo/Logo HIPMI.webp " alt=" " />
+                <img class="w-[90px] h-[90px] " src="public/assets/img/ekonomi/kemitraanLogo/logo ISEI.webp " alt=" " />
+                <img class="w-[90px] h-[90px] " src="public/assets/img/ekonomi/kemitraanLogo/logo pegadaian.webp " alt=" " />
+                <img class="w-[90px] h-[90px] " src="public/assets/img/ekonomi/kemitraanLogo/logo waruna_nusa_sentana.webp " alt=" " />
+                <img class="w-[90px] h-[90px] " src="public/assets/img/ekonomi/kemitraanLogo/logo-bank-mandiri.webp " alt=" " />
+                <img class="w-[90px] h-[90px] " src="public/assets/img/ekonomi/kemitraanLogo/Logo_Bank_Sumut.webp " alt=" " />
+                <img class="w-[90px] h-[90px] " src="public/assets/img/ekonomi/kemitraanLogo/ptpn4.webp " alt=" " />
+                <img class="w-[90px] h-[90px] " src="public/assets/img/ekonomi/kemitraanLogo/sandong university.webp " alt=" " />
+                <img class="w-[90px] h-[90px] " src="public/assets/img/ekonomi/kemitraanLogo/TELKOM.webp " alt=" " />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Berita Terkini -->
+<section class="bg-white py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-lg md:text-xl font-semibold text-gray-800">Berita Terkini</h2>
+            <a href="#" class="bg-[#B6A7D7] text-white text-sm font-medium px-5 py-2 rounded-lg hover:bg-[#9d8bc9] transition">
+        Baca Berita Lainnya
+      </a>
+        </div>
+        <hr class="border-gray-300 mb-8">
+
+        <!-- Grid Berita -->
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Berita 1 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-md transition">
+                <img src="public/assets/img/psikologi/Rectangle 9.png" alt="Berita 1" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <p class="text-sm text-gray-500">Senin, 20 Oktober 2025</p>
+                    <h3 class="text-base font-semibold text-gray-900 mt-1 mb-1">Kampus Terbaik dan Unggul….</h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi Strategis di Kabupaten Rokan….
+                    </p>
+                    <a href="#" class="text-[#5C3BA5] text-sm font-medium hover:underline">Selengkapnya</a>
+                </div>
+            </div>
+
+            <!-- Berita 2 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-md transition">
+                <img src="public/assets/img/psikologi/iausod.png" alt="Berita 2" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <p class="text-sm text-gray-500">Senin, 20 Oktober 2025</p>
+                    <h3 class="text-base font-semibold text-gray-900 mt-1 mb-1">Kuliah Arsitektur di Kampus….</h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Menjadi Arsitek Profesional Melalui Pendidikan Berbasis Desain dan Teknologi di UNPRI.
+                    </p>
+                    <a href="#" class="text-[#5C3BA5] text-sm font-medium hover:underline">Selengkapnya</a>
+                </div>
+            </div>
+
+            <!-- Berita 3 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-md transition">
+                <img src="public/assets/img/psikologi/lundu.png" alt="Berita 3" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <p class="text-sm text-gray-500">Senin, 20 Oktober 2025</p>
+                    <h3 class="text-base font-semibold text-gray-900 mt-1 mb-1">10 Bukti Mengapa Program Studi…</h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Mencetak Generasi Digital Unggul Melalui Socio-Technopreneurship di UNPRI.
+                    </p>
+                    <a href="#" class="text-[#5C3BA5] text-sm font-medium hover:underline">Selengkapnya</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Banner Aksi Fakultas Psikologi -->
+<section class="bg-[#2E0F73] text-white py-12 px-7">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between rounded-2xl p-9 bg-[#2E0F73]">
+
+        <!-- Teks Kiri -->
+        <div class="md:w-2/3 mb-6 md:mb-0">
+            <h2 class="text-lg md:text-xl font-semibold mb-3">
+                Memahami Manusia, Mewujudkan Perubahan Dunia
+            </h2>
+            <p class="text-sm md:text-base text-gray-200 leading-relaxed mb-5">
+                Di Fakultas Psikologi, setiap proses belajar adalah perjalanan memahami diri dan sesama. Wujudkan perubahan dimulai dari pikiran dan empati yang tulus. Kami percaya bahwa memahami manusia adalah langkah pertama untuk menyembuhkan dunia. Jadilah cahaya
+                bagi perubahan, dimulai dari hatimu.
+            </p>
+            <a href="#daftar" class="inline-block bg-[#B6A7D7] hover:bg-[#9f8ecb] text-white text-sm font-medium px-5 py-2 rounded-lg transition">
+        Daftar Sekarang
+      </a>
+        </div>
+
+        <!-- Gambar Kanan -->
+        <div class="md:w-1/3 flex justify-center">
+            <img src="public/assets/img/psikologi/image.png" alt="Mahasiswa Psikologi" class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover shadow-lg">
+        </div>
+    </div>
+</section>
+
+<!-- Testimoni Alumni -->
+<section class="bg-[#8A7EBE] py-10 px-6 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between rounded-lg p-6 relative">
+
+        <!-- Tombol Panah Kiri -->
+        <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-gray-100 text-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-200 shadow-md transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+        <!-- Kiri: Info Alumni -->
+        <div class="md:w-1/3 text-white pl-10">
+            <h3 class="text-base md:text-lg font-semibold mb-2">Testimoni Alumni</h3>
+            <p class="text-sm text-gray-200 leading-relaxed">
+                Dengar langsung pengalaman inspiratif dari alumni kami.
+            </p>
+        </div>
+
+        <!-- Kanan: Testimoni -->
+        <div class="md:w-2/3 text-white mt-6 md:mt-0 md:pl-10 relative">
+            <!-- Icon Kutipan -->
+            <div class="text-[#2E0F73] text-[110px] font-bold leading-none mb-[-30px]">“</div>
+
+            <!-- Isi Testimoni -->
+            <p class="text-sm md:text-base leading-relaxed mb-5">
+                Belajar di Psikologi UNPRI memberi saya bekal teori dan praktik yang seimbang. Sekarang saya bisa menerapkan ilmu psikologi dalam pekerjaan saya setiap hari.
+            </p>
+
+            <!-- Profil Alumni -->
+            <div class="flex items-center gap-3">
+                <img src="public/assets/img/psikologi/Ellipse 7.png" alt="Foto Alumni" class="w-12 h-12 rounded-full object-cover">
+                <div>
+                    <p class="font-semibold text-white text-sm md:text-base">Rizky Ananda, S.Psi – Alumni 2020</p>
+                    <p class="text-gray-200 text-xs">HRD di PT. SUKA KAMUUUU</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tombol Panah Kanan -->
+        <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-gray-100 text-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-200 shadow-md transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+    </div>
+</section>
+
+<!-- Footer Fakultas Psikologi -->
+<footer class="bg-gray-100 py-10 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-start">
+
+        <!-- Kolom Kiri: Logo dan Jam Pendaftaran -->
+        <div>
+            <div class="flex items-center space-x-4 mb-6">
+                <img src="public/assets/img/psikologi/logo-unpri-black 1 (1).png" alt="Logo UNPRI" class="h-12 object-contain">
+                <img src="public/assets/img/psikologi/unggul (1).png" alt="Logo Akreditasi" class="h-12 object-contain">
+                <img src="public/assets/img/psikologi/logo psikologi.png" alt="Logo Fakultas Psikologi" class="h-12 object-contain">
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-gray-800 mb-2">Jam Pendaftaran</h4>
+                <ul class="text-gray-700 text-sm space-y-1">
+                    <li>• Senin - Jumat: 08.00 - 17.00 WIB</li>
+                    <li>• Sabtu: 08.00 - 13.00 WIB</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Kolom Kanan: Kontak dan Sosial Media -->
+        <div class="md:text-right text-gray-800">
+            <h4 class="font-semibold">FAKULTAS PSIKOLOGI</h4>
+            <p class="font-semibold">Universitas Prima Indonesia</p>
+            <p class="text-sm mb-3">Jl. Sampul No. 3, Medan</p>
+
+            <p class="text-sm">Telepon: +62 12345689</p>
+            <p class="text-sm">Faks: +62 12345678</p>
+            <p class="text-sm mb-4">Email: fast@unpri.ac.id</p>
+
+            <!-- Sosial Media -->
+            <div class="flex md:justify-end justify-center space-x-4 text-gray-700 text-xl">
+                <a href="#" class="hover:text-[#5C3BA5]"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-[#5C3BA5]"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-[#5C3BA5]"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="hover:text-[#5C3BA5]"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Copyright -->
+<div class="bg-[#0D1B2A] text-white text-center text-[16px] py-3 ">
+    © 2025 Psikologi - Fakultas Psikologi | Universitas Prima Indonesia
+</div>
+</footer>
+
+
+
+
+<!-- Script -->
+<script>
+    feather.replace();
+    document.getElementById("menu-btn ").onclick = () => {
+        document.getElementById("mobile-menu ").classList.toggle("hidden ");
+    };
+</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js "></script>
+<script>
+    AOS.init({
+        once: true,
+        duration: 1000,
+        easing: "ease-out-cubic "
+    });
+</script>
+</body>
+
 </html>

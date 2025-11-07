@@ -1,36 +1,32 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HUKUM | UNPRI</title>
     <link rel="stylesheet" href="src/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind = {
-        config: {
-          theme: {
-            extend: {
-              colors: {
-                primary: "#192334",
-                accent: "#facc15",
-                secondary: "#F5F5F5",
-              },
-              fontFamily: {
-                sans: ["Poppins", "sans-serif"],
-              },
+        tailwind = {
+            config: {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "#192334",
+                            accent: "#facc15",
+                            secondary: "#F5F5F5",
+                        },
+                        fontFamily: {
+                            sans: ["Poppins", "sans-serif"],
+                        },
+                    },
+                },
             },
-          },
-        },
-      };
+        };
     </script>
 
     <!-- Feather -->
@@ -38,685 +34,467 @@
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  </head>
+</head>
 
-  <body class="bg-gray-50 text-gray-800 font-sans scroll-smooth">
+<body class="bg-gray-50 text-gray-800 font-sans scroll-smooth">
     <!-- Navbar -->
     <nav class="fixed w-full z-50 bg-primary border-b border-white/10 px-16">
-      <div
-        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"
-      >
-        <!-- Logo + Nama -->
-        <a
-          href="#"
-          class="flex items-center gap-7 text-2xl font-bold text-white drop-shadow-lg"
-        >
-          <!-- Logo UNPRI -->
-          <img
-            src="public/assets/img/logo unpri.png"
-            alt="Logo UNPRI"
-            class="w-13 h-12 object-contain drop-shadow-md transition-transform hover:scale-105"
-          />
-          <img
-            src="public/assets/img/hukum/logo hukum.webp "
-            class="w-13 h-12 object-contain drop-shadow-md transition-transform hover:scale-105"
-            alt=""
-          />
-        </a>
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+            <!-- Logo + Nama -->
+            <a href="#" class="flex items-center gap-7 text-2xl font-bold text-white drop-shadow-lg">
+                <!-- Logo UNPRI -->
+                <img src="public/assets/img/logo unpri.png" alt="Logo UNPRI" class="w-13 h-12 object-contain drop-shadow-md transition-transform hover:scale-105" />
+                <img src="public/assets/img/hukum/logo hukum.webp " class="w-13 h-12 object-contain drop-shadow-md transition-transform hover:scale-105" alt="" />
+            </a>
 
-        <!-- Menu Desktop -->
-        <ul class="hidden md:flex space-x-8 text-gray-100 font-medium">
-          <li>
-            <a href="#profil" class="hover:text-accent transition">Profil</a>
-          </li>
-          <li>
-            <a href="#program" class="hover:text-accent transition">Program</a>
-          </li>
-          <li>
-            <a href="#fasilitas" class="hover:text-accent transition"
-              >Fasilitas</a
+            <!-- Menu Desktop -->
+            <ul class="hidden md:flex space-x-8 text-gray-100 font-medium">
+                <li>
+                    <a href="#profil" class="hover:text-accent transition">Profil</a>
+                </li>
+                <li>
+                    <a href="#program" class="hover:text-accent transition">Program</a>
+                </li>
+                <li>
+                    <a href="#fasilitas" class="hover:text-accent transition">Fasilitas</a
             >
           </li>
           <li>
             <a href="#kontak" class="hover:text-accent transition">Kontak</a>
-          </li>
-        </ul>
+                </li>
+            </ul>
 
-        <!-- Tombol Mobile -->
-        <button id="menu-btn" class="md:hidden text-white">
+            <!-- Tombol Mobile -->
+            <button id="menu-btn" class="md:hidden text-white">
           <i data-feather="menu"></i>
         </button>
-      </div>
+        </div>
 
-      <!-- Menu Mobile -->
-      <div id="mobile-menu" class="hidden bg-primary/95 md:hidden text-center">
-        <ul class="py-4 space-y-4 text-white font-medium">
-          <li><a href="#profil">Profil</a></li>
-          <li><a href="#program">Program</a></li>
-          <li><a href="#fasilitas">Fasilitas</a></li>
-          <li><a href="#kontak">Kontak</a></li>
-        </ul>
-      </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden bg-primary/95 md:hidden text-center">
+            <ul class="py-4 space-y-4 text-white font-medium">
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#program">Program</a></li>
+                <li><a href="#fasilitas">Fasilitas</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Hero -->
-    <section
-      class="relative h-screen flex items-center text-white overflow-hidden"
-    >
-      <img
-        src="public/assets/img/bgHero.jpg"
-        class="absolute w-full h-full object-cover brightness-[0.45]"
-        alt="Campus Background"
-      />
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-primary/40 to-secondary/60"
-      ></div>
+    <section class="relative h-screen flex items-center text-white overflow-hidden">
+        <img src="public/assets/img/bgHero.jpg" class="absolute w-full h-full object-cover brightness-[0.45]" alt="Campus Background" />
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-secondary/60"></div>
 
-      <div class="relative z-10 px-16">
-        <div class="bg-primary px-2 py-1 max-w-[792px]">
-          <h1 class="text-xl md:text-4xl font-extrabold leading-tight">
-            FAKULTAS HUKUM
-          </h1>
-        </div>
-        <p class="text-sm md:text-[17px] mt-4 max-w-[600px] text-gray-200">
-          Membentuk generasi digital unggul, kreatif, dan adaptif menghadapi era
-          industri 5.0
-        </p>
-        <button
-          class="text-[#262626] bg-[#FACC15] font-bold text-sm rounded-lg mt-3 px-3 py-2"
-        >
+        <div class="relative z-10 px-16">
+            <div class="bg-primary px-2 py-1 max-w-[792px]">
+                <h1 class="text-xl md:text-4xl font-extrabold leading-tight">
+                    FAKULTAS HUKUM
+                </h1>
+            </div>
+            <p class="text-sm md:text-[17px] mt-4 max-w-[600px] text-gray-200">
+                Membentuk generasi digital unggul, kreatif, dan adaptif menghadapi era industri 5.0
+            </p>
+            <button class="text-[#262626] bg-[#FACC15] font-bold text-sm rounded-lg mt-3 px-3 py-2">
           Pelajari Lebih Lanjut
         </button>
-      </div>
+        </div>
 
-      <div
-        class="absolute w-[500px] h-[500px] bg-secondary/30 rounded-full blur-3xl top-0 left-0 animate-pulse"
-      ></div>
-      <div
-        class="absolute w-[400px] h-[400px] bg-accent/20 rounded-full blur-3xl bottom-0 right-0 animate-pulse"
-      ></div>
+        <div class="absolute w-[500px] h-[500px] bg-secondary/30 rounded-full blur-3xl top-0 left-0 animate-pulse"></div>
+        <div class="absolute w-[400px] h-[400px] bg-accent/20 rounded-full blur-3xl bottom-0 right-0 animate-pulse"></div>
     </section>
 
     <!-- Kemitraan -->
     <section class="px-16 overflow-hidden">
-      <div>
-        <h1 class="font-bold text-3xl mt-8 mb-3">Kemitraan</h1>
-        <div class="relative">
-          <div class="flex items-center gap-5 animate-scroll">
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/hukum/kemitraanLogo/bawaslu-logo-png_seeklogo-345724.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/hukum/kemitraanLogo/Kejaksaan binjai.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/hukum/kemitraanLogo/Kejaksaan_Agung_Republik_Indonesia_new_logo.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/hukum/kemitraanLogo/KPU_Logo.svg.webp"
-              alt=""
-            />
-            <img
-              class="w-[90px] h-[90px]"
-              src="public/assets/img/hukum/kemitraanLogo/logo-DPRD-KOTA-MEDAN.webp"
-              alt=""
-            />
-            <img
-              class="w-[100px] h-[90px]"
-              src="public/assets/img/hukum/kemitraanLogo/pengadilan-tinggi-medan-2.webp"
-              alt=""
-            />
-          </div>
+        <div>
+            <h1 class="font-bold text-3xl mt-8 mb-3">Kemitraan</h1>
+            <div class="relative">
+                <div class="flex items-center gap-5 animate-scroll">
+                    <img class="w-[90px] h-[90px]" src="public/assets/img/hukum/kemitraanLogo/bawaslu-logo-png_seeklogo-345724.webp" alt="" />
+                    <img class="w-[90px] h-[90px]" src="public/assets/img/hukum/kemitraanLogo/Kejaksaan binjai.webp" alt="" />
+                    <img class="w-[90px] h-[90px]" src="public/assets/img/hukum/kemitraanLogo/Kejaksaan_Agung_Republik_Indonesia_new_logo.webp" alt="" />
+                    <img class="w-[90px] h-[90px]" src="public/assets/img/hukum/kemitraanLogo/KPU_Logo.svg.webp" alt="" />
+                    <img class="w-[90px] h-[90px]" src="public/assets/img/hukum/kemitraanLogo/logo-DPRD-KOTA-MEDAN.webp" alt="" />
+                    <img class="w-[100px] h-[90px]" src="public/assets/img/hukum/kemitraanLogo/pengadilan-tinggi-medan-2.webp" alt="" />
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- tentang fast -->
     <section class="px-16 mt-20">
-      <div class="bg-primary flex p-10 gap-20">
-        <img src="public/assets/img/hukum/logo hukum.webp" class="w-[400px]" alt="" />
-        <div class="text-white w-1/2 text-center">
-          <p class="text-xl mb-2">Tentang Fakultas Hukum</p>
-          <p class="text-left">
-            Fakultas Hukum Universitas Prima Indonesia (UNPRI) adalah institusi pendidikan tinggi hukum terdepan
-            di Sumatera Utara yang mengedepankan keunggulan akademik dan profesionalisme global. Dengan program Sarjana,
-            Magister Hukum, Magister Kenotariatan, dan Doktor Hukum yang terakreditasi unggul, UNPRI siap mencetak lulusan
-            yang kompeten, berintegritas, dan adaptif terhadap dinamika hukum nasional maupun internasional. Fakultas ini
-            menanamkan semangat socio-technopreneurship, serta menerapkan kurikulum berbasis Outcome-Based Education (OBE) 
-            yang terintegrasi dengan teknologi informasi untuk menghasilkan lulusan berdaya saing tinggi dalam bidang hukum bisnis,
-            hukum kesehatan, dan kenotariatan.
-          </p>
+        <div class="bg-primary flex p-10 gap-20">
+            <img src="public/assets/img/hukum/logo hukum.webp" class="w-[400px]" alt="" />
+            <div class="text-white w-1/2 text-center">
+                <p class="text-xl mb-2">Tentang Fakultas Hukum</p>
+                <p class="text-left">
+                    Fakultas Hukum Universitas Prima Indonesia (UNPRI) adalah institusi pendidikan tinggi hukum terdepan di Sumatera Utara yang mengedepankan keunggulan akademik dan profesionalisme global. Dengan program Sarjana, Magister Hukum, Magister Kenotariatan, dan
+                    Doktor Hukum yang terakreditasi unggul, UNPRI siap mencetak lulusan yang kompeten, berintegritas, dan adaptif terhadap dinamika hukum nasional maupun internasional. Fakultas ini menanamkan semangat socio-technopreneurship, serta menerapkan
+                    kurikulum berbasis Outcome-Based Education (OBE) yang terintegrasi dengan teknologi informasi untuk menghasilkan lulusan berdaya saing tinggi dalam bidang hukum bisnis, hukum kesehatan, dan kenotariatan.
+                </p>
+            </div>
         </div>
-      </div>
     </section>
     <!-- Visi dan Misi HUKUM UNPRI -->
-    <section
-      id="visi-misi"
-      class="py-28 bg-gray-50 relative overflow-hidden px-16 flex justify-center flex-col items-center"
-    >
-      <div
-        class="max-w-4xl w-full bg-secondary rounded-xl shadow p-6 mb-6 border-2 border-gray-200"
-      >
-        <div class="flex items-center justify-center gap-2 mb-2">
-          <div
-            class="w-10 h-10 bg-white flex items-center justify-center rounded-full"
-          >
-            <img
-              src="public/assets/img/vectorVisi.svg"
-              class="w-5 h-5"
-              alt=""
-            />
-          </div>
-          <h2 class="text-xl font-bold text-gray-800">Visi</h2>
-        </div>
-        <p class="text-gray-700 leading-relaxed text-justify">
-          Menjadi Fakultas Hukum terbaik dalam penyelenggaraan pendidikan Hukum Bisnis
-          di tingkat Nasional berwawasan socio-technoprenership yang unggul, inovatif,
-          dan adaptif pada tahun 2030.
-        </p>
-      </div>
-
-      <!-- MISI & TUJUAN -->
-      <div class="grid md:grid-cols-2 gap-6 max-w-4xl w-full">
-        <!-- MISI -->
-        <div
-          class="bg-secondary shadow rounded-xl p-6 border-2 border-gray-200"
-        >
-          <div class="flex items-center gap-2 mb-2">
-            <i class="ri-flag-line text-yellow-500 text-2xl"></i>
-            <div
-              class="w-10 h-10 bg-white flex items-center justify-center rounded-full"
-            >
-              <img
-                src="public/assets/img/vectorMisidanTujuan.svg"
-                class="w-5 h-5"
-                alt=""
-              />
+    <section id="visi-misi" class="py-28 bg-gray-50 relative overflow-hidden px-16 flex justify-center flex-col items-center">
+        <div class="max-w-4xl w-full bg-secondary rounded-xl shadow p-6 mb-6 border-2 border-gray-200">
+            <div class="flex items-center justify-center gap-2 mb-2">
+                <div class="w-10 h-10 bg-white flex items-center justify-center rounded-full">
+                    <img src="public/assets/img/vectorVisi.svg" class="w-5 h-5" alt="" />
+                </div>
+                <h2 class="text-xl font-bold text-gray-800">Visi</h2>
             </div>
-            <h2 class="text-xl font-bold text-gray-800">Misi</h2>
-          </div>
-          <ol class="list-decimal text-gray-700 leading-relaxed space-y-1">
-            <li>
-              Menyelenggarakan pendidikan pada bidang hukum, serta berwawasan socio- technoprenership
-              yang inovatif dan adaptif.
-            </li>
-            <li>
-              Menyelenggarakan penelitian pada bidang hukum, serta berwawasan socio- technoprenership
-              yang inovatif dan adaptif.
-            </li>
-            <li>
-              Menyelenggarakan pengabdian pada bidang hukum, serta berwawasan socio- technoprenership 
-              yang inovatif dan adaptif.
-            </li>
-          </ol>
+            <p class="text-gray-700 leading-relaxed text-justify">
+                Menjadi Fakultas Hukum terbaik dalam penyelenggaraan pendidikan Hukum Bisnis di tingkat Nasional berwawasan socio-technoprenership yang unggul, inovatif, dan adaptif pada tahun 2030.
+            </p>
         </div>
 
-        <!-- TUJUAN -->
-        <div
-          class="bg-secondary rounded-xl shadow p-6 border-2 border-gray-200"
-        >
-          <div class="flex items-center gap-2 mb-2">
-            <i class="ri-check-double-line text-yellow-500 text-2xl"></i>
-            <div
-              class="w-10 h-10 bg-white flex items-center justify-center rounded-full"
-            >
-              <img
-                src="public/assets/img/vectorMisidanTujuan.svg"
-                class="w-5 h-5"
-                alt=""
-              />
+        <!-- MISI & TUJUAN -->
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl w-full">
+            <!-- MISI -->
+            <div class="bg-secondary shadow rounded-xl p-6 border-2 border-gray-200">
+                <div class="flex items-center gap-2 mb-2">
+                    <i class="ri-flag-line text-yellow-500 text-2xl"></i>
+                    <div class="w-10 h-10 bg-white flex items-center justify-center rounded-full">
+                        <img src="public/assets/img/vectorMisidanTujuan.svg" class="w-5 h-5" alt="" />
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-800">Misi</h2>
+                </div>
+                <ol class="list-decimal text-gray-700 leading-relaxed space-y-1">
+                    <li>
+                        Menyelenggarakan pendidikan pada bidang hukum, serta berwawasan socio- technoprenership yang inovatif dan adaptif.
+                    </li>
+                    <li>
+                        Menyelenggarakan penelitian pada bidang hukum, serta berwawasan socio- technoprenership yang inovatif dan adaptif.
+                    </li>
+                    <li>
+                        Menyelenggarakan pengabdian pada bidang hukum, serta berwawasan socio- technoprenership yang inovatif dan adaptif.
+                    </li>
+                </ol>
             </div>
-            <h2 class="text-xl font-bold text-gray-800">Tujuan</h2>
-          </div>
-          <ol
-            class="list-decimal list-inside text-gray-700 leading-relaxed space-y-1"
-          >
-            <li>
-              Menghasilkan lulusan yang mampu di bidang Technopreneurship yang
-              inovatif, adaptif;
-            </li>
-            <li>
-              Menghasilkan riset dan publikasi pada bidang teknologi dan ilmu
-              komputer;
-            </li>
-            <li>
-              Meningkatkan kepercayaan masyarakat dalam pelayanan di bidang
-              teknologi dan ilmu komputer;
-            </li>
-            <li>
-              Menghasilkan berbagai kerjasama untuk meningkatkan sarana
-              pelaksanaan Tri Dharma Perguruan Tinggi;
-            </li>
-            <li>
-              Terwujudnya tata kelola guna penguatan akuntabilitas, penataan
-              struktur organisasi yang efisien, efektif, transparan, dan
-              akuntabel.
-            </li>
-          </ol>
+
+            <!-- TUJUAN -->
+            <div class="bg-secondary rounded-xl shadow p-6 border-2 border-gray-200">
+                <div class="flex items-center gap-2 mb-2">
+                    <i class="ri-check-double-line text-yellow-500 text-2xl"></i>
+                    <div class="w-10 h-10 bg-white flex items-center justify-center rounded-full">
+                        <img src="public/assets/img/vectorMisidanTujuan.svg" class="w-5 h-5" alt="" />
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-800">Tujuan</h2>
+                </div>
+                <ol class="list-decimal list-inside text-gray-700 leading-relaxed space-y-1">
+                    <li>
+                        Menghasilkan lulusan yang mampu di bidang Technopreneurship yang inovatif, adaptif;
+                    </li>
+                    <li>
+                        Menghasilkan riset dan publikasi pada bidang teknologi dan ilmu komputer;
+                    </li>
+                    <li>
+                        Meningkatkan kepercayaan masyarakat dalam pelayanan di bidang teknologi dan ilmu komputer;
+                    </li>
+                    <li>
+                        Menghasilkan berbagai kerjasama untuk meningkatkan sarana pelaksanaan Tri Dharma Perguruan Tinggi;
+                    </li>
+                    <li>
+                        Terwujudnya tata kelola guna penguatan akuntabilitas, penataan struktur organisasi yang efisien, efektif, transparan, dan akuntabel.
+                    </li>
+                </ol>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Pimpinan prodi -->
-    <section
-      id="pimpinan"
-      class="py-24 bg-[#E8E9EB] text-center relative overflow-hidden px-16"
-    >
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-accent/5"
-      ></div>
-      <div class="relative z-10 max-w-6xl mx-auto px-6">
-        <h3 class="text-4xl font-bold text-primary mb-12" data-aos="fade-up">
-          Pimpinan Fakultas Hukum
-        </h3>
+    <section id="pimpinan" class="py-24 bg-[#E8E9EB] text-center relative overflow-hidden px-16">
+        <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-accent/5"></div>
+        <div class="relative z-10 max-w-6xl mx-auto px-6">
+            <h3 class="text-4xl font-bold text-primary mb-12" data-aos="fade-up">
+                Pimpinan Fakultas Hukum
+            </h3>
 
-        <div
-          class="grid sm:grid-cols-2 md:grid-cols-4 gap-10 justify-center"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <!-- dekan -->
-          <div
-            class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-4 hover:-translate-y-2 hover:shadow-2xl transition"
-          >
-            <div class="relative w-36 h-36 mx-auto mb-4">
-              <img
-                src="public/assets/img/hukum/pimpinanhukum/dekan.webp"
-                class="rounded-full w-full h-full object-cover border-4 border-accent shadow-md"
-              />
-            </div>
-            <h4 class="font-bold text-[15px] text-primary mb-2 mb-2">
-             Dr. Elvira Fitriyani Pakpahan, S.HI., M.Hum.
-            </h4>
-            <p>Dekan</p>
-          </div>
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-10 justify-center" data-aos="fade-up" data-aos-delay="100">
+                <!-- dekan -->
+                <div class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-4 hover:-translate-y-2 hover:shadow-2xl transition">
+                    <div class="relative w-36 h-36 mx-auto mb-4">
+                        <img src="public/assets/img/hukum/pimpinanhukum/dekan.webp" class="rounded-full w-full h-full object-cover border-4 border-accent shadow-md" />
+                    </div>
+                    <h4 class="font-bold text-[15px] text-primary mb-2 mb-2">
+                        Dr. Elvira Fitriyani Pakpahan, S.HI., M.Hum.
+                    </h4>
+                    <p>Dekan</p>
+                </div>
 
-          <!-- Wakil dekan I -->
-          <div
-            class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition"
-          >
-            <div class="relative w-36 h-36 mx-auto mb-4">
-              <img
-                src="public/assets/img/hukum/pimpinanhukum/wk dekan 1.jpg"
-                class="rounded-full w-full h-full object-cover border-4 border-blue-400 shadow-md"
-              />
-            </div>
-            <h4 class="font-bold text-[15px] text-primary mb-2">
-              Dr. Herman Brahmana, S.H., M.H.
-            </h4>
-            <p>wakil Dekan 1</p>
-          </div>
+                <!-- Wakil dekan I -->
+                <div class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition">
+                    <div class="relative w-36 h-36 mx-auto mb-4">
+                        <img src="public/assets/img/hukum/pimpinanhukum/wk dekan 1.jpg" class="rounded-full w-full h-full object-cover border-4 border-blue-400 shadow-md" />
+                    </div>
+                    <h4 class="font-bold text-[15px] text-primary mb-2">
+                        Dr. Herman Brahmana, S.H., M.H.
+                    </h4>
+                    <p>wakil Dekan 1</p>
+                </div>
 
-          <!-- Wakil dekan II -->
-          <div
-            class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition"
-          >
-            <div class="relative w-36 h-36 mx-auto mb-4">
-              <img
-                src="public/assets/img/hukum/pimpinanhukum/wk dekan 2.jpg"
-                class="rounded-full w-full h-full object-cover border-4 border-green-400 shadow-md"
-              />
-            </div>
-            <h4 class="font-bold text-[15px] text-primary mb-2">
-           Sigar P. Berutu, S.H., M.H.
-            </h4>
-            <p>Wakil Dekan 2</p>
-          </div>
+                <!-- Wakil dekan II -->
+                <div class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition">
+                    <div class="relative w-36 h-36 mx-auto mb-4">
+                        <img src="public/assets/img/hukum/pimpinanhukum/wk dekan 2.jpg" class="rounded-full w-full h-full object-cover border-4 border-green-400 shadow-md" />
+                    </div>
+                    <h4 class="font-bold text-[15px] text-primary mb-2">
+                        Sigar P. Berutu, S.H., M.H.
+                    </h4>
+                    <p>Wakil Dekan 2</p>
+                </div>
 
-          <!-- Wakil dekan III -->
-          <div
-            class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition"
-          >
-            <div class="relative w-36 h-36 mx-auto mb-4">
-              <img
-                src="public/assets/img/hukum/pimpinanhukum/wk dekan 3.jpg"
-                class="rounded-full w-full h-full object-cover border-4 border-purple-400 shadow-md"
-              />
+                <!-- Wakil dekan III -->
+                <div class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition">
+                    <div class="relative w-36 h-36 mx-auto mb-4">
+                        <img src="public/assets/img/hukum/pimpinanhukum/wk dekan 3.jpg" class="rounded-full w-full h-full object-cover border-4 border-purple-400 shadow-md" />
+                    </div>
+                    <h4 class="font-bold text-[15px] text-primary mb-2">
+                        Dr. Rizki, S.H., M.Kn.
+                    </h4>
+                    <p>Wakil Dekan 3</p>
+                </div>
             </div>
-            <h4 class="font-bold text-[15px] text-primary mb-2">
-              Dr. Rizki, S.H., M.Kn.
-            </h4>
-            <p>Wakil Dekan 3</p>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- Program Studi -->
     <section class="px-16">
-      <div>
-        <h1 class="font-bold text-2xl my-5">Program Studi</h1>
-        <div class="grid grid-cols-3 gap-8">
-          <div class="relative">
-            <div
-              class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"
-            ></div>
+        <div>
+            <h1 class="font-bold text-2xl my-5">Program Studi</h1>
+            <div class="grid grid-cols-3 gap-8">
+                <div class="relative">
+                    <div class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"></div>
 
-            <div
-              class="bg-secondary rounded-2xl p-5 shadow border border-gray-200"
-            >
-              <div
-                class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2"
-              >
-                <img
-                  src="public/assets/img/Vector.svg"
-                  class="w-5 h-5"
-                  alt="icon"
-                />
-              </div>
-              <h1 class="text-xl font-bold">Sarjana Hukum</h1>
-              <p class="my-5">
-                Program Studi Hukum adalah program akademik yang berfokus pada pembelajaran sistem hukum, 
-                regulasi, dan prinsip keadilan yang berlaku di tingkat nasional maupun internasional.
-              </p>
-              <div class="flex gap-3 items-center">
-                Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="relative">
-            <div
-              class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"
-            ></div>
+                    <div class="bg-secondary rounded-2xl p-5 shadow border border-gray-200">
+                        <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2">
+                            <img src="public/assets/img/Vector.svg" class="w-5 h-5" alt="icon" />
+                        </div>
+                        <h1 class="text-xl font-bold">Sarjana Hukum</h1>
+                        <p class="my-5">
+                            Program Studi Hukum adalah program akademik yang berfokus pada pembelajaran sistem hukum, regulasi, dan prinsip keadilan yang berlaku di tingkat nasional maupun internasional.
+                        </p>
+                        <div class="flex gap-3 items-center">
+                            Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"></div>
 
-            <div
-              class="bg-secondary rounded-2xl p-5 shadow border border-gray-200"
-            >
-              <div
-                class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2"
-              >
-                <img
-                  src="public/assets/img/Si.svg"
-                  class="w-5 h-5"
-                  alt="icon"
-                />
-              </div>
-              <h1 class="text-xl font-bold">Magister Hukum</h1>
-              <p class="my-5">
-                Program Studi Magister Hukum (S2) dirancang untuk menghasilkan lulusan yang memiliki kemampuan
-                analisis hukum tingkat lanjut, berpikir kritis, serta mampu memberikan solusi strategis terhadap
-                permasalahan hukum yang kompleks.
-              </p>
-              <div class="flex gap-3 items-center">
-                Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="relative">
-            <div
-              class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"
-            ></div>
+                    <div class="bg-secondary rounded-2xl p-5 shadow border border-gray-200">
+                        <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2">
+                            <img src="public/assets/img/Si.svg" class="w-5 h-5" alt="icon" />
+                        </div>
+                        <h1 class="text-xl font-bold">Magister Hukum</h1>
+                        <p class="my-5">
+                            Program Studi Magister Hukum (S2) dirancang untuk menghasilkan lulusan yang memiliki kemampuan analisis hukum tingkat lanjut, berpikir kritis, serta mampu memberikan solusi strategis terhadap permasalahan hukum yang kompleks.
+                        </p>
+                        <div class="flex gap-3 items-center">
+                            Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"></div>
 
-            <div
-              class="bg-secondary rounded-2xl p-5 shadow border border-gray-200"
-            >
-              <div
-                class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2"
-              >
-                <img
-                  src="public/assets/img/elektro.svg"
-                  class="w-5 h-5"
-                  alt="icon"
-                />
-              </div>
-              <h1 class="text-xl font-bold">Magister Kenotariatan</h1>
-              <p class="my-5">
-                Program Studi Magister Kenotariatan (M.Kn) merupakan program pendidikan lanjutan 
-                yang secara khusus mempersiapkan calon notaris profesional yang memiliki kompetensi 
-                tinggi dalam bidang hukum perdata, khususnya terkait pembuatan akta otentik dan pengaturan perjanjian hukum.
-              </p>
-              <div class="flex gap-3 items-center">
-                Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="relative">
-            <div
-              class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"
-            ></div>
+                    <div class="bg-secondary rounded-2xl p-5 shadow border border-gray-200">
+                        <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2">
+                            <img src="public/assets/img/elektro.svg" class="w-5 h-5" alt="icon" />
+                        </div>
+                        <h1 class="text-xl font-bold">Magister Kenotariatan</h1>
+                        <p class="my-5">
+                            Program Studi Magister Kenotariatan (M.Kn) merupakan program pendidikan lanjutan yang secara khusus mempersiapkan calon notaris profesional yang memiliki kompetensi tinggi dalam bidang hukum perdata, khususnya terkait pembuatan akta otentik dan pengaturan
+                            perjanjian hukum.
+                        </p>
+                        <div class="flex gap-3 items-center">
+                            Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"></div>
 
-            <div
-              class="bg-secondary rounded-2xl p-5 shadow border border-gray-200"
-            >
-              <div
-                class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2"
-              >
-                <img
-                  src="public/assets/img/industri.svg"
-                  class="w-5 h-5"
-                  alt="icon"
-                />
-              </div>
-              <h1 class="text-xl font-bold">Doktor Hukum</h1>
-              <p class="my-5">
-                Program Studi Doktor Hukum (S3) merupakan jenjang pendidikan tertinggi di bidang ilmu hukum yang berfokus 
-                pada pengembangan teori hukum, pemikiran kritis, dan kontribusi keilmuan melalui penelitian yang orisinal dan berdampak.
-              </p>
-              <div class="flex gap-3 items-center">
-                Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
-              </div>
+                    <div class="bg-secondary rounded-2xl p-5 shadow border border-gray-200">
+                        <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center mb-2">
+                            <img src="public/assets/img/industri.svg" class="w-5 h-5" alt="icon" />
+                        </div>
+                        <h1 class="text-xl font-bold">Doktor Hukum</h1>
+                        <p class="my-5">
+                            Program Studi Doktor Hukum (S3) merupakan jenjang pendidikan tertinggi di bidang ilmu hukum yang berfokus pada pengembangan teori hukum, pemikiran kritis, dan kontribusi keilmuan melalui penelitian yang orisinal dan berdampak.
+                        </p>
+                        <div class="flex gap-3 items-center">
+                            Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"></div>
+                </div>
             </div>
-          </div>
-          <div class="relative">
-            <div
-              class="w-2 h-20 bg-primary absolute top-5 rounded-l-full"
-            ></div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+        </div>
+        </div>
     </section>
 
     <!-- Berita Terkini -->
     <section class="px-16 py-16">
-      <div class="flex items-center mb-5">
-        <p class="text-[24px] font-bold">Berita Terkini</p>
-        <div class="flex-1 h-px bg-gray-300 mx-4"></div>
-        <a
-          href="#"
-          class="bg-yellow-400 text-[16px] text-black text-sm font-semibold px-4 py-2 rounded-md hover:bg-yellow-500 transition"
-        >
+        <div class="flex items-center mb-5">
+            <p class="text-[24px] font-bold">Berita Terkini</p>
+            <div class="flex-1 h-px bg-gray-300 mx-4"></div>
+            <a href="#" class="bg-yellow-400 text-[16px] text-black text-sm font-semibold px-4 py-2 rounded-md hover:bg-yellow-500 transition">
           Baca Berita Lainnya
         </a>
-      </div>
-      <div class="grid grid-cols-3 gap-10">
-        <div class="">
-          <img
-            src="public/assets/img/fast/berita1.jpeg"
-            class="mb-2 w-[360px] h-[220px]"
-            alt=""
-          />
-          <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
-          <p class="text-[20px] font-bold py-1">
-            Kampus Terbaik dan Unggul....
-          </p>
-          <p class="text-[15px]">
-            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi
-            Strategis di Kabupaten Rokan ....
-          </p>
         </div>
-        <div>
-          <img
-            src="public/assets/img/fast/berita2.jpeg"
-            class="mb-2 w-[360px] h-[220px]"
-            alt=""
-          />
-          <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
-          <p class="text-[20px] font-bold py-1">
-            Kampus Terbaik dan Unggul....
-          </p>
-          <p class="text-[15px]">
-            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi
-            Strategis di Kabupaten Rokan ....
-          </p>
+        <div class="grid grid-cols-3 gap-10">
+            <div class="">
+                <img src="public/assets/img/fast/berita1.jpeg" class="mb-2 w-[360px] h-[220px]" alt="" />
+                <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
+                <p class="text-[20px] font-bold py-1">
+                    Kampus Terbaik dan Unggul....
+                </p>
+                <p class="text-[15px]">
+                    Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi Strategis di Kabupaten Rokan ....
+                </p>
+            </div>
+            <div>
+                <img src="public/assets/img/fast/berita2.jpeg" class="mb-2 w-[360px] h-[220px]" alt="" />
+                <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
+                <p class="text-[20px] font-bold py-1">
+                    Kampus Terbaik dan Unggul....
+                </p>
+                <p class="text-[15px]">
+                    Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi Strategis di Kabupaten Rokan ....
+                </p>
+            </div>
+            <div>
+                <img src="public/assets/img/fast/berita3.jpeg" class="mb-2 w-[360px] h-[220px]" alt="" />
+                <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
+                <p class="text-[20px] font-bold py-1">
+                    Kampus Terbaik dan Unggul....
+                </p>
+                <p class="text-[15px]">
+                    Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi Strategis di Kabupaten Rokan ....
+                </p>
+            </div>
         </div>
-        <div>
-          <img
-            src="public/assets/img/fast/berita3.jpeg"
-            class="mb-2 w-[360px] h-[220px]"
-            alt=""
-          />
-          <p class="text-[14px] text-[#7B7B7B]">Senin, 20 Oktober 2025</p>
-          <p class="text-[20px] font-bold py-1">
-            Kampus Terbaik dan Unggul....
-          </p>
-          <p class="text-[15px]">
-            Sinergi Pendidikan dan Pemerintah Daerah: UNPRI Perluas Kolaborasi
-            Strategis di Kabupaten Rokan ....
-          </p>
-        </div>
-      </div>
     </section>
 
     <!-- hmmmmmmmmmm -->
     <section class="px-16 py-16">
-      <div
-        class="bg-primary text-white rounded-2xl flex items-center justify-between px-10 py-10 gap-8"
-      >
-        <div class="flex-1 w-[657px]">
-          <h2 class="text-[29px] font-bold mb-2">
-            Jadilah Bagian dari Masa Depan Teknologi dan Inovasi!
-          </h2>
-          <p class="text-gray-300 mb-5 text-[16px]">
-            Wujudkan mimpi bersama Fakultas Hukum — tempat di mana
-            ide-ide cemerlang tumbuh menjadi inovasi yang berdampak. Daftar
-            sekarang!
-          </p>
-          <button
-            class="bg-yellow-400 text-black font-semibold px-5 py-2 rounded-md hover:bg-yellow-500 transition"
-          >
+        <div class="bg-primary text-white rounded-2xl flex items-center justify-between px-10 py-10 gap-8">
+            <div class="flex-1 w-[657px]">
+                <h2 class="text-[29px] font-bold mb-2">
+                    Jadilah Bagian dari Masa Depan Teknologi dan Inovasi!
+                </h2>
+                <p class="text-gray-300 mb-5 text-[16px]">
+                    Wujudkan mimpi bersama Fakultas Hukum — tempat di mana ide-ide cemerlang tumbuh menjadi inovasi yang berdampak. Daftar sekarang!
+                </p>
+                <button class="bg-yellow-400 text-black font-semibold px-5 py-2 rounded-md hover:bg-yellow-500 transition">
             Daftar Sekarang
           </button>
-        </div>
+            </div>
 
-        <div class="flex-shrink-0">
-          <img
-            src="public/assets/img/hukum/logo hukum.webp"
-            alt="Mahasiswa belajar"
-            class="w-52 h-52 rounded-full object-cover"
-          />
+            <div class="flex-shrink-0">
+                <img src="public/assets/img/hukum/logo hukum.webp" alt="Mahasiswa belajar" class="w-52 h-52 rounded-full object-cover" />
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- FOOTER -->
-     <footer class="bg-[#E8E9EB] text-[#262626]">
-      <div class="flex justify-between px-16">
-        <div class="py-10 gap-10">
-          <!-- Logo -->
+    <footer class="bg-[#E8E9EB] text-[#262626]">
+        <div class="flex justify-between px-16">
+            <div class="py-10 gap-10">
+                <!-- Logo -->
 
-          <div class="flex items-center mb-5">
-            <img
-              src="public/assets/img/logo-unpri-black.webp"
-              alt="Unpri Logo"
-              class="h-12"
-            />
-            <img
-              src="public/assets/img/logoAkrediatasiUnggul.webp"
-              alt="Unggul Logo"
-              class="h-12"
-            />
-            <img
-              src="public/assets/img/hukum/logo hukum.webp"
-              alt="Hukum Logo"
-              class="h-12"
-            />
-          </div>
-          <div class="text-[16px]">
-            <p class="font-bold mb-2">Jam Pendaftaran</p>
-            <ul class="text-gray-700">
-              <li>• Senin - Jumat: 08.00 - 17.00 WIB</li>
-              <li>• Sabtu: 08.00 - 13.00 WIB</li>
-            </ul>
-          </div>
+                <div class="flex items-center mb-5">
+                    <img src="public/assets/img/logo-unpri-black.webp" alt="Unpri Logo" class="h-12" />
+                    <img src="public/assets/img/logoAkrediatasiUnggul.webp" alt="Unggul Logo" class="h-12" />
+                    <img src="public/assets/img/hukum/logo hukum.webp" alt="Hukum Logo" class="h-12" />
+                </div>
+                <div class="text-[16px]">
+                    <p class="font-bold mb-2">Jam Pendaftaran</p>
+                    <ul class="text-gray-700">
+                        <li>• Senin - Jumat: 08.00 - 17.00 WIB</li>
+                        <li>• Sabtu: 08.00 - 13.00 WIB</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="py-10">
+                <div class="mb-5">
+                    <h1 class="font-bold">FAKULTAS HUKUM</h1>
+                    <h2 class="font-bold">Universitas Prima Indonesia</h2>
+                    <p>Jl. Sampul No. 3, Medan</p>
+                    <p class="mt-2">Telepon: +62 12345689</p>
+                    <p>Faks: +62 12345678</p>
+                    <p>Email: contact@unprimdn.ac.id</p>
+                </div>
+                <div class="flex gap-4 text-xl">
+                    <a href="#" class="hover:text-primary"><i class="fab fa-facebook"></i
+            ></a>
+                    <a href="#" class="hover:text-primary"><i class="fab fa-instagram"></i
+            ></a>
+                    <a href="#" class="hover:text-primary"><i class="fab fa-youtube"></i
+            ></a>
+                    <a href="#" class="hover:text-primary"><i class="fab fa-tiktok"></i
+            ></a>
+                </div>
+            </div>
         </div>
-        <div class="py-10">
-          <div class="mb-5">
-            <h1 class="font-bold">FAKULTAS HUKUM</h1>
-            <h2 class="font-bold">Universitas Prima Indonesia</h2>
-            <p>Jl. Sampul No. 3, Medan</p>
-            <p class="mt-2">Telepon: +62 12345689</p>
-            <p>Faks: +62 12345678</p>
-            <p>Email: contact@unprimdn.ac.id</p>
-          </div>
-          <div class="flex gap-4 text-xl">
-            <a href="#" class="hover:text-primary"
-              ><i class="fab fa-facebook"></i
-            ></a>
-            <a href="#" class="hover:text-primary"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="#" class="hover:text-primary"
-              ><i class="fab fa-youtube"></i
-            ></a>
-            <a href="#" class="hover:text-primary"
-              ><i class="fab fa-tiktok"></i
-            ></a>
-          </div>
+        <!-- Copyright -->
+        <div class="bg-[#0D1B2A] text-white text-center text-[16px] py-3">
+            © 2025 Hukum - Fakultas Hukum | Universitas Prima Indonesia
         </div>
-      </div>
-      <!-- Copyright -->
-      <div class="bg-[#0D1B2A] text-white text-center text-[16px] py-3">
-        © 2025 Hukum - Fakultas Hukum | Universitas Prima Indonesia
-      </div>
     </footer>
 
 
     <!-- Fullscreen Loading Screen -->
-    <div
-      id="loading-screen"
-      class="fixed inset-0 flex items-center justify-center bg-[#0b1221] z-[9999] transition-opacity duration-700"
-    >
-      <img
-        src="{{ asset('assets/img/loading-fast.gif') }}"
-        alt="Loading..."
-        class="w-full h-full object-contain md:object-scale-down animate-fadeIn"
-      />
+    <div id="loading-screen" class="fixed inset-0 flex items-center justify-center bg-[#0b1221] z-[9999] transition-opacity duration-700">
+        <img src="{{ asset('assets/img/loading-fast.gif') }}" alt="Loading..." class="w-full h-full object-contain md:object-scale-down animate-fadeIn" />
     </div>
 
     <style>
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: scale(0.95);
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
-        to {
-          opacity: 1;
-          transform: scale(1);
+        
+        .animate-fadeIn {
+            animation: fadeIn 0.8s ease-out;
         }
-      }
-      .animate-fadeIn {
-        animation: fadeIn 0.8s ease-out;
-      }
     </style>
 
     <script>
-      // Hilangkan loading setelah halaman selesai dimuat
-      window.addEventListener("load", () => {
-        const loader = document.getElementById("loading-screen");
-        loader.classList.add("opacity-0");
-        setTimeout(() => (loader.style.display = "none"), 600);
-      });
+        // Hilangkan loading setelah halaman selesai dimuat
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loading-screen");
+            loader.classList.add("opacity-0");
+            setTimeout(() => (loader.style.display = "none"), 600);
+        });
     </script>
 
     <!-- Script -->
     <script>
-      feather.replace();
-      document.getElementById("menu-btn").onclick = () => {
-        document.getElementById("mobile-menu").classList.toggle("hidden");
-      };
+        feather.replace();
+        document.getElementById("menu-btn").onclick = () => {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        };
     </script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-      AOS.init({ once: true, duration: 1000, easing: "ease-out-cubic" });
+        AOS.init({
+            once: true,
+            duration: 1000,
+            easing: "ease-out-cubic"
+        });
     </script>
-  </body>
+</body>
+
 </html>
